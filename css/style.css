@@ -68,18 +68,38 @@ footer {
     color: white;
 }
 
-/* HEADER I MENU */
+
+
+/************* LIST OF CONTENT *******************/
+
+/*
+
+1. HEADER
+2. NAV MENU
+3. CLASS OF HEADER WHEN SCROLLING
+4. HERO
+
+*/
 
 body {
-
-    font-family: 'Roboto'
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Roboto';
+    box-sizing: border-box;
 }
+
+/* 1. HEADER */
+
 header {
+    font-size: 15px;
     text-align: center;
-    height: auto;
+    line-height: 60px;
+    height: 60px;
     width: 100%;
+    margin: 0;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
+    transition: height 0.5s;
     position: fixed;
     top: 0;
     left: 0;
@@ -88,28 +108,30 @@ header {
 
 }
 
+/* 2. MENU */
+
 header ul {
+    text-align: center;
     list-style: none;
     float: right;
-    margin-right: 50px;
+    margin: 0 50px 0 0;
+    padding: 0;
+
 }
+
 
 header ul li {
     float: left;
-    padding: 15px;
-}
-
-li:hover {
-    background-color: inherit;
-    opacity: 0.7;
+    padding: 0 10px 0 10px;
 }
 
 a {
     text-decoration: none;
     color: rgba(254, 249, 255, 0.57);
-    font-size: 16px;
     font-family: 'Roboto';
 }
+
+/* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
     color: rgba(30, 34, 31, 0.67);
@@ -117,7 +139,18 @@ a {
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
 }
+
+.small {
+    height: 50px;
+
+}
+
+.active-a {
+    color: rgba(0, 0, 0, 0.71);
+}
+/* 4. ZAJAWKA */
 
 #hero {
     position: relative;
@@ -131,7 +164,7 @@ a {
 }
 
 #zajawka-big-sub {
-    font-size: 400%;
+    font-size: 65px;
     color: inherit;
     font-family: 'Roboto';
     font-weight: 400;
@@ -139,7 +172,7 @@ a {
 
 
 #zajawka-small-sub {
-    font-size: 200%;
+    font-size: 40px;
     font-weight: 100;
     color: inherit;
     font-family: 'Roboto';
@@ -155,6 +188,9 @@ a {
     z-index: 100;
     text-align: center;
 }
+
+/***** END OF NAV / MENU / ZAJAWKA *****/
+
 
 #jms_lewy {
 

@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(window).on("scroll", function () {
-        if($(window).scrollTop() > 50) {
+        if($(window).scrollTop() > 40) {
             $("a").addClass("active-a");
         } else {
             $("a").removeClass("active-a");
@@ -19,11 +19,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $(window).on("scroll", function () {
-        if($(window).scrollTop() > 50) {
-            $("#hero_picture").addClass("hero-brightness");
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 70) {
+            $("header").addClass('small');
         } else {
-            $("#hero_picture").removeClass("hero-brightness");
+            $("header").removeClass('small');
         }
     });
 });
