@@ -93,7 +93,7 @@ body {
 header {
     font-size: 15px;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
     height: 60px;
     width: 100%;
     margin: 0;
@@ -123,12 +123,18 @@ header ul {
 header ul li {
     float: left;
     padding: 0 10px 0 10px;
+    transition: all 100ms linear 0s;
 }
 
-a {
+header ul li a {
     text-decoration: none;
-    color: rgba(254, 249, 255, 0.57);
+    color: #ffffff;
     font-family: 'Roboto';
+
+}
+
+header ul li:hover {
+    border-bottom: 4px solid #ffffff;
 }
 
 /* 3. CLASS OF HEADER WHEN SCROLLING */
