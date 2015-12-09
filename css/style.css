@@ -1,0 +1,16 @@
+.lewastrona {
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+.prawastrona    {
+    float: right;
+    width: 50%;
+    height: 500px;
+}
+div img {
+    width: 100%;
+    height: 150px;
+
+}
+
