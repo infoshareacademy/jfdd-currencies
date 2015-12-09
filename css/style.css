@@ -1,3 +1,7 @@
+footer {
+    background-color: #2c4f85;
+    color: white;
+}
 
 /* HEADER I MENU */
 
@@ -85,4 +89,12 @@ a {
     color: #ffffff;
     z-index: 100;
     text-align: center;
+}
+
+#jms_lewy {
+
+}
+
+#jms_prawy {
+
 }
