@@ -9,7 +9,7 @@
     <meta name="keywords" content=".....">
     <title>Stal - Santom sp. z o.o. | Szkoła matematyki</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -27,7 +27,28 @@
 
 
 <main>
+    <section id="formularz">
+            <form id="wysylka" action="" method=post">
+                <ul>
+                    <li>Skontaktuj się z nami!</li>
+                    <li><input type ="numer" name="numer" placeholder="Numer telefonu komórkowego" required min="9" ></li>
+                    <li><input type ="email" name="mail" placeholder="Adres e-mail" required></li>
+                    <li><input type ="submit" name="wyślij" value="wyślij"></li>
+                </ul>
+            </form>
+        <?php
+            $numer=$_POST['numer'];
+            $mail=$_POST['mail'];
+            if (mail("l.komajda@wp.pl", "Dane kontaktowe", $mail, $numer))
+            {
+            echo "mail został wysłany";
+            }
 
+
+        ?>
+
+
+    </section>
 
 </main>
 
