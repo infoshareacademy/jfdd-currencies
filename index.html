@@ -37,12 +37,71 @@
     </div>
 
 <main>
+    <section id="functions">
+        <div class="lewastrona">
+            <img src="image/fotof1.jpg" alt="tu powinien być obrazek">
+            <h2>Funkcjonalność 1</h2>
+            <p>
+                Opis funkcjonalności 1 zdanie pierwsze.Opis funkcjonalności 1 kolejne zdanie.
+                Opis funkcjonalności 1 kolejne zdanie.Opis funkcjonalności 1 kolejne zdanie.
+            </p>
+        </div>
+        <div class="prawastrona">
+            <img src="image/fotof2.jpg" alt="tu powinien być obrazek">
+            <h2>Funkcjonalność 2</h2>
+            <p>
+                Opis funkcjonalności 2 zdanie pierwsze. Opis funkcjonalności 2 kolejne zdanie.
+                Opis funkcjonalności 2 kolejne zdanie.Opis funkcjonalności 2 kolejne zdanie.
+            </p>
+        </div>
+        <div class="lewastrona">
+            <img src="image/fotof3.jpg" alt="tu powinien być obrazek">
+            <h2>Funkcjonalność 3</h2>
+            <p>
+                Opis funkcjonalności 3 zdanie pierwsze. Opis funkcjonalności 3 kolejne zdanie.
+                Opis funkcjonalności 3 kolejne zdanie.Opis funkcjonalności 3 kolejne zdanie.
+            </p>
 
+        </div>
+        <div class="prawastrona">
+            <img src="image/fotof4.jpg" alt="tu powinien być obrazek">
+            <h2>Funkcjonalność 4</h2>
+            <p>
+                Opis funkcjonalności 4 zdanie pierwsze. Opis funkcjonalności 4 kolejne zdanie.
+                Opis funkcjonalności 4 kolejne zdanie.Opis funkcjonalności 4 kolejne zdanie.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="formularz">
+            <form id="wysylka" action="" method=post">
+                <ul>
+                    <li>Skontaktuj się z nami!</li>
+                    <li><input type ="numer" name="numer" placeholder="Numer telefonu komórkowego" required min="9" ></li>
+                    <li><input type ="email" name="mail" placeholder="Adres e-mail" required></li>
+                    <li><input type ="submit" name="wyślij" value="wyślij"></li>
+                </ul>
+            </form>
+        <?php
+            $numer=$_POST['numer'];
+            $mail=$_POST['mail'];
+            if (mail("l.komajda@wp.pl", "Dane kontaktowe", $mail, $numer))
+            {
+            echo "mail został wysłany";
+            }
+
+
+        ?>
+
+
+    </section>
 
 </main>
 
 <footer>
-    <div id="jms_lewy">copyright©2015 | All rights reserved | Kalkulator walutowy</div><div id="jms_prawy"><a href="mailto:e-mail: walutomat@kasa.pl">Napisz do NAS</a></div>
+    <div>copyright © 2015 | All rights reserved | Kalkulator walutowy | e-mail: waluty@kasa.pl | tel.: +48 789 456 123</div>
 </footer>
 
 
