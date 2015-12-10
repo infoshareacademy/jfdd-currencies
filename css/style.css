@@ -207,7 +207,7 @@ footer {
     background-image: linear-gradient(#2c4f85, #000000);
     color: #ffffff;
     padding: 20px;
-    border-bottom: solid 15px rgba(67, 94, 178, 0.86);
+    border-bottom: solid 15px rgb(26, 26, 26);
     border-top: solid 5px #ffc93e;
     text-align: center;
     clear: both;
@@ -215,5 +215,16 @@ footer {
 #logo_bottom {
     padding-top: 20px;
     padding-bottom: 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+#logo_bottom:hover {
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 /** FOOTER END **/
