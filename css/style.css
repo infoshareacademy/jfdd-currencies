@@ -49,26 +49,38 @@ form li{
     font-size:20px;
     font-weight:bolder;
 }
+/*** FUNKCJE BY EMKA ***/
 
 #functions div  {
     width:50%;
     height:500px;
-}
-.leftside {
-    float: left;
-  }
-.rightside    {
-    float: right;
+    text-align: center;
     }
 
-#functions div img {
-    width: 100%;
+.leftside   {
+    float: left;
+}
+
+.rightside  {
+    float: right;
+}
+
+#functions div img  {
+    width: 80%;
     height: 300px;
 }
+
 #functions  {
     position:relative;
     height:1000px;
 }
+
+#functions div p    {
+    font-size: 20px;
+}
+
+/*** END OF FUNKCJE BY EMKA***/
+
 
 /************* LIST OF CONTENT *******************/
 
