@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(window).on("scroll", function () {
-        if($(window).scrollTop() > 40) {
+        if($(window).scrollTop() > 50) {
             $("a").addClass("active-a");
         } else {
             $("a").removeClass("active-a");
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(window).scroll(function(){
-        if($(window).scrollTop() > 70) {
+        if($(window).scrollTop() > 50) {
             $("header").addClass('small');
         } else {
             $("header").removeClass('small');
