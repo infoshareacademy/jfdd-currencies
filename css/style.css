@@ -160,8 +160,13 @@ header ul li:hover {
 
 #hero {
     position: relative;
-    height: 800px;
+    height: 700px;
     overflow: hidden;
+}
+
+.parallax-window {
+    min-height: 1200px;
+    background: transparent;
 }
 
 #hero_picture {
