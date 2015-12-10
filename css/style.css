@@ -50,24 +50,24 @@ form li{
     font-weight:bolder;
 }
 
-.lewastrona {
+#functions div  {
+    width:50%;
+    height:500px;
+}
+.leftside {
     float: left;
-    width: 50%;
-    height: 500px;
-}
-.prawastrona    {
+  }
+.rightside    {
     float: right;
-    width: 50%;
-    height: 500px;
-}
+    }
 
 #functions div img {
     width: 100%;
     height: 300px;
 }
-#functions{
+#functions  {
     position:relative;
-    height:1200px;
+    height:1000px;
 }
 
 /************* LIST OF CONTENT *******************/
@@ -160,7 +160,13 @@ header ul li:hover {
 
 #hero {
     position: relative;
-    height: 500px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.parallax-window {
+    min-height: 1200px;
+    background: transparent;
 }
 
 #hero_picture {
@@ -186,7 +192,6 @@ header ul li:hover {
 }
 
 #zajawka {
-    padding-top: 260px;
     position: absolute;
     top: 200px;
     left: 600px;
