@@ -76,22 +76,8 @@
     </section>
 
     <section id="formularz">
-        <?php
-            if($_POST['numer') && $_POST['mail']{
-                $wiadomosc=$_POST['numer'].$_POST['mail'];
-            }
 
-            if(mail("l.komajda@wp.pl", "Dane kontaktowe", $wiadomosc)){
-        ?>
-            <script>
-               //todo usunąć komentarz gdy bedziemy pracować na php
-               // window.alert("Mail został wysłany");
-            </script>
-        <?php
-            }
-        ?>
-
-                <form id="wysylka" action="" method=post">
+                <form id="wysylka" action="php/mailing.php" method=post">
                     <ul>
                         <li>Skontaktuj się z nami!</li>
                         <li><input type ="numer" name="numer" placeholder="Numer telefonu komórkowego" required min="9" ></li>
