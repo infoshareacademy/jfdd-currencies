@@ -14,24 +14,24 @@
 </head>
 <body>
 <!-- HEADER -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">START</a></li>
-                <li><a href="#">PRODUKTY</a></li>
-                <li><a href="#">O NAS</a></li>
-                <li><a href="#">KONTAKT</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="hero">
-        <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
-            <div id="zajawka">
-                <h1 class="zajawka-big-sub">Zarabiaj pieniądze.</h1>
-                <p class="zajawka-small-sub">Monituj waluty, zdobywaj pieniądze i odnieś sukces finansowy.</p>
-            </div>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">START</a></li>
+            <li><a href="#">PRODUKTY</a></li>
+            <li><a href="#">O NAS</a></li>
+            <li><a href="#">KONTAKT</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="hero">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
+        <div id="zajawka">
+            <h1 class="zajawka-big-sub">Zarabiaj pieniądze.</h1>
+            <p class="zajawka-small-sub">Monituj waluty, zdobywaj pieniądze i odnieś sukces finansowy.</p>
         </div>
     </div>
+</div>
 
 <main>
     <section id="functions">
@@ -74,14 +74,15 @@
 
     <section id="formularz">
 
-                <form id="wysylka" action="php/mailing.php" method=post">
-                    <ul>
-                        <li>Skontaktuj się z nami!</li>
-                        <li><input type ="numer" name="numer" placeholder="Numer telefonu komórkowego" required min="9" ></li>
-                        <li><input type ="email" name="mail" placeholder="Adres e-mail" required></li>
-                        <li><input type ="submit" name="wyślij" value="wyślij"></li>
-                    </ul>
-                </form>
+        <form  name="wysylka" action="mailto:l.komajda@wp.pl"  method="POST">
+            <ul>
+                <li>Skontaktuj się z nami!</li>
+                <li><input type ="numer" id="numer" name="numer" placeholder="Numer telefonu komórkowego"  ></li><label id="Kod_Komunikat"></label>
+                <li><input type ="email" id="email" name="email" placeholder="Adres e-mail" ></li><label id="Kod_Komunikatt"></label>
+                <li><input type ="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
+
+            </ul>
+        </form>
 
 
 
@@ -90,20 +91,26 @@
 </main>
 <!-- FOOTER START -->
 <footer>
-    <p>copyright © 2015 | All rights reserved | Monitor Kursu Walut | e-mail: waluty@kasa.pl | tel.: +48 789 456 123</p>
+    <p>copyright © 2015 | All rights reserved | Monitor Kursów Walut | e-mail: waluty@kasa.pl | tel.: +48 789 456 123 | Regulamin | Cookies</p>
     <div>
-        <img id="logo_bottom" src="image/logo.png" alt=" logo firmowe" title="logo button">
+        <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="logo_bottom" alt=" logo firmowe" width="218" height="50" title="logo button"></a>
     </div>
+    <div>
+        <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="social_btu" src="image/facebook.png" alt="facebook" width="32" height="32" title="facebook"></a>
+        <a href="https://plus.google.com/collections/featured" target="_blank"><img class="social_btu" src="image/google_plus.png" alt="google+" width="32" height="32" title="google+"></a>
+        <a href="https://twitter.com/?lang=pl" target="_blank"><img class="social_btu" src="image/twitter.png" alt="twitter" width="32" height="32" title="twitter"></a>
+    </div>
+
 </footer>
 <!-- FOOTER END -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script>
-        $('.parallax-window').parallax({imageSrc: 'image/hero.jpg'});
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
+    <script src="js/walidacja_formularza.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+<script>
+    $('.parallax-window').parallax({imageSrc: 'image/hero.jpg'});
+</script>
 
 </body>
 </html>
