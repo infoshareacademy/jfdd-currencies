@@ -77,15 +77,17 @@
 
     <section id="formularz">
 
-                <form id="wysylka" action="php/mailing.php" method=post">
+                <form id="wysylka" action="mailto:l.komajda@wp.pl" method=post" >
                     <ul>
                         <li>Skontaktuj się z nami!</li>
-                        <li><input type ="numer" name="numer" placeholder="Numer telefonu komórkowego" required min="9" ></li>
-                        <li><input type ="email" name="mail" placeholder="Adres e-mail" required></li>
-                        <li><input type ="submit" name="wyślij" value="wyślij"></li>
+                        <li><input type ="text" id="numer_tel"name="numer" placeholder="Numer telefonu komórkowego" ></li>
+                        <li><input type ="text" name="mail" placeholder="Adres e-mail" ></li>
+                        <li><input type ="submit" name="wyślij" value="wyślij" ></li>
                     </ul>
                 </form>
-
+                <script>
+            
+                </script>
 
 
     </section>
