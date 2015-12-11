@@ -29,27 +29,27 @@
 		// jesli brak bledow wysylanie
             }
             if(!error_mail && !error_numer){
-                var komunikat_numer = document.getElementById('Kod_Komunikat');
+                var komunikat_numer = document.getElementById('Kod_Komunikat_numer');
                 komunikat_numer.innerHTML = '';
-                var komunikat_mail = document.getElementById('Kod_Komunikatt');
+                var komunikat_mail = document.getElementById('Kod_Komunikat_mail');
                 komunikat_mail.innerHTML = '';
                 wysylka.submit();
             }
 			// jak sa bledy to komunikaty
             if(error_numer){
-                var komunikat_numer = document.getElementById('Kod_Komunikat');
+                var komunikat_numer = document.getElementById('Kod_Komunikat_numer');
                 komunikat_numer.innerHTML = error_numer;
             }
             else{
-                var komunikat_numer = document.getElementById('Kod_Komunikat');
+                var komunikat_numer = document.getElementById('Kod_Komunikat_numer');
                 komunikat_numer.innerHTML = '';
             }
             if(error_mail){
-                var komunikat_mail = document.getElementById('Kod_Komunikatt');
+                var komunikat_mail = document.getElementById('Kod_Komunikat_mail');
                 komunikat_mail.innerHTML = error_mail;
             }
             else{
-                var komunikat_mail = document.getElementById('Kod_Komunikatt');
+                var komunikat_mail = document.getElementById('Kod_Komunikat_mail');
                 komunikat_mail.innerHTML = '';
             }
         }
