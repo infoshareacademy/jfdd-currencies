@@ -4,41 +4,38 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="....">
-    <meta name="author" content="...">
+    <meta name="description" content="Strona pozwala monitorować wartości kursów walut i porównywać je w czasie">
+    <meta name="author" content="FunkyPro">
+    <meta name="keywords" content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
     <title>Monitor Kursu Walut</title>
-
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-
-
+    <link rel="icon" href="image/favicon.ico">
 </head>
 <body>
-
 <!-- HEADER -->
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">START</a></li>
-                <li><a href="#">PRODUKTY</a></li>
-                <li><a href="#">O NAS</a></li>
-                <li><a href="#">KONTAKT</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="hero">
-        <img src="image/hero.jpg" alt="waluty" id="hero_picture">
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">START</a></li>
+            <li><a href="#">PRODUKTY</a></li>
+            <li><a href="#">O NAS</a></li>
+            <li><a href="#">KONTAKT</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="hero">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
         <div id="zajawka">
             <h1 class="zajawka-big-sub">Zarabiaj pieniądze.</h1>
             <p class="zajawka-small-sub">Monituj waluty, zdobywaj pieniądze i odnieś sukces finansowy.</p>
         </div>
     </div>
+</div>
 
 <main>
     <section id="functions">
-        <div class="lewastrona">
+        <div class="leftside">
             <img src="image/fotof1.jpg" alt="tu powinien być obrazek">
             <h2>Funkcjonalność 1</h2>
             <p>
@@ -46,7 +43,7 @@
                 Opis funkcjonalności 1 kolejne zdanie.Opis funkcjonalności 1 kolejne zdanie.
             </p>
         </div>
-        <div class="prawastrona">
+        <div class="rightside">
             <img src="image/fotof2.jpg" alt="tu powinien być obrazek">
             <h2>Funkcjonalność 2</h2>
             <p>
@@ -54,7 +51,7 @@
                 Opis funkcjonalności 2 kolejne zdanie.Opis funkcjonalności 2 kolejne zdanie.
             </p>
         </div>
-        <div class="lewastrona">
+        <div class="leftside">
             <img src="image/fotof3.jpg" alt="tu powinien być obrazek">
             <h2>Funkcjonalność 3</h2>
             <p>
@@ -63,7 +60,7 @@
             </p>
 
         </div>
-        <div class="prawastrona">
+        <div class="rightside">
             <img src="image/fotof4.jpg" alt="tu powinien być obrazek">
             <h2>Funkcjonalność 4</h2>
             <p>
@@ -77,17 +74,16 @@
 
     <section id="formularz">
 
-                <form id="wysylka" action="mailto:l.komajda@wp.pl" method=post" >
-                    <ul>
-                        <li>Skontaktuj się z nami!</li>
-                        <li><input type ="text" id="numer_tel"name="numer" placeholder="Numer telefonu komórkowego" ></li>
-                        <li><input type ="text" name="mail" placeholder="Adres e-mail" ></li>
-                        <li><input type ="submit" name="wyślij" value="wyślij" ></li>
-                    </ul>
-                </form>
-                <script>
-            
-                </script>
+        <form  name="wysylka" action="mailto:l.komajda@wp.pl"  method="POST">
+            <ul>
+                <li>Skontaktuj się z nami!</li>
+                <li><input type ="numer" id="numer" name="numer" placeholder="Numer telefonu komórkowego"  ></li><label id="Kod_Komunikat"></label>
+                <li><input type ="email" id="email" name="email" placeholder="Adres e-mail" ></li><label id="Kod_Komunikatt"></label>
+                <li><input type ="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
+
+            </ul>
+        </form>
+
 
 
     </section>
@@ -95,11 +91,26 @@
 </main>
 <!-- FOOTER START -->
 <footer>
-    <p>copyright © 2015 | All rights reserved | Monitor Kursu Walut | e-mail: waluty@kasa.pl | tel.: +48 789 456 123</p>
-    <p id="logo_bottom"><img src="image/logo.png"></p>
+    <p>copyright © 2015 | All rights reserved | Monitor Kursów Walut | e-mail: waluty@kasa.pl | tel.: +48 789 456 123 | Regulamin | Cookies</p>
+    <div>
+        <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="logo_bottom" alt=" logo firmowe" width="218" height="50" title="logo button"></a>
+    </div>
+    <div>
+        <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="social_btu" src="image/facebook.png" alt="facebook" width="32" height="32" title="facebook"></a>
+        <a href="https://plus.google.com/collections/featured" target="_blank"><img class="social_btu" src="image/google_plus.png" alt="google+" width="32" height="32" title="google+"></a>
+        <a href="https://twitter.com/?lang=pl" target="_blank"><img class="social_btu" src="image/twitter.png" alt="twitter" width="32" height="32" title="twitter"></a>
+    </div>
+
 </footer>
 <!-- FOOTER END -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
+    <script src="js/walidacja_formularza.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+<script>
+    $('.parallax-window').parallax({imageSrc: 'image/hero.jpg'});
+</script>
+
 </body>
 </html>
