@@ -118,7 +118,7 @@ form li{
 body {
     margin: 0 !important;
     padding: 0 !important;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -157,19 +157,26 @@ header ul {
 header ul li {
     float: left;
     padding: 0 10px 0 10px;
-    transition: all 100ms linear 0s;
-}
-
-header ul li a {
-    text-decoration: none;
     color: #ffffff;
+}
+
+li a {
+    text-decoration: none;
+    color: #000000;
     font-family: 'Roboto';
-
 }
 
-header ul li:hover {
-    border-bottom: 4px solid #ffffff;
+li a:hover {
+    color: #625CFF;
 }
+
+li a:active {
+    color: #625cff;
+}
+
+
+
+
 
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
@@ -193,9 +200,11 @@ header ul li:hover {
 /* 4. ZAJAWKA */
 
 #hero {
+    width: 100%;
     position: relative;
     height: 700px;
     overflow: hidden;
+    text-align: center;
 }
 
 .parallax-window {
@@ -210,7 +219,6 @@ header ul li:hover {
 }
 
 #zajawka-big-sub {
-    font-size: 65px;
     color: inherit;
     font-family: 'Roboto';
     font-weight: 400;
@@ -218,7 +226,6 @@ header ul li:hover {
 
 
 #zajawka-small-sub {
-    font-size: 40px;
     font-weight: 100;
     color: inherit;
     font-family: 'Roboto';
@@ -226,12 +233,12 @@ header ul li:hover {
 }
 
 #zajawka {
-    position: absolute;
-    top: 200px;
-    left: 600px;
+    margin-top: 350px;
     color: #ffffff;
     z-index: 100;
     text-align: center;
+    font-size: 2.5em;
+    display: inline-block
 }
 
 /***** END OF NAV / MENU / ZAJAWKA *****/
