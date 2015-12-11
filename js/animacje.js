@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(this).viewportChecker({
             classToAdd: 'show animated ' + $(this).data('animate'),
             classToRemove: 'hide',
-            offset: '30%'
+            offset: '20%'
         });
     });
 
