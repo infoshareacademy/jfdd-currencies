@@ -9,6 +9,7 @@
     <meta name="keywords" content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
     <title>Monitor Kursu Walut</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="icon" href="image/favicon.ico">
 </head>
@@ -42,7 +43,7 @@
                 Opis funkcjonalności 1 kolejne zdanie.Opis funkcjonalności 1 kolejne zdanie.
             </p>
         </div>
-        <div class="rightside">
+        <div class="rightside" >
             <img src="image/fotof2.jpg" alt="tu powinien być obrazek">
             <h2>Funkcjonalność 2</h2>
             <p>
@@ -71,13 +72,15 @@
 
     </section>
 
-    <section id="formularz">
+    <section id="formularz" data-animate="fadeIn">
 
         <form  name="wysylka" action="mailto:l.komajda@wp.pl"  method="POST">
             <ul>
                 <li>Skontaktuj się z nami!</li>
-                <li><input type ="numer" id="numer" name="numer" placeholder="Numer telefonu komórkowego"  ></li><label id="Kod_Komunikat"></label>
-                <li><input type ="email" id="email" name="email" placeholder="Adres e-mail" ></li><label id="Kod_Komunikatt"></label>
+                <li><input type ="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"  ></li>
+                <div id="Kod_Komunikat_numer"></div>
+                <li><input type ="email" id="email" name="email" placeholder="Adres e-mail" ></li>
+                <div id="Kod_Komunikat_mail"></div>
                 <li><input type ="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
 
             </ul>
@@ -104,9 +107,12 @@
 <!-- FOOTER END -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
-    <script src="js/walidacja_formularza.js"></script>
+<script src="js/walidacja_formularza.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/parallax.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.viewportchecker.min.js"></script>
+<script src="js/animacje.js"></script>
 <script>
     $('.parallax-window').parallax({imageSrc: 'image/hero.jpg'});
 </script>

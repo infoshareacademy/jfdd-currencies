@@ -5,6 +5,7 @@
     width:100%;
     background-color:#f4f4f4;
     text-align:center;
+
 }
 input {
     margin-top:10px;
@@ -49,6 +50,14 @@ form li{
     font-size:20px;
     font-weight:bolder;
 }
+#Kod_Komunikat_numer{
+    height:20px;
+    color:#C55252;
+}
+#Kod_Komunikat_mail{
+    height:20px;
+    color:#C55252;
+}
 /*** FUNKCJE BY EMKA ***/
 
 #functions  {
@@ -86,6 +95,7 @@ form li{
     text-align: left;
     width:100%;
 }
+
 #functions div:hover   {
         color: black;
 }
@@ -268,3 +278,11 @@ footer {
     border-radius: 16px;
 }
 /** FOOTER END **/
+
+.hide{
+    opacity:0
+}
+
+.show {
+    opacity: 1;
+}
