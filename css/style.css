@@ -265,7 +265,7 @@ footer {
     border-top: solid 5px #ffc93e;
     text-align: center;
     clear: both;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+    text-shadow: 1px 1px rgb(0, 0, 0);
     font-weight: lighter;
 }
 .logo_bottom {
@@ -295,7 +295,7 @@ footer input {
     background: rgba(255, 255, 255, 0.17);
     color: white;
     padding: 5px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.76);
+    text-shadow: 1px 1px rgb(0, 0, 0);
 }
 /** FOOTER END **/
 
