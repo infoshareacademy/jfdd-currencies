@@ -268,6 +268,7 @@ li a:active {
 
 /** FOOTER START **/
 footer {
+    height: 200px;
 	background-image: linear-gradient(#2c4f85, #000000);
 	color: #ffffff;
 	border-top: solid 5px #ffc93e;
@@ -295,7 +296,7 @@ footer {
     margin: 5px 15px 0 15px;
 }
 .social_btu:hover {
-	background: rgba(247, 229, 0, 0.26);
+	background: rgba(255, 201, 62, 0.3);
 	border-radius: 16px;
 	overflow-x: auto;
 }
@@ -306,7 +307,8 @@ footer input {
     padding: 5px;
     text-shadow: 1px 1px rgb(0, 0, 0);
 }
-.so_me_btu {
+.soc_me_btu {
+    margin-bottom: 25px;
     background: rgba(0, 0, 0, 0.11);
     padding: 10px;
 	border-bottom: 2px solid rgba(255,255,255,0.1);
@@ -318,11 +320,19 @@ footer input {
     text-shadow: none;
     padding: 5px;
 }
-.foot_list {
+.foot_list_left {
+    height: 130px;
+    float: left;
     text-align: right;
-    width: 33%;
+    width: 25%;
     border-right: 2px solid rgba(255, 255, 255, 0.1);
     padding-right: 10px;
+}
+footer li a:visited {
+    color: white;
+}
+footer li a:hover {
+    color: #ffc93e;
 }
 /** FOOTER END **/
 
