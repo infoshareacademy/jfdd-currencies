@@ -150,7 +150,7 @@ header {
     transition: all 0.3s ease-in-out;
     /*transition: height 0.5s;*/
     position: fixed;
-    top: -60px;
+    top: 0;
     left: 0;
     z-index: 100;
     opacity: 0.90;
@@ -163,7 +163,7 @@ header {
     left:50px;
     float: left;
     width: 300px;
-    color: #000000;
+    background-color: transparent;
     font-size: 15px;
     padding: 0;
 }
@@ -213,10 +213,6 @@ li a:hover {
     background-color: #ffffff;
 }
 
-
-.small {
-    top: 0;
-}
 
 .active-a {
     color: rgba(0, 0, 0, 0.71);
