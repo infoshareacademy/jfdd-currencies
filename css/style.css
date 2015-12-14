@@ -348,9 +348,11 @@ footer input {
 }
 footer li a {
     color: #ffffff;
+    text-decoration: none;
 }
 footer li a:hover {
     color: #ffc93e;
+    text-decoration: none;
 }
 /** FOOTER END **/
 
