@@ -148,14 +148,14 @@ header {
     margin: 0;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
-    /*transition: height 0.5s;*/
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     opacity: 0.90;
-
 }
+
+/* 1.1 adres i telefon w lewym górnym rogu */
 
 #quick_contact {
     position: absolute;
@@ -189,10 +189,10 @@ header ul li {
     color: #ffffff;
 }
 
-li a {
+header li a {
     text-decoration: none;
     color: #343434;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 li a:hover {
@@ -205,22 +205,18 @@ li a:hover {
 
 
 
-
-
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
     background-color: #ffffff;
 }
 
-
-.active-a {
-    color: rgba(0, 0, 0, 0.71);
-}
 /* 4. ZAJAWKA */
 
 #hero {
+
     width: 100%;
+    line-height: 200%;
     position: relative;
     height: 700px;
     overflow: hidden;
@@ -239,18 +235,22 @@ li a:hover {
 }
 
 #zajawka-big-sub {
+
     color: inherit;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
 
 #zajawka-small-sub {
+
     font-weight: 100;
     color: inherit;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     line-height: 130%;
 }
+
+/* kontener, który trzyma hasło */
 
 #zajawka {
     margin-top: 350px;
