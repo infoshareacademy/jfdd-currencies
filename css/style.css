@@ -120,9 +120,10 @@ font-weight: 400;
 
 @media screen and (max-width:800px) {
     #functions div  {
-        width:88%;
+        width:93%;
         height: 530px;
-        float: left;
+        float:none;
+        text-align: center;
     }
     #functions {
         height: 2050px;
@@ -348,9 +349,11 @@ footer input {
 }
 footer li a {
     color: #ffffff;
+    text-decoration: none;
 }
 footer li a:hover {
     color: #ffc93e;
+    text-decoration: none;
 }
 /** FOOTER END **/
 
