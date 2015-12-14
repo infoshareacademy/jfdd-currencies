@@ -148,9 +148,9 @@ header {
     margin: 0;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
-    transition: height 0.5s;
+    /*transition: height 0.5s;*/
     position: fixed;
-    top: 0;
+    top: -60px;
     left: 0;
     z-index: 100;
     opacity: 0.90;
@@ -210,14 +210,12 @@ li a:hover {
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
-    color: #000000;
     background-color: #ffffff;
-    font-size: 13px;
 }
 
-.small {
-    height: 50px;
 
+.small {
+    top: 0;
 }
 
 .active-a {
