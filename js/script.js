@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $(window).on("scroll", function () {
         if($(window).scrollTop() > 50) {
-            $("header").addClass("active small");
+            $("header").addClass("active");
             $("#quick_contact").addClass("active");
 
         } else {
-            $("header").removeClass("active small");
+            $("header").removeClass("active");
             $("#quick_contact").removeClass("active");
         }
     });
