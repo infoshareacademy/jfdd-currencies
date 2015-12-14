@@ -10,5 +10,11 @@ $(document).ready(function() {
             $("header").removeClass('small');
         }
     });
+
+    $(".menu-item").click(function(){
+        $('.menu-item').removeClass('menu-item-selected');
+        $(this).addClass("menu-item-selected");
+    });
+
 });
 
