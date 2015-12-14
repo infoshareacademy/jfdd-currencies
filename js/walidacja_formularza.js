@@ -23,7 +23,7 @@ function sprawdz() {
         }
         var numer = document.getElementById('numer').value;
 // sprawdzenie poprawno�ci numeru
-        var znaki_numer = /^[0-9]{9}$/;
+        var znaki_numer = /^[+0-9]{9,10}$/;
         var spr_numer = znaki_numer.test(numer);
         if (numer == '') {
             var error_numer = 'Pole nie może być puste';
