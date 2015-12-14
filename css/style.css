@@ -59,6 +59,7 @@ form li{
     color:#C55252;
 }
 /*** FUNKCJE BY EMKA ***/
+
 #functions_summary  {
     width: 100%;
     background-color: #f4f4f4;
@@ -74,7 +75,7 @@ form li{
 
 #functions  {
     position:relative;
-    height:1200px;
+    height:1050px;
     background-color: #e7e7e7;
     padding:3%;
     color: #454545;
@@ -82,38 +83,50 @@ form li{
 
 #functions div  {
     width:44%;
-    height:600px;
+    height:550px;
     text-align: center;
     padding-left:3%;
     padding-right:3%;
     }
 
+
 .leftside   {
-    float: left;
+float: left;
 }
 
 .rightside  {
-    float: right;
+float: right;
 }
 
 #functions div img  {
-    width: 100%;
-    max-height: 360px;
-    border-radius: 2%;
-    box-shadow:3px 0px 30px 1px #898989;
+width: 100%;
+max-height: 400px;
+border-radius: 2%;
+box-shadow:3px 0px 30px 1px #898989;
 }
 
 #functions div p    {
-    font-size: 20px;
-    text-align: center;
-    width:100%;
+font-size: 20px;
+text-align: center;
+width:100%;
 }
 
 #functions div:hover   {
-        color: black;
+color: black;
 }
 #functions div h2   {
-    font-weight: 400;
+font-weight: 400;
+}
+
+@media screen and (max-width:800px) {
+    #functions div  {
+        width:88%;
+        height: 530px;
+        float: left;
+    }
+    #functions {
+        height: 2050px;
+    }
 }
 
 
@@ -148,7 +161,7 @@ header {
     margin: 0;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
-    transition: height 0.5s;
+    /*transition: height 0.5s;*/
     position: fixed;
     top: 0;
     left: 0;
@@ -163,7 +176,7 @@ header {
     left:50px;
     float: left;
     width: 300px;
-    color: #000000;
+    background-color: transparent;
     font-size: 15px;
     padding: 0;
 }
@@ -210,15 +223,9 @@ li a:hover {
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
-    color: #000000;
     background-color: #ffffff;
-    font-size: 13px;
 }
 
-.small {
-    height: 50px;
-
-}
 
 .active-a {
     color: rgba(0, 0, 0, 0.71);
