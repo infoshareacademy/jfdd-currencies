@@ -8,8 +8,10 @@ $(document).ready(function () {
         $(this).viewportChecker({
             classToAdd: 'show animated ' + $(this).data('animate'),
             classToRemove: 'hide',
-            offset: '20%'
+            offset: '30%'
         });
     });
 
 });
+
+

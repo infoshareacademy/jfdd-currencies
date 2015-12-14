@@ -4,30 +4,32 @@
     <meta charset="utf-8">
     <meta name="description" content="Strona pozwala monitorować wartości kursów walut i porównywać je w czasie">
     <meta name="author" content="FunkyPro">
-    <meta name="keywords" content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
+    <meta name="keywords"
+          content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
     <title>Monitor Kursu Walut</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
     <link rel="icon" href="image/favicon.ico">
 </head>
 <body>
 <!-- HEADER -->
 <header>
-    <div id="quick_contact"> waluty@kasa.pl | +48 789 456 123 </div>
+    <div id="quick_contact"> waluty@kasa.pl | +48 789 456 123</div>
     <nav>
         <ul>
-            <li><a href="#">START</a></li>
-            <li><a href="#functions">PRODUKTY</a></li>
-            <li><a href="#formularz">KONTAKT</a></li>
+            <li><a href="#" class="menu-item">START</a></li>
+            <li><a href="#functions" class="menu-item">PRODUKTY</a></li>
+            <li><a href="#formularz" class="menu-item">KONTAKT</a></li>
         </ul>
     </nav>
 </header>
 <div id="hero">
     <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
         <div id="zajawka">
-            <h1 class="zajawka-big-sub">Zwiększ efektywność.</h1>
-            <p class="zajawka-small-sub">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+            <h1 class="zajawka-big-sub" data-animate="fadeIn">Zwiększ efektywność.</h1>
+            <p class="zajawka-small-sub" data-animate="fadeIn">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
         </div>
     </div>
 </div>
@@ -38,33 +40,37 @@
     </section>
     <section id="functions">
         <div class="leftside">
-            <img src="image/fotof1.jpg" alt="tu powinien być obrazek">
+            <img src="image/kursy_aktualne.jpg" alt="tu powinien być obrazek">
             <h2>Aktualne kursy walut</h2>
+
             <p>
                 Wyświetl najbardziej aktualne kursy walut obcych na podstawie notowań Narodowego Banku Polskiego.
                 Kurs euro, dolara, funta, franka, korony, jena i wiele innych.
             </p>
         </div>
         <div class="rightside">
-            <img src="image/foto_watch.jpg" alt="tu powinien być obrazek">
+            <img src="image/kursy_historyczne.jpg" alt="tu powinien być obrazek">
             <h2>Wykresy kursów historycznych</h2>
+
             <p>
                 Sprawdź jak kształtowały się kursy walut na przestrzeni wybranych przez Ciebie okresów.
             </p>
         </div>
         <div class="leftside">
-            <img src="image/fotof2.jpg" alt="tu powinien być obrazek">
+            <img src="image/osobliwosci.jpg" alt="tu powinien być obrazek">
             <h2>Znajdowanie osobliwości kursów względnych</h2>
+
             <p>
                 Porównaj kursy poszczególnych walut i znajdź osobliwości w kursach wybranych walut.
             </p>
 
         </div>
         <div class="rightside">
-            <img src="image/foto_laptop.jpg" alt="tu powinien być obrazek">
+            <img src="image/personalizacja.jpg" alt="tu powinien być obrazek">
             <h2>Personalizacja zbioru obserwowanych walut</h2>
+
             <p>
-               Wybierz i obserwuj tylko te waluty, które Cię interesują.
+                Wybierz i obserwuj tylko te waluty, które Cię interesują.
             </p>
 
         </div>
@@ -73,18 +79,17 @@
 
     <section id="formularz" data-animate="fadeIn">
 
-        <form  name="wysylka" action="mailto:l.komajda@wp.pl"  method="POST">
+        <form name="wysylka" action="mailto:l.komajda@wp.pl" method="POST">
             <ul>
                 <li>Skontaktuj się z nami!</li>
-                <li><input type ="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"  ></li>
+                <li><input type="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"></li>
                 <div id="Kod_Komunikat_numer"></div>
-                <li><input type ="email" id="email" name="email" placeholder="Adres e-mail" ></li>
+                <li><input type="email" id="email" name="email" placeholder="Adres e-mail"></li>
                 <div id="Kod_Komunikat_mail"></div>
-                <li><input type ="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
+                <li><input type="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
 
             </ul>
         </form>
-
 
 
     </section>
@@ -94,12 +99,12 @@
 <!-- FOOTER START -->
 <footer>
     <div class="soc_me_btu">
-        <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="social_btu" src="image/facebook.png" alt="facebook" width="32" height="32" title="facebook"></a>
-        <a href="https://plus.google.com/collections/featured" target="_blank"><img class="social_btu" src="image/google_plus.png" alt="google+" width="32" height="32" title="google+"></a>
-        <a href="https://twitter.com/?lang=pl" target="_blank"><img class="social_btu" src="image/twitter.png" alt="twitter" width="32" height="32" title="twitter"></a>
+        <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="social_btu" src="image/facebook.png" alt="facebook" title="facebook"></a>
+        <a href="https://plus.google.com/collections/featured" target="_blank"><img class="social_btu" src="image/google_plus.png" alt="google+" title="google+"></a>
+        <a href="https://twitter.com/?lang=pl" target="_blank"><img class="social_btu" src="image/twitter.png" alt="twitter" title="twitter"></a>
     </div>
     <div>
-        <div class="foot_list_left">
+        <div class="foot_list tekstR">
             <ul style="list-style-type: none;">
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Produkty</a></li>
@@ -108,7 +113,7 @@
                 <li><a href="">Polityka Cookies</a></li>
             </ul>
         </div>
-        <div class="foot_list_left">
+        <div class="foot_list">
             <br>Monitor Kursów Walut<br>
             3 Hanover Square #8<br>
             New York<br>
@@ -116,16 +121,19 @@
             e-mail: waluty@kasa.pl<br>
             tel.: +48 789 456 123<br>
         </div>
-        <div>
-            <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="logo_bottom" alt=" logo firmowe" width="218" height="50" title="logo button"></a>
+        <div class="foot_list tekstL">
+            <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="logo_bottom" alt=" logo firmowe" title="logo button"></a>
             <form action="mailto:waluty@kasa.pl" method="post">
-                <input type ="email" value="mail..." title="e-mail">
+                <input type="email" value="mail..." title="e-mail">
                 <input type="submit" value="newsletter">
             </form>
         </div>
     </div>
+    <div class="clear"></div>
     <div class="foot_cop">
-        &bull; copyright &copy; <script type="text/javascript" src="js/AktualnaData.js"></script> &bull; All rights reserved &bull; Monitor Kursów Walut &bull;
+        &bull; copyright &copy;
+        <script type="text/javascript" src="js/AktualnaData.js"></script> &bull; All rights reserved &bull; Monitor
+        Kursów Walut &bull;
     </div>
 </footer>
 <!-- FOOTER END -->
