@@ -14,25 +14,40 @@
     <link rel="icon" href="image/favicon.ico">
 </head>
 <body>
-<!-- HEADER -->
-<header>
-    <div id="quick_contact"> waluty@kasa.pl | +48 789 456 123</div>
-    <nav>
-        <ul>
-            <li><a href="#" class="menu-item">START</a></li>
-            <li><a href="#functions" class="menu-item">PRODUKTY</a></li>
-            <li><a href="#formularz" class="menu-item">KONTAKT</a></li>
-        </ul>
-    </nav>
-</header>
-<div id="hero">
-    <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
-        <div id="zajawka">
-            <h1 class="zajawka-big-sub" data-animate="fadeIn">Zwiększ efektywność.</h1>
-            <p class="zajawka-small-sub" data-animate="fadeIn">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+
+<!-- HEADER , SEKCJA TOMASZA-->
+
+    <header>
+
+        <div id="quick_contact"> waluty@kasa.pl | +48 789 456 123</div>
+
+        <!-- NAWIGACJA -->
+
+        <nav>
+            <ul>
+                <li><a href="#" class="menu-item">START</a></li>
+                <li><a href="#functions" class="menu-item">PRODUKTY</a></li>
+                <li><a href="#formularz" class="menu-item">KONTAKT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+<!-- HERO Z EFEKTEM PARALLAX, SEKCJA TOMASZA-->
+
+    <div id="hero">
+
+        <div class="parallax-window" data-parallax="scroll" data-image-src="image/hero.jpg" id="hero_picture">
+            <div id="zajawka">
+                <h1 class="zajawka-big-sub" data-animate="fadeInUp">Zwiększ efektywność.</h1>
+                <p class="zajawka-small-sub" data-animate="fadeInUp">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+            </div>
         </div>
+
     </div>
-</div>
+
+<!-- KONIEC SEKCJI TOMASZA -->
+
 
 <main>
     <section id="functions_summary">
@@ -97,7 +112,7 @@
 </main>
 
 <!-- FOOTER START -->
-<footer>
+<footer data-animate="fadeIn">
     <div class="soc_me_btu">
         <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="social_btu" src="image/facebook.png" alt="facebook" title="facebook"></a>
         <a href="https://plus.google.com/collections/featured" target="_blank"><img class="social_btu" src="image/google_plus.png" alt="google+" title="google+"></a>
@@ -137,9 +152,6 @@
     </div>
 </footer>
 <!-- FOOTER END -->
-<script>
-    var data = new Date();
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/walidacja_formularza.js"></script>
