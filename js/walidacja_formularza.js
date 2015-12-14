@@ -5,7 +5,7 @@ function sprawdz() {
     var nowaData = new Date();
     var nowyCzas = nowaData.getTime() / 1000;
     var sprawdzenieCzasu = nowyCzas- czas ;
-    if (sprawdzenieCzasu>3) {
+    if (sprawdzenieCzasu>0) {
 
         var error_mail = '';
         var error_numer = '';
@@ -23,15 +23,24 @@ function sprawdz() {
         }
         var numer = document.getElementById('numer').value;
 // sprawdzenie poprawno�ci numeru
-        var znaki_numer = /^[+0-9]{9,10}$/;
+        var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
+        var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
+        var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9]{6}$/;
         var spr_numer = znaki_numer.test(numer);
+        var spr_numer_domowy = znaki_numer_domowy.test(numer);
+        var spr_numer_platny = znaki_numer_platny.test(numer);
         if (numer == '') {
             var error_numer = 'Pole nie może być puste';
         }
-        else {
-            if (!spr_numer) {
+             if(spr_numer_platny){
                 var error_numer = 'Musisz wpisać prawdziwy numer';
+             }
+
+             else if (!spr_numer && !spr_numer_domowy) {
+                var error_numer = 'Musisz wpisać prawdziwy numer';
+
             }
+        else {
             // jesli brak bledow wysylanie
         }
         if (!error_mail && !error_numer) {
