@@ -98,19 +98,22 @@ form li{
 
 #functions div img  {
     width: 100%;
-    max-height: 400px;
+    max-height: 360px;
     border-radius: 2%;
     box-shadow:3px 0px 30px 1px #898989;
 }
 
 #functions div p    {
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     width:100%;
 }
 
 #functions div:hover   {
         color: black;
+}
+#functions div h2   {
+    font-weight: 400;
 }
 
 
@@ -181,23 +184,23 @@ header ul {
 
 
 header ul li {
-    float: left;
+    display: inline-block;
     padding: 0 10px 0 10px;
     color: #ffffff;
 }
 
 li a {
     text-decoration: none;
-    color: #000000;
+    color: #343434;
     font-family: 'Roboto';
 }
 
 li a:hover {
-    color: #625CFF;
+    border-bottom: 2px solid #343434;
 }
 
-li a:active {
-    color: #625cff;
+.menu-item-selected {
+    border-bottom: 2px solid #343434;
 }
 
 
@@ -343,9 +346,6 @@ footer li a {
 footer li a:hover {
     color: #ffc93e;
 }
-/*.foot_list_left:nth-child(3) {*/
-    /*border-right: 0px;*/
-/*}*/
 /** FOOTER END **/
 
 .hide{
