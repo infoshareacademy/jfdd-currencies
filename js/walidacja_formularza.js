@@ -33,7 +33,7 @@ function sprawdz() {
             var error_numer = 'Pole nie może być puste';
         }
              if(spr_numer_platny){
-                var error_numer = 'Musisz wpisać prawdziwy numer';
+                var error_numer = 'Nie podawaj płatnego numeru';
              }
 
              else if (!spr_numer && !spr_numer_domowy) {
