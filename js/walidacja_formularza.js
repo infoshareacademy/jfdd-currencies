@@ -23,9 +23,10 @@ function sprawdz() {
         }
         var numer = document.getElementById('numer').value;
         numer = numer.replace(RegExp(" ","g"),"");
+        numer = numer.replace(RegExp("-","g"),"");
 // sprawdzenie poprawno�ci numeru
         var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
-        var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
+        var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
         var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9]{6}$/;
         var spr_numer = znaki_numer.test(numer);
         var spr_numer_domowy = znaki_numer_domowy.test(numer);
@@ -41,9 +42,7 @@ function sprawdz() {
                 var error_numer = 'Musisz wpisać prawdziwy numer';
 
             }
-        else {
-            // jesli brak bledow wysylanie
-        }
+
         if (!error_mail && !error_numer) {
             var komunikat_numer = document.getElementById('Kod_Komunikat_numer');
             komunikat_numer.innerHTML = '';
