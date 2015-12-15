@@ -22,6 +22,7 @@ function sprawdz() {
             }
         }
         var numer = document.getElementById('numer').value;
+        numer = numer.replace(RegExp(" ","g"),"");
 // sprawdzenie poprawno�ci numeru
         var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
         var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
