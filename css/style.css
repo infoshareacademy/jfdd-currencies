@@ -296,7 +296,7 @@ footer {                                                   /* ogólne dla footer
 }
 .SocialBtu:hover {                                         /* przycisk social media - po najechaniu */
     background: rgb(120, 42, 40);
-    border-radius: 16px;
+    border-radius: 100%;
 }
 .FooterContent {                                           /* 3 DIV-y z treścią */
     height: 130px;
@@ -358,6 +358,24 @@ footer input {                                             /* wysyłacz newslett
     padding: 5px;
 }
 /************* FOOTER END *************/
+
+/*** FUNKCJONALNOŚCI DODATKOWE START ***/
+
+.additionalFunct{
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    margin: 25px;
+    float: left;
+}
+.additionalSect {
+    margin: auto;
+    width: 75%;
+}
+
+
+
+/**** FUNKCJONALNOŚCI DODATKOWE END ****/
 
 .hide{
     opacity:0
