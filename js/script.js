@@ -15,5 +15,21 @@ $(document).ready(function() {
         $(this).addClass("menu-item-selected");
     });
 
+
+
+    var func = function(firstHero, secondHero) {
+
+        firstHero.fadeIn(1500);
+        secondHero.fadeOut(1500);
+
+        setTimeout(function() {
+            func(secondHero,firstHero)
+        } , 6000);
+
+    };
+
+    func($('#firstHero'),$('#secondHero'));
+
 });
+
 
