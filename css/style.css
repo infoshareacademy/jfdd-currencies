@@ -394,3 +394,26 @@ footer input {                                             /* wysyłacz newslett
 .show {
     opacity: 1;
 }
+.scrollup {
+
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 300px;
+    right: 0;
+    display: none;
+    background-color: #000;
+    border-radius:5px;
+    index-z:9999;
+    opacity:0.2;
+}
+.scrollup:hover {
+    opacity:1;
+}
+
+.scrollup img {
+    width: 80px;
+    height: 80px;
+    border-radius:5px;
+    border:2px solid #2c4f85;
+}
