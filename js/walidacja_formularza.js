@@ -9,7 +9,7 @@ function sprawdz() {
 
         var error_mail = '';
         var error_numer = '';
-        mail = document.getElementById('email').value;
+        var mail = document.getElementById('email').value;
 // sprawdzenie poprawno�ci adresu email
         var znaki_mail = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
         var spr_mail = znaki_mail.test(mail);
