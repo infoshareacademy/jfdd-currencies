@@ -69,8 +69,7 @@ form li{
     padding-bottom: 50px;
 }
 #functions_summary h1  {
-    margin: auto;
-    font-weight:100;
+       font-weight:100;
 }
 
 #functions  {
@@ -128,6 +127,9 @@ form li{
         height: 2050px;
     }
 }
+/*** END OF FUNKCJE BY EMKA***/
+
+/*** ABOUT US ***/
 #ourTeam    {
     margin: 0;
     height: 420px;
@@ -158,8 +160,7 @@ form li{
     font-size: 30px;
     font-weight: 300;
 }
-
-/*** END OF FUNKCJE BY EMKA***/
+/*** END OF ABOUT US ***/
 
 
 /************* LIST OF CONTENT *******************/
