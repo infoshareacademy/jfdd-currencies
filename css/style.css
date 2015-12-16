@@ -390,18 +390,20 @@ footer input {                                             /* wysyłacz newslett
 /*** FUNKCJONALNOŚCI DODATKOWE START ***/
 
 .additionalFunct{
-    border-radius: 100%;
-    height: 200px;
-    width: 200px;
-    margin: 25px;
+    width: 33%;
     float: left;
+    text-align: center;
+    margin: 15px 0px 15px 0px ;
 }
 .additionalSect {
-    margin: auto;
-    width: 75%;
+    margin: 0px;
+    background-image: linear-gradient(#bdc7d8, #f4f4f4);
+    padding-bottom: 20px;
 }
-
-
+.additionalSect div p {
+    font-size: 24px;
+    font-weight: lighter;
+}
 
 /**** FUNKCJONALNOŚCI DODATKOWE END ****/
 
