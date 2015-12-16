@@ -393,10 +393,10 @@ footer input {                                             /* wysyłacz newslett
     width: 33%;
     float: left;
     text-align: center;
-    margin: 15px 0px 15px 0px ;
+    margin: 15px 0 15px 0;
 }
 .additionalSect {
-    margin: 0px;
+    margin: 0;
     background-image: linear-gradient(#bdc7d8, #f4f4f4);
     padding-bottom: 20px;
 }
