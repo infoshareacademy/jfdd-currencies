@@ -142,13 +142,14 @@
 
     <section id="formularz" data-animate="fadeIn">
         <a href="#" class="scrollup"><img src="image/strzalka.jpg" alt="tu powinien być obrazek"></a>
-        <form name="wysylka" action="mailto:l.komajda@wp.pl" method="POST">
+        <form name="wysylka" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
             <ul>
                 <li>Wypełnij formularz i skontaktujemy się z Tobą!</li>
                 <li><input type="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"></li>
                 <div id="Kod_Komunikat_numer"></div>
                 <li><input type="email" id="email" name="email" placeholder="Adres e-mail"></li>
                 <div id="Kod_Komunikat_mail"></div>
+                <li><input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com"></li>
                 <li><input type="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
 
             </ul>
