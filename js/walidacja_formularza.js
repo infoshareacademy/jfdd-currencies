@@ -10,7 +10,7 @@ function sprawdz() {
         var error_mail = '';
         var error_numer = '';
         var mail = document.getElementById('email').value;
-// sprawdzenie poprawno�ci adresu email
+// sprawdzenie poprawnosci adresu email
         var znaki_mail = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
         var spr_mail = znaki_mail.test(mail);
         if (mail == '') {
@@ -24,7 +24,7 @@ function sprawdz() {
         var numer = document.getElementById('numer').value;
         numer = numer.replace(new RegExp(" ","g"),"");
         numer = numer.replace(new RegExp("-","g"),"");
-// sprawdzenie poprawno�ci numeru
+// sprawdzenie poprawnosci numeru
         var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
         var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
         var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9]{6}$/;
