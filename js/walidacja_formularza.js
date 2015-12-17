@@ -5,12 +5,12 @@ function sprawdz() {
     var nowaData = new Date();
     var nowyCzas = nowaData.getTime() / 1000;
     var sprawdzenieCzasu = nowyCzas- czas ;
-    if (sprawdzenieCzasu>0) {
+    if (sprawdzenieCzasu>2) {
 
         var error_mail = '';
         var error_numer = '';
         var mail = document.getElementById('email').value;
-// sprawdzenie poprawno�ci adresu email
+// sprawdzenie poprawnosci adresu email
         var znaki_mail = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
         var spr_mail = znaki_mail.test(mail);
         if (mail == '') {
@@ -24,7 +24,7 @@ function sprawdz() {
         var numer = document.getElementById('numer').value;
         numer = numer.replace(new RegExp(" ","g"),"");
         numer = numer.replace(new RegExp("-","g"),"");
-// sprawdzenie poprawno�ci numeru
+// sprawdzenie poprawnosci numeru
         var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
         var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
         var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9]{6}$/;
@@ -34,15 +34,16 @@ function sprawdz() {
         if (numer == '') {
             error_numer = 'Pole nie może być puste';
         }
-             if(spr_numer_platny){
+        else {
+            if (spr_numer_platny) {
                 error_numer = 'Nie podawaj płatnego numeru';
-             }
+            }
 
-             else if (!spr_numer && !spr_numer_domowy) {
+            else if (!spr_numer && !spr_numer_domowy) {
                 error_numer = 'Musisz wpisać prawdziwy numer';
 
             }
-
+        }
         if (!error_mail && !error_numer) {
             komunikat_numer = document.getElementById('Kod_Komunikat_numer');
             komunikat_numer.innerHTML = '';
@@ -72,4 +73,4 @@ function sprawdz() {
         data = new Date();
     }
 }
-  
+
