@@ -229,7 +229,9 @@ header ul {
     float: right;
     margin: 0 50px 0 0;
     padding: 0;
+
 }
+
 
 header ul li {
     display: inline-block;
@@ -251,6 +253,8 @@ li a:hover {
     border-bottom: 2px solid #343434;
 }
 
+
+
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
@@ -260,12 +264,14 @@ li a:hover {
 /* 4. ZAJAWKA */
 
 #hero {
+
     width: 100%;
     position: relative;
     height: 700px;
     overflow: hidden;
     text-align: center;
 }
+
 
 .hero_picture {
     z-index: -999;
@@ -274,16 +280,22 @@ li a:hover {
     position: absolute;
     top: 0;
     left: 0;
+
 }
 
 #zajawka-big-sub {
+
     color: inherit;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
+
 #zajawka-small-sub {
+
     font-weight: 100;
     color: inherit;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* kontener, który trzyma hasło */
