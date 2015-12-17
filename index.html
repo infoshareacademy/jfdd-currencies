@@ -17,6 +17,8 @@
 
 <!-- HEADER , SEKCJA TOMASZA-->
 
+    <div id="start"></div>
+
     <header>
 
         <div id="quick_contact"> waluty@kasa.pl | +48 789 456 123</div>
@@ -25,9 +27,10 @@
 
         <nav>
             <ul>
-                <li><a href="#" class="menu-item">START</a></li>
-                <li><a href="#functions" class="menu-item">PRODUKTY</a></li>
-                <li><a href="#formularz" class="menu-item">KONTAKT</a></li>
+                <li><a href="#start" class="menu-item" id="link-start">START</a></li>
+                <li><a href="#functions" class="menu-item" id="link-produkt">PRODUKTY</a></li>
+                <li><a href="#ourTeam" class="menu-item" id="link-zespol">ZESPÓŁ</a></li>
+                <li><a href="#formularz" class="menu-item" id="link-kontakt">KONTAKT</a></li>
             </ul>
         </nav>
 
@@ -36,13 +39,18 @@
 <!-- HERO SEKCJA TOMASZA-->
 
     <div id="hero">
+
         <div id="firstHero"><img src="image/hero.jpg" alt="waluty" class="hero_picture"></div>
-        <div id="secondHero"><img src="image/hero2.jpg" alt="waluty" class="hero_picture"></div>
-            <div id="zajawka" data-animate="fadeInUp">
-                <h1 class="zajawka-big-sub">Zwiększ efektywność.</h1>
-                <p class="zajawka-small-sub">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
-            </div>
+        <div id="secondHero"><img src="image/hero3.jpg" alt="waluty" class="hero_picture"></div>
+
+        <div id="zajawka" data-animate="fadeInUp">
+
+            <h1 class="zajawka-big-sub">Zwiększ efektywność.</h1>
+            <p class="zajawka-small-sub">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+
         </div>
+
+    </div>
 
 
 <!-- KONIEC SEKCJI TOMASZA -->
@@ -166,6 +174,7 @@
         <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="SocialBtu" src="image/facebook.png" alt="facebook" title="facebook"></a>
         <a href="https://plus.google.com/collections/featured" target="_blank"><img class="SocialBtu" src="image/google_plus.png" alt="google+" title="google+"></a>
         <a href="https://twitter.com/?lang=pl" target="_blank"><img class="SocialBtu" src="image/twitter.png" alt="twitter" title="twitter"></a>
+        <h4>&lt;Facebook&frasl;&gt;&lt;Google+&frasl;&gt;&lt;Twitter&frasl;&gt;</h4>
     </div>
     <div>
         <div class="FooterContent TxtRight">
@@ -187,8 +196,9 @@
         </div>
         <div class="FooterContent TxtLeft">
             <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="LogoButton" alt=" logo firmowe" title="logo button"></a>
-            <form action="mailto:waluty@kasa.pl?subject=Zamawiam subskrypcje newslettera" method="post">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
                 <input type="email" title="e-mail" placeholder="wpisz e-maila...">
+                <input type="hidden" name="receiver" value="siwexx@tlen.pl">
                 <input type="submit" value="newsletter">
             </form>
         </div>

@@ -30,6 +30,30 @@ $(document).ready(function() {
 
     func($('#firstHero'),$('#secondHero'));
 
+
+    $("#link-start").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#start").offset().top},
+            'slow');
+    });
+
+    $("#link-produkt").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#functions").offset().top},
+            'slow');
+    });
+
+    $("#link-zespol").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#ourTeam").offset().top},
+            'slow');
+    });
+
+    $("#link-kontakt").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#formularz").offset().top},
+            'slow');
+    });
+
+
 });
-
-

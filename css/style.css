@@ -68,6 +68,7 @@ form li{
     padding-top:50px;
     padding-bottom: 50px;
 }
+
 #functions_summary h1  {
        font-weight:100;
 }
@@ -78,7 +79,7 @@ form li{
     background-color: #e7e7e7;
     padding:3%;
     color: #454545;
-    }
+}
 
 #functions div  {
     width:44%;
@@ -86,7 +87,7 @@ form li{
     text-align: center;
     padding-left:3%;
     padding-right:3%;
-    }
+}
 
 .leftside   {
     float: left;
@@ -101,6 +102,7 @@ form li{
     max-height: 400px;
     border-radius: 2%;
     box-shadow:3px 0 30px 1px #898989;
+    background-color: #454545;
 }
 
 #functions div p    {
@@ -112,6 +114,7 @@ form li{
 #functions div:hover   {
     color: black;
 }
+
 #functions div h2   {
     font-weight: 400;
 }
@@ -123,6 +126,7 @@ form li{
         float:none;
         text-align: center;
     }
+
     #functions {
         height: 2050px;
     }
@@ -134,6 +138,7 @@ form li{
     margin: 0;
     height: 420px;
 }
+
 #FunkyPro   {
     text-align: center;
     height:70px;
@@ -152,14 +157,16 @@ form li{
 }
 
 #ourTeam div img    {
-    border-radius: 100%;
-
+    border-radius:50%;
     max-height: 250px;
+    background-color: #959595
 }
+
 #ourTeam div p{
     font-size: 30px;
-    font-weight: 300;
+    font-weight:300;
 }
+
 /*** END OF ABOUT US ***/
 
 
@@ -302,6 +309,7 @@ li a:hover {
     color: #ffffff;
     text-align: center;
     font-size: 2em;
+    text-shadow: 1px 1px #55585b;
 }
 
 /***** END OF NAV / MENU / ZAJAWKA *****/
