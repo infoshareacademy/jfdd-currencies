@@ -159,7 +159,7 @@ form li{
 #ourTeam div img    {
     border-radius:50%;
     max-height: 250px;
-    background-color: #959595
+    background-image: linear-gradient(#959595, #000000);
 }
 
 #ourTeam div p{
@@ -325,6 +325,11 @@ footer {                                                   /* ogólne dla footer
 	text-align: center;
 	text-shadow: 1px 1px rgb(0, 0, 0);
 	font-weight: lighter;
+}
+footer h4 {
+    font-weight: lighter;
+    margin: 0;
+    font-size: 14px;
 }
 .SocialMediaButton {                                       /* DIV z przyciskami facebook, google plus, twitter */
     margin-bottom: 25px;
