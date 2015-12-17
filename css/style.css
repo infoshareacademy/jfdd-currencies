@@ -157,9 +157,9 @@ form li{
 }
 
 #ourTeam div img    {
-    border-radius: 100%;
+    border-radius:50%;
     max-height: 250px;
-    background-color: #454545
+    background-color: #959595
 }
 
 #ourTeam div p{
