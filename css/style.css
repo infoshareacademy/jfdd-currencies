@@ -294,9 +294,10 @@ li a:hover {
 /* kontener, który trzyma hasło */
 
 #zajawka {
+    z-index: 1500;
     width: 100%;
     left: 0;
-    top: 150%;
+    top: 150px;
     position: absolute;
     color: #ffffff;
     text-align: center;
