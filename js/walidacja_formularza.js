@@ -34,15 +34,16 @@ function sprawdz() {
         if (numer == '') {
             error_numer = 'Pole nie może być puste';
         }
-             if(spr_numer_platny){
+        else {
+            if (spr_numer_platny) {
                 error_numer = 'Nie podawaj płatnego numeru';
-             }
+            }
 
-             else if (!spr_numer && !spr_numer_domowy) {
+            else if (!spr_numer && !spr_numer_domowy) {
                 error_numer = 'Musisz wpisać prawdziwy numer';
 
             }
-
+        }
         if (!error_mail && !error_numer) {
             komunikat_numer = document.getElementById('Kod_Komunikat_numer');
             komunikat_numer.innerHTML = '';
