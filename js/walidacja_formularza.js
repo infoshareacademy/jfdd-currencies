@@ -5,7 +5,6 @@ function sprawdz() {
     var nowaData = new Date();
     var nowyCzas = nowaData.getTime() / 1000;
     var sprawdzenieCzasu = nowyCzas- czas ;
-    alert(sprawdzenieCzasu);
     if (sprawdzenieCzasu>2) {
 
         var error_mail = '';
