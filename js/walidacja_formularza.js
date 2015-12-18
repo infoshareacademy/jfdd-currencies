@@ -5,6 +5,7 @@ function sprawdz() {
     var nowaData = new Date();
     var nowyCzas = nowaData.getTime() / 1000;
     var sprawdzenieCzasu = nowyCzas- czas ;
+    alert(sprawdzenieCzasu);
     if (sprawdzenieCzasu>2) {
 
         var error_mail = '';
@@ -50,6 +51,9 @@ function sprawdz() {
             komunikat_mail = document.getElementById('Kod_Komunikat_mail');
             komunikat_mail.innerHTML = '';
             wysylka.submit();
+        }
+        else{
+            data = new Date();
         }
         // jak sa bledy to komunikaty
         if (error_numer) {
