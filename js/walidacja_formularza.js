@@ -1,5 +1,4 @@
 function sprawdz() {
-    // dodac sprawdzanie minuty
     var czas = data.getTime() / 1000;
     var nowaData = new Date();
     var nowyCzas = nowaData.getTime() / 1000;
@@ -59,11 +58,10 @@ function test_mail(){
 function test_number (){
     var numer = document.getElementById('numer').value;
     numer = numer.replace(new RegExp(" ","g"),"");
-    numer = numer.replace(new RegExp("-","g"),"");
 // sprawdzenie poprawnosci numeru
-    var znaki_numer = /^[5-8]{1}[0-9]{8}$/;
-    var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9]{6}$/;
-    var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9]{6}$/;
+    var znaki_numer = /^[+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{2}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{3}$/;
+    var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9-]{6,8}$/;
+    var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9-]{6,8}$/;
     var spr_numer = znaki_numer.test(numer);
     var spr_numer_domowy = znaki_numer_domowy.test(numer);
     var spr_numer_platny = znaki_numer_platny.test(numer);
