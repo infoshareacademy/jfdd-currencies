@@ -405,8 +405,9 @@ footer input {                                             /* wysyłacz newslett
 }
 /************* FOOTER END *************/
 
-/*** FUNKCJONALNOŚCI DODATKOWE START ***/
 
+
+/*** FUNKCJONALNOŚCI DODATKOWE START ***/
 .additionalFunct{
     width: 33%;
     float: left;
@@ -422,7 +423,6 @@ footer input {                                             /* wysyłacz newslett
     font-size: 24px;
     font-weight: lighter;
 }
-
 /**** FUNKCJONALNOŚCI DODATKOWE END ****/
 
 .hide{
