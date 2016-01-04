@@ -44,13 +44,10 @@ form li{
     font-size:20px;
     font-weight:bolder;
 }
-#divNumberErrorMassage{
+#divNumberErrorMassage,
+#divMailErrorMassage{
 	height: 20px;
 	color: #C55252;
-}
-#divMailErrorMassage{
-    height:20px;
-    color:#C55252;
 }
 
 #functionsTitle  {
