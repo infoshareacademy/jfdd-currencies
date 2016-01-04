@@ -319,7 +319,7 @@ li a:hover {
 /***** END OF NAV / MENU / ZAJAWKA *****/
 
 /************* FOOTER START *************/
-footer {                                                   /* ogólne dla footer */
+footer {
 	background-image: linear-gradient(#2c4f85, #000000);
 	color: #ffffff;
 	text-align: center;
@@ -331,43 +331,43 @@ footer h4 {
     margin: 0;
     font-size: 14px;
 }
-.SocialMediaButton {                                       /* DIV z przyciskami facebook, google plus, twitter */
+.socialMediaButton {
     margin-bottom: 25px;
     background: rgba(0, 0, 0, 0.11);
     padding: 10px;
     border-bottom: 1px solid rgb(38, 69, 117);
 }
-.SocialBtu {                                               /* przycisk social media */
+.socialButton {
     margin: 5px 15px 5px 15px;
 }
-.SocialBtu:hover {                                         /* przycisk social media - po najechaniu */
+.socialButton:hover {
     background: rgb(120, 42, 40);
     border-radius: 100%;
 }
-.FooterContent {                                           /* 3 DIV-y z treścią */
+.footerContent {
     height: 130px;
     float: left;
     width: 32%;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-footer li a {                                              /* odsyłacze footer-a */
+footer li a {
     color: #ffffff;
     text-decoration: none;
 }
-footer li a:hover {                                        /* odsyłacze footer-a - po najechaniu */
+footer li a:hover {
     color: #ffc93e;
     text-decoration: none;
 }
-.TxtRight {                                                /* zawartość wyrównana do prawej */
+.txtRight {
     text-align: right;
     padding-right: 10px;
 }
-.TxtLeft {                                                 /* zawartość wyrównana do lewej */
+.txtLeft {
     text-align: left;
     border-right: 0;
     padding-left: 15px;
 }
-.LogoButton {                                              /* przycisk 'waluty on-line'*/
+.logoButton {
     padding-top: 20px;
     padding-bottom: 20px;
     -webkit-transition: all 1s ease;
@@ -377,7 +377,7 @@ footer li a:hover {                                        /* odsyłacze footer-
     -o-transform: scale(0.9);
     -webkit-transform: scale(0.9);
 }
-.LogoButton:hover {                                        /* przycisk 'waluty on-line'- po najechaniu */
+.logoButton:hover {
     -o-transition: all 0.6s;
     -moz-transition: all 0.6s;
     -webkit-transition: all 0.6s;
@@ -385,17 +385,17 @@ footer li a:hover {                                        /* odsyłacze footer-
     -o-transform: scale(1.0);
     -webkit-transform: scale(1.0);
 }
-footer input {                                             /* wysyłacz newsletter-a */
+footer input {
     border: solid 1px rgba(255, 255, 255, 0.31);
     background: rgba(255, 255, 255, 0.17);
     color: white;
     padding: 5px;
     text-shadow: 1px 1px rgb(0, 0, 0);
 }
-.clear {                                                   /* domknięcie float */
+.clear {
     clear: both;
 }
-.FooterCopyright {                                         /* dół copyright */
+.footerCopyright {
     margin-top: 20px;
     background: #131313;
     font-size: 12px;
@@ -404,8 +404,6 @@ footer input {                                             /* wysyłacz newslett
     padding: 5px;
 }
 /************* FOOTER END *************/
-
-
 
 /*** FUNKCJONALNOŚCI DODATKOWE START ***/
 .additionalFunct{
