@@ -15,7 +15,6 @@
 </head>
 <body>
 
-<!-- HEADER , SEKCJA TOMASZA-->
 
     <div id="start"></div>
 
@@ -23,20 +22,18 @@
 
         <div id="quickContactInHeader"> waluty@kasa.pl | +48 789 456 123</div>
 
-        <!-- NAWIGACJA -->
 
         <nav>
             <ul>
                 <li><a href="#start" class="menuItem" id="link-start">START</a></li>
                 <li><a href="#functions" class="menuItem" id="link-produkt">PRODUKTY</a></li>
                 <li><a href="#ourTeam" class="menuItem" id="link-zespol">ZESPÓŁ</a></li>
-                <li><a href="#formularz" class="menuItem" id="link-kontakt">KONTAKT</a></li>
+                <li><a href="#formToSend" class="menuItem" id="link-kontakt">KONTAKT</a></li>
             </ul>
         </nav>
 
     </header>
 
-<!-- HERO SEKCJA TOMASZA-->
 
     <div id="hero">
 
@@ -51,9 +48,6 @@
         </div>
 
     </div>
-
-
-<!-- KONIEC SEKCJI TOMASZA -->
 
 
 <main>
@@ -148,17 +142,17 @@
         </div>
     </section>
 
-    <section id="formularz" data-animate="fadeIn">
-        <a href="#" class="scrollup"><img src="image/strzalka.jpg" alt="tu powinien być obrazek"></a>
-        <form name="wysylka" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+    <section id="formToSend" data-animate="fadeIn">
+        <a href="#" class="moveToTop"><img src="image/strzalka.jpg" alt="tu powinien być obrazek"></a>
+        <form name="sendForm" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
             <ul>
                 <li>Wypełnij formularz, skontaktujemy się z Tobą!</li>
                 <li><input type="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"></li>
-                <div id="Kod_Komunikat_numer"></div>
+                <div id="divNumberErrorMassage"></div>
                 <li><input type="email" id="email" name="email" placeholder="Adres e-mail"></li>
-                <div id="Kod_Komunikat_mail"></div>
+                <div id="divMailErrorMassage"></div>
                 <li><input type="hidden" name="receiver" value="l.komajda@wp.pl"></li>
-                <li><input type="button" name="wyślij" onclick="sprawdz()" value="wyślij"></li>
+                <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij"></li>
 
             </ul>
         </form>
@@ -181,7 +175,7 @@
             <ul style="list-style-type:none">
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Produkty</a></li>
-                <li><a href="#formularz">Kontakt</a></li>
+                <li><a href="#formToSend">Kontakt</a></li>
                 <li><a href="pdf/regulamin_cinkciarz_pl_v6.pdf" target="_blank">Regulamin</a></li>
             </ul>
         </div>
