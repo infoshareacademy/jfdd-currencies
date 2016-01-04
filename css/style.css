@@ -58,7 +58,6 @@ form li{
     height:20px;
     color:#C55252;
 }
-/*** FUNKCJE BY EMKA ***/
 
 #functionsTitle  {
     width: 100%;
@@ -131,11 +130,8 @@ form li{
         height: 2050px;
     }
 }
-/*** END OF FUNKCJE BY EMKA***/
 
-/*** ABOUT US ***/
 #ourTeam    {
-    margin: 0;
     height: 420px;
 }
 
@@ -166,9 +162,6 @@ form li{
     font-size: 30px;
     font-weight:300;
 }
-
-/*** END OF ABOUT US ***/
-
 
 /************* LIST OF CONTENT *******************/
 
