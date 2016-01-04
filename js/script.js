@@ -1,4 +1,14 @@
+// SPIS FUNKCJI TOMASZA
+// 1. ADDING CLASS TO HEADER WHEN SCROLLBAR > 50
+// 2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
+// 3. FUNCTION "changeHeroImage" WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
+//      3.1 CALLING THIS FUNCTION
+// 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
+
 $(document).ready(function() {
+
+//1. ADDING CLASS TO HEADER WHEN SCROLLBAR > 50
+
     $(window).on("scroll", function () {
         if($(window).scrollTop() > 50) {
             $("header").addClass("active");
@@ -10,14 +20,16 @@ $(document).ready(function() {
         }
     });
 
-    $(".menu-item").click(function(){
-        $('.menu-item').removeClass('menu-item-selected');
-        $(this).addClass("menu-item-selected");
+//2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
+
+    $(".menuItem").click(function(){
+        $('.menuItem').removeClass('menuItemSelected');
+        $(this).addClass('menuItemSelected');
     });
 
+// 3. FUNCTION WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
 
-
-    var func = function(firstHero, secondHero) {
+    var changeHeroImage = function(firstHero, secondHero) {
 
         firstHero.fadeIn(1500);
         secondHero.fadeOut(1500);
@@ -28,8 +40,11 @@ $(document).ready(function() {
 
     };
 
-    func($('#firstHero'),$('#secondHero'));
+// 3.1 CALLING FUNCTION "changeHeroImage"
 
+    changeHeroImage($('#firstHero'),$('#secondHero'));
+
+// 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
 
     $("#link-start").click(function() {
         $('html,body').animate({
