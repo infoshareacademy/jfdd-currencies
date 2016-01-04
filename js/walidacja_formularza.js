@@ -34,12 +34,12 @@ function checkForm() {
 
 function displayError(errorIndicator, errorMessageDivId) {
     if (errorIndicator) {
-        numberComment = document.getElementById(errorMessageDivId);
-        numberComment.innerHTML = errorIndicator;
+        Comment = document.getElementById(errorMessageDivId);
+        Comment.innerHTML = errorIndicator;
     }
     else {
-        numberComment = document.getElementById(errorMessageDivId);
-        numberComment.innerHTML = '';
+        Comment = document.getElementById(errorMessageDivId);
+        Comment.innerHTML = '';
     }
 
 }
