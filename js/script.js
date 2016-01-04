@@ -35,7 +35,7 @@ $(document).ready(function() {
         secondHero.fadeOut(1500);
 
         setTimeout(function() {
-            func(secondHero,firstHero)
+            changeHeroImage(secondHero,firstHero)
         } , 6000);
 
     };
