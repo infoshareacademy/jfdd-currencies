@@ -22,9 +22,9 @@ $(document).ready(function() {
 
 //2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
 
-    $(".menu-item").click(function(){
-        $('.menu-item').removeClass('menu-item-selected');
-        $(this).addClass("menu-item-selected");
+    $(".menuItem").click(function(){
+        $('.menuItem').removeClass('menuItemSelected');
+        $(this).addClass('menuItemSelected');
     });
 
 // 3. FUNCTION WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
