@@ -106,6 +106,7 @@ form li{
 
 #functions div p    {
     font-size: 20px;
+    font-weight: 400;
     text-align: center;
     width:100%;
 }
@@ -115,7 +116,8 @@ form li{
 }
 
 #functions div h2   {
-    font-weight: 400;
+    font-weight:600;
+    font-size: 25px;
 }
 
 @media screen and (max-width:800px) {
