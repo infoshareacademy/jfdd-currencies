@@ -1,80 +1,84 @@
-function sprawdz() {
-    var czas = data.getTime() / 1000;
-    var nowaData = new Date();
-    var nowyCzas = nowaData.getTime() / 1000;
-    var sprawdzenieCzasu = nowyCzas- czas ;
-    if (sprawdzenieCzasu>2) {
-        error_mail = '';
-        error_numer = '';
-        test_mail();
-        test_number();
-        if (!error_mail && !error_numer) {
-            komunikat_numer = document.getElementById('Kod_Komunikat_numer');
-            komunikat_numer.innerHTML = '';
-            komunikat_mail = document.getElementById('Kod_Komunikat_mail');
-            komunikat_mail.innerHTML = '';
-            wysylka.submit();
-        }
-        else{
-            data = new Date();
-        }
-        // jak sa bledy to komunikaty
-        if (error_numer) {
-            komunikat_numer = document.getElementById('Kod_Komunikat_numer');
-            komunikat_numer.innerHTML = error_numer;
+function checkForm() {
+
+    var timeChangeToSeconds = 1000;
+    var time = date.getTime() / timeChangeToSeconds;
+    var newDate = new Date();
+    var newTime = newDate.getTime() / timeChangeToSeconds;
+    var checkTime = newTime - time;
+
+    if (checkTime > 2) {
+        errorMail = '';
+        errorNumber = '';
+        testMail();
+        testNumber();
+
+        if (!errorMail && !errorNumber) {
+            numberComment = document.getElementById('divNumberErrorMassage');
+            numberComment.innerHTML = '';
+            mailComment = document.getElementById('divMailErrorMassage');
+            mailComment.innerHTML = '';
+            sendForm.submit();
         }
         else {
-            komunikat_numer = document.getElementById('Kod_Komunikat_numer');
-            komunikat_numer.innerHTML = '';
+            date = new Date();
         }
-        if (error_mail) {
-            komunikat_mail = document.getElementById('Kod_Komunikat_mail');
-            komunikat_mail.innerHTML = error_mail;
-        }
-        else {
-            komunikat_mail = document.getElementById('Kod_Komunikat_mail');
-            komunikat_mail.innerHTML = '';
-        }
+
+        displayError(errorNumber, 'divNumberErrorMassage');
+        displayError(errorMail, 'divMailErrorMassage');
+
     }
-    else{
-        data = new Date();
+    else {
+        date = new Date();
     }
 }
 
-function test_mail(){
-    var mail = document.getElementById('email').value;
-// sprawdzenie poprawnosci adresu email
-    var znaki_mail = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
-    var spr_mail = znaki_mail.test(mail);
-    if (mail == '') {
-        error_mail = 'Pole nie może być puste';
+function displayError(errorIndicator, errorMessageDivId) {
+    if (errorIndicator) {
+        numberComment = document.getElementById(errorMessageDivId);
+        numberComment.innerHTML = errorIndicator;
     }
     else {
-        if (!spr_mail) {
-            error_mail = 'Niepoprawny adres email';
+        numberComment = document.getElementById(errorMessageDivId);
+        numberComment.innerHTML = '';
+    }
+
+}
+
+function testMail() {
+
+    var mailValue = document.getElementById('email').value,
+        mailCharacters = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/,
+        checkMail = mailCharacters.test(mailValue);
+
+    if (mailValue == '') {
+        errorMail = 'Pole nie może być puste';
+    }
+    else {
+        if (!checkMail) {
+            errorMail = 'Niepoprawny adres email';
         }
     }
 }
-function test_number (){
-    var numer = document.getElementById('numer').value;
-    numer = numer.replace(new RegExp(" ","g"),"");
-// sprawdzenie poprawnosci numeru
-    var znaki_numer = /^[+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{2}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{3}$/;
-    var znaki_numer_domowy = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9-]{6,8}$/;
-    var znaki_numer_platny = /^[7]{1}[0-1]{1}[0-9]{1}[0-9-]{6,8}$/;
-    var spr_numer = znaki_numer.test(numer);
-    var spr_numer_domowy = znaki_numer_domowy.test(numer);
-    var spr_numer_platny = znaki_numer_platny.test(numer);
-    if (numer == '') {
-        error_numer = 'Pole nie może być puste';
+
+function testNumber() {
+    var numberValue = document.getElementById('numer').value;
+    number = numberValue.replace(new RegExp(" ", "g"), "");
+    var numberCharacters = /^[+]{0,1}[1-9]{0,2}[1-9]{1}[0-9]{2}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{3}$/,
+        homeNumberCharacters = /^[0+]{0,1}[1-9]{0,2}[1-9]{0,2}[1-9]{1}[0-9-]{6,8}$/,
+        premiumRateNumberCharacters = /^[7]{1}[0-1]{1}[0-9]{1}[0-9-]{6,8}$/,
+        checkNumber = numberCharacters.test(number),
+        checkHomeNumber = homeNumberCharacters.test(number),
+        checkPremiumRateNumber = premiumRateNumberCharacters.test(number);
+
+    if (number == '') {
+        errorNumber = 'Pole nie może być puste';
     }
     else {
-        if (spr_numer_platny) {
-            error_numer = 'Nie podawaj płatnego numeru';
+        if (checkPremiumRateNumber) {
+            errorNumber = 'Nie podawaj płatnego numeru';
         }
-
-        else if (!spr_numer && !spr_numer_domowy) {
-            error_numer = 'Musisz wpisać prawdziwy numer';
+        else if (!checkNumber && !checkHomeNumber) {
+            errorNumber = 'Musisz wpisać prawdziwy numer';
 
         }
     }
