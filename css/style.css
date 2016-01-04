@@ -273,6 +273,34 @@ li a:hover {
     font-weight: 100;
 }
 
+/* 6. CLASS PL & ENG */
+
+
+.engBlock,
+.engInlineBlock,
+.engInline,
+.hidePolishTxt,
+.hideEnglishTxt {
+    display: none;
+}
+
+.engBlockElement {
+    display: block;
+}
+
+.engInlineBlockElement {
+    display: inline-block;
+}
+
+.engInlineElement {
+    display: inline;
+}
+
+
+
+
+
+
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
 
