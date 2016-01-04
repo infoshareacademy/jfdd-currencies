@@ -379,23 +379,27 @@ footer input {
 }
 /************* FOOTER END *************/
 
-/*** FUNKCJONALNOŚCI DODATKOWE START ***/
-.additionalFunct{
+/*** additional functionality START ***/
+.additionalFunctionsIcons{
     width: 33%;
     float: left;
     text-align: center;
     margin: 15px 0 15px 0;
 }
-.additionalSect {
+.additionalSection {
     margin: 0;
     background-image: linear-gradient(#b7b7b7, #f3f3f3);
     padding-bottom: 20px;
 }
-.additionalSect div p {
+.additionalSection div p {
     font-size: 24px;
     font-weight: lighter;
 }
-/**** FUNKCJONALNOŚCI DODATKOWE END ****/
+.sizeLogoButton {
+    width: 206px;
+    height: 206px;
+}
+/*** additional functionality END ***/
 
 .hide{
     opacity:0
