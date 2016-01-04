@@ -50,11 +50,11 @@ form li{
     font-size:20px;
     font-weight:bolder;
 }
-#Kod_Komunikat_numer{
+#div_number_error_massage{
 	height: 20px;
 	color: #C55252;
 }
-#Kod_Komunikat_mail{
+#div_mail_error_massage{
     height:20px;
     color:#C55252;
 }
@@ -432,7 +432,7 @@ footer input {                                             /* wysyłacz newslett
 .show {
     opacity: 1;
 }
-.scrollup {
+.move_to_top {
 
     width: 80px;
     height: 80px;
@@ -444,11 +444,11 @@ footer input {                                             /* wysyłacz newslett
     border-radius:5px;
     opacity:0.2;
 }
-.scrollup:hover {
+.move_to_top:hover {
     opacity:1;
 }
 
-.scrollup img {
+.move_to_top img {
     width: 80px;
     height: 80px;
     border-radius:5px;
