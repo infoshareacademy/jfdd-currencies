@@ -175,9 +175,11 @@ form li{
 /*
 
 1. HEADER
+    1.1 QUICK CONTACT IN HEADER
 2. NAV MENU
 3. CLASS OF HEADER WHEN SCROLLING
-4. HERO
+4. HERO - BIG PICTURE
+5. TITLE ON HERO
 
 */
 
@@ -208,9 +210,9 @@ header {
     opacity: 0.90;
 }
 
-/* 1.1 adres i telefon w lewym górnym rogu */
+/* 1.1 QUICK CONTACT IN HEADER */
 
-#quick_contact {
+#quick-contact-in-header {
     position: absolute;
     top: 10px;
     left:50px;
@@ -265,7 +267,7 @@ li a:hover {
 
 }
 
-/* 4. ZAJAWKA */
+/* 4. HERO - BIG PICTURE */
 
 #hero {
 
@@ -287,24 +289,9 @@ li a:hover {
 
 }
 
-#zajawka-big-sub {
+/* TITLE ON HERO */
 
-    color: inherit;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-
-
-#zajawka-small-sub {
-
-    font-weight: 100;
-    color: inherit;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* kontener, który trzyma hasło */
-
-#zajawka {
+#container-title-on-hero {
     z-index: 1500;
     width: 100%;
     left: 0;
@@ -316,7 +303,23 @@ li a:hover {
     text-shadow: 1px 1px #55585b;
 }
 
-/***** END OF NAV / MENU / ZAJAWKA *****/
+#big-title-on-hero {
+
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+#under-title-on-hero {
+
+    font-weight: 100;
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/***** END OF NAV / MENU / TITLE ON HERO *****/
 
 /************* FOOTER START *************/
 footer {                                                   /* ogólne dla footer */
