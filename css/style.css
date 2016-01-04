@@ -218,9 +218,7 @@ header ul {
     right:10px;
     text-align: center;
     list-style: none;
-    float: right;
     margin: 0 50px 0 0;
-    padding: 0;
 
 }
 
@@ -234,11 +232,8 @@ header li a {
     color: #343434;
 }
 
+.menuItemSelected,
 li a:hover {
-    border-bottom: 2px solid #343434;
-}
-
-.menuItemSelected {
     border-bottom: 2px solid #343434;
 }
 
