@@ -5,13 +5,13 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 800) {
-            $('.scrollup').fadeIn();
+            $('.moveToTop').fadeIn();
         } else {
-            $('.scrollup').fadeOut();
+            $('.moveToTop').fadeOut();
         }
     });
 
-    $('.scrollup').click(function () {
+    $('.moveToTop').click(function () {
         $("html, body").animate({
             scrollTop: 0
         }, 500);
