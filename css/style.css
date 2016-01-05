@@ -1,4 +1,4 @@
-#formularz{
+#formToSend{
     position:relative;
     padding-top:50px;
     height:300px;
@@ -24,6 +24,7 @@ main input:focus {
     border-radius:5px;
     box-shadow: 0 0 10px 1px #71706B;
 }
+main input[type="submit"]:focus,
 main input[type="submit"] {
     width:80px;
     height:35px;
@@ -31,32 +32,22 @@ main input[type="submit"] {
     border-radius:5px;
     font-size:13px;
 }
-main input[type="submit"]:focus {
-    width:80px;
-    height:35px;
-    border:2px solid #bdc7d8;
-    border-radius:5px;
-    font-size:13px;
 
-}
 form {
     margin:0 auto;
 }
 form ul{
-   list-style:none;
+    list-style:none;
 }
 form li{
     color:#71706B;
     font-size:20px;
     font-weight:bolder;
 }
-#Kod_Komunikat_numer{
-	height: 20px;
-	color: #C55252;
-}
-#Kod_Komunikat_mail{
-    height:20px;
-    color:#C55252;
+#divNumberErrorMassage,
+#divMailErrorMassage{
+    height: 20px;
+    color: #C55252;
 }
 
 #functionsTitle  {
@@ -69,7 +60,7 @@ form li{
 }
 
 #functionsTitle h1  {
-       font-weight:100;
+    font-weight:100;
 }
 
 #functions  {
@@ -106,8 +97,6 @@ form li{
 
 #functions div p    {
     font-size: 20px;
-    text-align: center;
-    width:100%;
 }
 
 #functions div:hover   {
@@ -218,9 +207,7 @@ header ul {
     right:10px;
     text-align: center;
     list-style: none;
-    float: right;
     margin: 0 50px 0 0;
-    padding: 0;
 
 }
 
@@ -234,11 +221,8 @@ header li a {
     color: #343434;
 }
 
+.menuItemSelected,
 li a:hover {
-    border-bottom: 2px solid #343434;
-}
-
-.menuItemSelected {
     border-bottom: 2px solid #343434;
 }
 
@@ -289,16 +273,44 @@ li a:hover {
     font-weight: 100;
 }
 
+/* 6. CLASS PL & ENG */
+
+
+.engBlock,
+.engInlineBlock,
+.engInline,
+.hidePolishTxt,
+.hideEnglishTxt {
+    display: none;
+}
+
+.engBlockElement {
+    display: block;
+}
+
+.engInlineBlockElement {
+    display: inline-block;
+}
+
+.engInlineElement {
+    display: inline;
+}
+
+
+
+
+
+
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
 
 /************* FOOTER START *************/
 footer {
-	background-image: linear-gradient(#2c4f85, #000000);
-	color: #ffffff;
-	text-align: center;
-	text-shadow: 1px 1px rgb(0, 0, 0);
-	font-weight: lighter;
+    background-image: linear-gradient(#2c4f85, #000000);
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    font-weight: lighter;
 }
 footer h4 {
     font-weight: lighter;
@@ -407,7 +419,7 @@ footer input {
 .show {
     opacity: 1;
 }
-.scrollup {
+.moveToTop {
 
     width: 80px;
     height: 80px;
@@ -419,11 +431,11 @@ footer input {
     border-radius:5px;
     opacity:0.2;
 }
-.scrollup:hover {
+.moveToTop:hover {
     opacity:1;
 }
 
-.scrollup img {
+.moveToTop img {
     width: 80px;
     height: 80px;
     border-radius:5px;
