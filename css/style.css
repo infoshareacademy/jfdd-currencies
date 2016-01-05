@@ -1,4 +1,4 @@
-#formToSend{
+#formularz{
     position:relative;
     padding-top:50px;
     height:300px;
@@ -51,6 +51,8 @@ main input[type="submit"] {
     font-size:13px;
 }
 
+
+}
 form {
     margin:0 auto;
 }
@@ -115,6 +117,9 @@ form li{
 
 #functions div p    {
     font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width:100%;
 }
 
 #functions div:hover   {
@@ -122,7 +127,8 @@ form li{
 }
 
 #functions div h2   {
-    font-weight: 400;
+    font-weight:600;
+    font-size: 25px;
 }
 
 @media screen and (max-width:800px) {
