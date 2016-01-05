@@ -2,8 +2,9 @@
 // 1. ADDING CLASS TO HEADER WHEN SCROLLBAR > 50
 // 2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
 // 3. FUNCTION "changeHeroImage" WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
-//      3.1 CALLING THIS FUNCTION
 // 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
+// 5. FUNCTION WHICH CHANGES PAGE LANGUAGE
+
 
 $(document).ready(function() {
 
@@ -40,8 +41,6 @@ $(document).ready(function() {
 
     };
 
-// 3.1 CALLING FUNCTION "changeHeroImage"
-
     changeHeroImage($('#firstHero'),$('#secondHero'));
 
 // 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
@@ -70,5 +69,21 @@ $(document).ready(function() {
             'slow');
     });
 
+// 5. FUNCTION WHICH CHANGES PAGE LANGUAGE
+
+
+    $('#jQuerylangEngBtn').click(function () {
+            $('.pl').addClass('hidePolishTxt');
+            $('.engBlock').addClass('engBlockElement');
+            $('.engInlineBlock').addClass('engInlineBlockElement');
+            $('.engInline').addClass('engInlineElement');
+        });
+
+    $('#jQuerylangPlBtn').click(function () {
+        $('.engBlock').removeClass('engBlockElement');
+        $('.engInlineBlock').removeClass('engInlineBlockElement');
+        $('.engInline').removeClass('engInlineElement');
+        $('.pl').removeClass('hidePolishTxt');
+    });
 
 });
