@@ -37,7 +37,7 @@ form {
     margin:0 auto;
 }
 form ul{
-    list-style:none;
+   list-style:none;
 }
 form li{
     color:#71706B;
@@ -46,8 +46,8 @@ form li{
 }
 #divNumberErrorMassage,
 #divMailErrorMassage{
-    height: 20px;
-    color: #C55252;
+	height: 20px;
+	color: #C55252;
 }
 
 #functionsTitle  {
@@ -60,7 +60,7 @@ form li{
 }
 
 #functionsTitle h1  {
-    font-weight:100;
+       font-weight:100;
 }
 
 #functions  {
@@ -306,11 +306,11 @@ li a:hover {
 
 /************* FOOTER START *************/
 footer {
-    background-image: linear-gradient(#2c4f85, #000000);
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 1px 1px rgb(0, 0, 0);
-    font-weight: lighter;
+	background-image: linear-gradient(#2c4f85, #000000);
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 1px 1px rgb(0, 0, 0);
+	font-weight: lighter;
 }
 footer h4 {
     font-weight: lighter;
