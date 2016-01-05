@@ -389,6 +389,15 @@ footer input {
     text-shadow: none;
     padding: 5px;
 }
+.mediaLine {
+    display: inline-block;
+    width: 70px;
+    padding: 0 15px 0 20px;
+}
+.logoMargin {
+    padding: 20px 0 10px 0;
+}
+
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
