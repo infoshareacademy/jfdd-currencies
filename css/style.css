@@ -295,8 +295,27 @@ li a:hover {
 .engInlineElement {
     display: inline;
 }
+#langIcons img  {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin:0;
+    border:none;
+    border-radius: 100%;
 
+    box-shadow: none;
+    box-sizing: initial;
 
+}
+
+#langIcons button, #langIcons button:active    {
+    border-radius: 100%;
+    border: none;
+    width:40px;
+    height: 40px;
+    padding: 0;
+    outline:none;
+}
 
 
 
