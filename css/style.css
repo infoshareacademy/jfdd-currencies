@@ -176,7 +176,6 @@ form li{
 /*
 
 1. HEADER
-    1.1 QUICK CONTACT IN HEADER
 2. NAV MENU
 3. CLASS OF HEADER WHEN SCROLLING
 4. HERO - BIG PICTURE
@@ -207,15 +206,6 @@ header {
     left: 0;
     z-index: 99999999999999;
     opacity: 0.90;
-}
-
-/* 1.1 QUICK CONTACT IN HEADER */
-
-#quickContactInHeader {
-    position: absolute;
-    top: 10px;
-    left:50px;
-    width: 300px;
 }
 
 /* 2. MENU */
