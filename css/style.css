@@ -7,6 +7,24 @@
     text-align:center;
 
 }
+#othello{
+    position:relative;
+    padding-top:50px;
+    height:500px;
+    width:100%;
+}
+.othelloSquare {
+    border: 4px solid black;
+    height:48px;
+    width:48px;
+    background-color:limegreen;
+}
+.othelloBoard {
+    border-collapse: collapse;
+    border: 4px solid black;
+    margin:0 auto;
+}
+
 main input {
     margin-top:10px;
     width:300px;
@@ -163,7 +181,6 @@ form li{
 /*
 
 1. HEADER
-    1.1 QUICK CONTACT IN HEADER
 2. NAV MENU
 3. CLASS OF HEADER WHEN SCROLLING
 4. HERO - BIG PICTURE
@@ -194,15 +211,6 @@ header {
     left: 0;
     z-index: 99999999999999;
     opacity: 0.90;
-}
-
-/* 1.1 QUICK CONTACT IN HEADER */
-
-#quickContactInHeader {
-    position: absolute;
-    top: 10px;
-    left:50px;
-    width: 300px;
 }
 
 /* 2. MENU */
