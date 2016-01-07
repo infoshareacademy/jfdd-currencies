@@ -419,7 +419,7 @@ footer input {
     font-size: 12px;
     color: white;
     text-shadow: none;
-    padding: 5px;
+    padding: 5px 40px 5px 5px;
 }
 
 .logoMargin {
@@ -450,14 +450,16 @@ footer input {
 /*** additional functionality END ***/
 
 .informationAboutCookies {
-    position:fixed;
-    top: 0;
-    left: 0;
+    color: #ffffff;
+    padding: 30px;
+    position: fixed;
     z-index: 2001;
     background-image: linear-gradient(#000000,#2c4f85);
     width: 100%;
-    height: 200px;
-
+    height: 100px;
+    box-shadow: 0 0 35px 10px rgba(0,0,0,1);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .hide{
