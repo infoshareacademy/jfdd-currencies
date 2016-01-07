@@ -317,7 +317,6 @@ header button img  {
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
-
 }
 
 header button, header button:active    {
@@ -328,12 +327,8 @@ header button, header button:active    {
     border-radius: 100%;
     border: none;
     outline: none;
-
-
+    cursor: pointer;
 }
-
-
-
 
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
