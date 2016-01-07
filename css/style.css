@@ -330,6 +330,11 @@ footer h4 {
     background: rgb(120, 42, 40);
     border-radius: 100%;
 }
+.mediaLine {
+    display: inline-block;
+    width: 70px;
+    padding: 0 15px 0 20px;
+}
 .footerContent {
     height: 130px;
     float: left;
@@ -389,11 +394,7 @@ footer input {
     text-shadow: none;
     padding: 5px;
 }
-.mediaLine {
-    display: inline-block;
-    width: 70px;
-    padding: 0 15px 0 20px;
-}
+
 .logoMargin {
     padding: 20px 0 10px 0;
 }
