@@ -65,7 +65,7 @@ $(document).ready(function() {
 
     $("#link-kontakt").click(function() {
         $('html,body').animate({
-                scrollTop: $("#formularz").offset().top},
+                scrollTop: $("#formToSend").offset().top},
             'slow');
     });
 
