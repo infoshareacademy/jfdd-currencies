@@ -207,7 +207,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999999999999;
+    z-index: 1000;
     opacity: 0.90;
 }
 
@@ -361,7 +361,7 @@ footer h4 {
     margin: 5px 15px 5px 15px;
 }
 .socialButton:hover {
-    background: rgb(120, 42, 40);
+    background: rgba(255, 169, 49, 0.75);
     border-radius: 100%;
 }
 .mediaLine {
@@ -448,6 +448,17 @@ footer input {
     height: 206px;
 }
 /*** additional functionality END ***/
+
+.informationAboutCookies {
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background-color: rgb(38, 95, 143);
+    width: 100%;
+    height: 200px;
+
+}
 
 .hide{
     opacity:0
