@@ -295,26 +295,29 @@ li a:hover {
 .engInlineElement {
     display: inline;
 }
-#langIcons img  {
+
+header button img  {
     width: 40px;
     height: 40px;
-    padding: 0;
-    margin:0;
-    border:none;
+    padding: 0 10px 0 10px;
+    margin-left:-22px;
+    margin-top:-2px;
     border-radius: 100%;
-
     box-shadow: none;
     box-sizing: initial;
 
 }
 
-#langIcons button, #langIcons button:active    {
+header button, header button:active    {
+    width: 35px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
     border-radius: 100%;
     border: none;
-    width:40px;
-    height: 40px;
-    padding: 0;
-    outline:none;
+    outline: none;
+
+
 }
 
 
