@@ -200,45 +200,59 @@
 </main>
 
 <!-- FOOTER START -->
-<footer>
+<footer data-animate="fadeIn">
     <div class="socialMediaButton">
-        <a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="socialButton" src="image/facebook.png" alt="facebook" title="facebook"></a>
-        <a href="https://plus.google.com/collections/featured" target="_blank"><img class="socialButton" src="image/google_plus.png" alt="google+" title="google+"></a>
-        <a href="https://twitter.com/?lang=pl" target="_blank"><img class="socialButton" src="image/twitter.png" alt="twitter" title="twitter"></a>
-        <h4>Facebook &bull; Google+ &bull; Twitter</h4>
+        <div class="mediaLine">
+            <div><a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="socialButton" src="image/facebook.png" alt="facebook" title="facebook"></a></div>
+            <div>Facebook</div>
+        </div>
+        <div class="mediaLine">
+            <div><a href="https://plus.google.com/collections/featured" target="_blank"><img class="socialButton" src="image/google_plus.png" alt="google+" title="google+"></a></div>
+            <div>Google +</div>
+        </div>
+        <div class="mediaLine">
+            <div><a href="https://twitter.com/?lang=pl" target="_blank"><img class="socialButton" src="image/twitter.png" alt="twitter" title="twitter"></a></div>
+            <div>Twitter</div>
+        </div>
     </div>
     <div>
-        <div class="footerContent txtRight">
+        <div class="footerContent txtRight pl">
             <ul style="list-style-type:none">
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Produkty</a></li>
-                <li><a href="pdf/regulamin_cinkciarz_pl_v6.pdf" target="_blank">Regulamin</a></li>
                 <li><a href="#formToSend">Kontakt</a></li>
-                <li><a href="">Regulamin</a></li>
-
-
+                <li><a href="pdf/regulamin.pdf" target="_blank">Regulamin</a></li>
+                <li><a href="pdf/politykaCookies.pdf" target="_blank">Polityka cookies</a></li>
             </ul>
         </div>
+        <div class="footerContent txtRight engBlock">
+            <ul style="list-style-type:none">
+                <li><a href="#">Start</a></li>
+                <li><a href="#functions">Products</a></li>
+                <li><a href="#formToSend">Contact</a></li>
+                <li><a href="pdf/regulamin.pdf" target="_blank">Regulations</a></li>
+                <li><a href="pdf/politykaCookies.pdf" target="_blank">Cookies policy</a></li>
+            </ul>
+        </div>
+
         <div class="footerContent">
             <p class="pl">
-                <br>Monitor Kursów Walut<br>
-            3 Hanover Square #8<br>
-            New York<br>
-
-            e-mail: waluty@kasa.pl<br>
-            tel.: +48 789 456 123<br>
+                Monitor Kursów Walut<br>
+                3 Hanover Square #8<br>
+                New York City<br>
+                e-mail: waluty@kasa.pl<br>
+                tel.: +48 789 456 123<br>
             </p>
             <p class="engBlock">
-                <br>Monitor exchange rates<br>
+                Monitor exchange rates<br>
                 3 Hanover Square #8<br>
-                New York<br>
-
+                New York City<br>
                 e-mail: waluty@kasa.pl<br>
                 tel.: +48 789 456 123<br>
             </p>
         </div>
         <div class="footerContent txtLeft">
-            <a href="https://www.walutomat.pl" target="_blank"><img src="image/logo.png" class="logoButton" alt=" logo firmowe" title="logo button"></a>
+            <img src="image/logo.png" class="logoMargin" alt=" logo firmowe" title="Waluty on-line">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
                 <input type="email" title="e-mail" placeholder="wpisz e-maila...">
                 <input type="hidden" name="receiver" value="siwexx@tlen.pl">
@@ -248,11 +262,7 @@
     </div>
     <div class="clear"></div>
     <div class="footerCopyright">
-        <p class="pl">copyright &copy;<script type="text/javascript" src="js/AktualnaData.js"></script> &bull; All rights reserved &bull; Monitor Kursów Walut
-    </p>
-
-        <p class="engBlock">copyright &copy;<script type="text/javascript" src="js/AktualnaData.js"></script> &bull; All rights reserved &bull; Monitor Exchange Rates
-        </p>
+        <p>copyright &copy; <span id="currentYear"></span> &bull; All rights reserved</p>
     </div>
 </footer>
 <!-- FOOTER END -->
@@ -262,7 +272,6 @@
 <script src="js/jquery.viewportchecker.min.js"></script>
 <script src="js/animacje.js"></script>
 <script src="js/scrollUp.js"></script>
-<script src="js/AktualnaData.js"></script>
 
 </body>
 </html>

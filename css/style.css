@@ -51,8 +51,6 @@ main input[type="submit"] {
     font-size:13px;
 }
 
-
-}
 form {
     margin:0 auto;
 }
@@ -366,6 +364,11 @@ footer h4 {
     background: rgb(120, 42, 40);
     border-radius: 100%;
 }
+.mediaLine {
+    display: inline-block;
+    width: 70px;
+    padding: 0 40px 0 20px;
+}
 .footerContent {
     height: 130px;
     float: left;
@@ -387,25 +390,18 @@ footer li a:hover {
 .txtLeft {
     text-align: left;
     border-right: 0;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 .logoButton {
     padding-top: 20px;
     padding-bottom: 20px;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -moz-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    -webkit-transform: scale(0.9);
+    transition: all 1s ease-in;
+    transform: scale(1.0);
+
 }
 .logoButton:hover {
-    -o-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    -webkit-transition: all 0.6s;
-    -moz-transform: scale(1.0);
-    -o-transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transition: all 1s;
+    transform: scale(1.3);
 }
 footer input {
     border: solid 1px rgba(255, 255, 255, 0.31);
@@ -425,6 +421,11 @@ footer input {
     text-shadow: none;
     padding: 5px;
 }
+
+.logoMargin {
+    padding: 20px 0 10px 0;
+}
+
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
