@@ -36,22 +36,19 @@ $(document).ready(function() {
             $('#link-produkt').addClass('menuItemSelected');
         }
 
-        if (scroll >= $("#ourTeam").offset().top && scroll <= $("#formToSend").offset().top) {
+        if (scroll >= $("#ourTeam").offset().top - 2 && scroll <= $("#formToSend").offset().top) {
             $('.menuItem').removeClass('menuItemSelected');
             $('#link-zespol').addClass('menuItemSelected');
         }
 
-        if (scroll >= $("#formToSend").offset().top) {
+        if (scroll >= $("#formToSend").offset().top - 2) {
             $('.menuItem').removeClass('menuItemSelected');
             $('#link-kontakt').addClass('menuItemSelected');
         }
 
     });
 
-    $(".menuItem").click(function(){
-        $('.menuItem').removeClass('menuItemSelected');
-        $(this).addClass('menuItemSelected');
-    });
+
 
 // 3. FUNCTION WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
 
