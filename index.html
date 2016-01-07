@@ -188,8 +188,17 @@
     <section id="othello">
 
         <table class='othelloBoard' >
-            <script src="js/othello.js"></script>
+            <script>
+                for (var x = 1; x < 9; ++x) {
+                document.write('<tr>');
+                for (var y = 1; y < 9; ++y) {
+                    document.write('<td class=othelloSquare id=' + x + y + '>' + '</td>');
+                }
+                document.write('</tr>');
+                }
+            </script>
         </table>
+        <div id="raport"></div>
     </section>
 </main>
 
@@ -254,6 +263,7 @@
 <script src="js/animacje.js"></script>
 <script src="js/scrollUp.js"></script>
 <script src="js/AktualnaData.js"></script>
+    <script src="js/othello.js"></script>
 
 </body>
 </html>

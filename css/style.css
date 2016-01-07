@@ -24,6 +24,12 @@
     border: 4px solid black;
     margin:0 auto;
 }
+.monetaGry{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    padding:4px 0 0 4px;
+}
 
 main input {
     margin-top:10px;
