@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Strona pozwala monitorować wartości kursów walut i porównywać je w czasie">
+    <meta name="author" content="FunkyPro">
+    <meta name="keywords"
+          content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
+    <title>Monitor Kursu Walut</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/podstronafunkcjonalnosci.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
+    <link rel="icon" href="image/favicon.ico">
+</head>
+<body>
+<!--    <div class="informationAboutCookies">
+        <span>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych,
+            reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich
+            potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce,
+            dzięki czemu nie będą zbierane żadne informacje.
+        </span>
+    </div>-->
+
+    <div id="start"></div>
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#start" class="menuItem" id="link-start">START</a></li>
+                <li><a href="#functions" class="menuItem" id="link-produkt">PRODUKTY</a></li>
+                <li><a href="#formToSend" class="menuItem" id="link-kontakt">KONTAKT</a></li>
+            </ul>
+        </nav>
+
+
+        <button id="jQuerylangEngBtn" class="langEngBtn">
+            <img src="image/eng.png" title="English" alt="English"/>
+        </button>
+        <button id="jQuerylangPlBtn" class="langPlBtn">
+            <img src="image/pl.png" title="Polski" alt="Polski"/>
+        </button>
+
+    </header>
+
+    <div class="col-12 currenciesChartsHeading">
+        <h1 class="fancy"><span>AKTUALNE KURSY WALUT</span></h1>
+    </div>
+    <div class="clear"></div>
+
+    <div class="col-12 primaryDescriptionOfFunction">
+        <p>
+            Wyświetl najbardziej aktualne kursy walut obcych na
+            podstawie notowań Narodowego Banku Polskiego.
+            Kurs euro, dolara, funta, franka, korony i wiele innych.
+        </p>
+    </div>
+    <div class="clear"></div>
+
+    <section>
+
+        <div class="col-6 description">
+            <img src="image/icon-review.png" class="iconInDescription">
+            <h2>Przegląd aktualnych walut</h2>
+            <img src="image/currenc.jpg" class="pictureOfFunc">
+            <p>
+                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.
+            </p>
+        </div>
+        <div class="col-6 description">
+            <img src="image/icon-responsive.png" class="iconInDescription">
+            <h2>Pełna responsywność</h2>
+            <img src="image/flex.png" class="pictureOfFunc">
+            <p>
+                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.
+            </p>
+        </div>
+
+    </section>
+<div class="clear">
+
+
+
+
+
+
+
+    <section id="formToSend" data-animate="fadeIn">
+        <a href="#" class="moveToTop"><img src="image/strzalka.jpg" alt="tu powinien być obrazek"></a>
+        <form name="sendForm" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+            <ul>
+                <li class="pl">Wypełnij formularz, skontaktujemy się z Tobą!</li>
+                <li class="engInline">Fill out the form, we will contact you!</li>
+                <li><input type="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"></li>
+                <div id="divNumberErrorMassage"></div>
+                <li><input type="email" id="email" name="email" placeholder="Adres e-mail"></li>
+                <div id="divMailErrorMassage"></div>
+                <li><input type="hidden" name="receiver" value="l.komajda@wp.pl"></li>
+                <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij"></li>
+
+            </ul>
+        </form>
+    </section>
+
+
+
+<!-- FOOTER START -->
+<footer data-animate="fadeIn">
+    <div class="socialMediaButton">
+        <div class="mediaLine">
+            <div><a href="https://www.facebook.com/infoshareacademy" target="_blank"><img class="socialButton" src="image/facebook.png" alt="facebook" title="facebook"></a></div>
+            <div>Facebook</div>
+        </div>
+        <div class="mediaLine">
+            <div><a href="https://plus.google.com/collections/featured" target="_blank"><img class="socialButton" src="image/google_plus.png" alt="google+" title="google+"></a></div>
+            <div>Google +</div>
+        </div>
+        <div class="mediaLine">
+            <div><a href="https://twitter.com/?lang=pl" target="_blank"><img class="socialButton" src="image/twitter.png" alt="twitter" title="twitter"></a></div>
+            <div>Twitter</div>
+        </div>
+    </div>
+    <div>
+        <div class="footerContent txtRight pl">
+            <ul style="list-style-type:none">
+                <li><a href="#">Start</a></li>
+                <li><a href="#functions">Produkty</a></li>
+                <li><a href="#formToSend">Kontakt</a></li>
+                <li><a href="pdf/regulamin.pdf" target="_blank">Regulamin</a></li>
+                <li><a href="pdf/politykaCookies.pdf" target="_blank">Polityka cookies</a></li>
+            </ul>
+        </div>
+        <div class="footerContent txtRight engBlock">
+            <ul style="list-style-type:none">
+                <li><a href="#">Start</a></li>
+                <li><a href="#functions">Products</a></li>
+                <li><a href="#formToSend">Contact</a></li>
+                <li><a href="pdf/regulamin.pdf" target="_blank">Regulations</a></li>
+                <li><a href="pdf/politykaCookies.pdf" target="_blank">Cookies policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footerContent">
+            <p class="pl">
+                Monitor Kursów Walut<br>
+                3 Hanover Square #8<br>
+                New York City<br>
+                e-mail: waluty@kasa.pl<br>
+                tel.: +48 789 456 123<br>
+            </p>
+            <p class="engBlock">
+                Monitor Exchange Rates<br>
+                3 Hanover Square #8<br>
+                New York City<br>
+                e-mail: waluty@kasa.pl<br>
+                tel.: +48 789 456 123<br>
+            </p>
+        </div>
+        <div class="footerContent txtLeft">
+            <img src="image/logo.png" class="logoMargin" alt=" logo firmowe" title="Waluty on-line">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
+                <input type="email" title="e-mail" placeholder="wpisz e-maila...">
+                <input type="hidden" name="receiver" value="siwexx@tlen.pl">
+                <input type="submit" value="newsletter">
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footerCopyright">
+        <p>copyright &copy; <span id="currentYear"></span> &bull; All rights reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/walidacja_formularza.js"></script>
+<script src="js/jquery.viewportchecker.min.js"></script>
+<script src="js/animacje.js"></script>
+<script src="js/scrollUp.js"></script>
+<script src="js/AktualnaData.js"></script>
+<script src="js/othello.js"></script>
+
+</body>
+</html>
