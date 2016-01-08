@@ -393,7 +393,7 @@ footer li a:hover {
     padding-left: 10px;
 }
 .logoButton {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
     transition: all 1s ease-in;
     transform: scale(1.0);
@@ -401,7 +401,7 @@ footer li a:hover {
 }
 .logoButton:hover {
     transition: all 1s;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 footer input {
     border: solid 1px rgba(255, 255, 255, 0.31);
@@ -449,17 +449,14 @@ footer input {
 }
 /*** additional functionality END ***/
 
-.informationAboutCookies {
+body .informationAboutCookies {
     color: #ffffff;
-    padding: 30px;
+    padding: 50px 30px 30px 30px;
     position: fixed;
     z-index: 2001;
     background-image: linear-gradient(#000000,#2c4f85);
     width: 100%;
-    height: 100px;
     box-shadow: 0 0 35px 10px rgba(0,0,0,1);
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .hide{
