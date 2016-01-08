@@ -442,16 +442,19 @@ footer input {
 }
 /*** additional functionality END ***/
 
-/*** Coocies Information START ***/
+/*** Information about cookies START ***/
 
-.informationAboutCookies {
+#informationAboutCookies {
     text-align: justify;
-    background-image: linear-gradient(#000000,#2c4f85);
+    font-size: 12px;
+    line-height: 2;
+    background-color: rgba(38, 69, 117, 1);
     color: #ffffff;
     position: fixed;
     z-index: 2001;
-    padding: 25px;
-    box-shadow: 0 0 35px 10px rgba(0,0,0,1);
+    padding: 20px;
+    box-shadow: 0 0 35px 10px rgb(0, 0, 0);
+    border-bottom: solid 5px #ffc93e;
 }
 .coociesIcon {
     margin-left: 25px;
@@ -464,13 +467,13 @@ footer input {
     filter: invert(100%);
 }
 .coociesIcon:hover {
-    -moz-filter: invert(45%);
-    -webkit-filter: invert(45%);
-    -o-filter: invert(45%);
-    -ms-filter: invert(45%);
+    -moz-filter: invert(75%);
+    -webkit-filter: invert(75%);
+    -o-filter: invert(75%);
+    -ms-filter: invert(75%);
 }
 
-/*** Coocies Information END ***/
+/*** Information about cookies END ***/
 
 .hide{
     opacity:0
