@@ -328,13 +328,7 @@ header button, header button:active    {
     border-radius: 100%;
     border: none;
     outline: none;
-
-
 }
-
-
-
-
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
 
@@ -425,7 +419,6 @@ footer input {
 .logoMargin {
     padding: 20px 0 10px 0;
 }
-
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
@@ -449,15 +442,35 @@ footer input {
 }
 /*** additional functionality END ***/
 
+/*** Coocies Information START ***/
+
 .informationAboutCookies {
+    text-align: justify;
+    background-image: linear-gradient(#000000,#2c4f85);
     color: #ffffff;
-    padding: 50px 30px 30px 30px;
     position: fixed;
     z-index: 2001;
-    background-image: linear-gradient(#000000,#2c4f85);
-    width: 100%;
+    padding: 25px;
     box-shadow: 0 0 35px 10px rgba(0,0,0,1);
 }
+.coociesIcon {
+    margin-left: 25px;
+    z-index: 2002;
+    float: right;
+    -moz-filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%);
+}
+.coociesIcon:hover {
+    -moz-filter: invert(45%);
+    -webkit-filter: invert(45%);
+    -o-filter: invert(45%);
+    -ms-filter: invert(45%);
+}
+
+/*** Coocies Information END ***/
 
 .hide{
     opacity:0
