@@ -36,15 +36,14 @@
 .niebo{
     overflow:hidden;
     width:100%;
-    height:100%;
-    animation:pogoda 10s infinite normal linear;
+    animation:pogoda 20s infinite normal linear;
 }
 #ziemia{
     position:absolute;
     bottom:0;
     width:100%;
     height:20%;
-    animation: trawa 10s infinite normal linear;
+    animation: trawa 20s infinite normal linear;
     background-color:#66cc33;
     z-index:2;
 }
@@ -58,7 +57,7 @@
     background-color:yellow;
     border-radius:100%;
     overflow:hidden;
-    animation:slonce 10s infinite normal linear,
+    animation:slonce 20s infinite normal linear,
     promienie 1s infinite;
     box-shadow: 0 0 10px yellow;
 }
@@ -72,7 +71,7 @@
     background-color:white;
     border-radius:100%;
     overflow:hidden;
-    animation:ksiezyc 10s 5s infinite normal linear;
+    animation:ksiezyc 20s 10s infinite normal linear;
     opacity:0;
 }
 #wiatrak{
@@ -83,7 +82,7 @@
     height:150px;
     width:200px;
     background-color:#97694F;
-    animation:budynek 10s infinite normal linear;
+    animation:budynek 20s infinite normal linear;
 }
 #drzwi{
     position:absolute;
@@ -93,7 +92,7 @@
     left:100px;
     bottom:50px;
     background-color:black;
-    animation:drzwi 10s infinite normal linear;
+    animation:drzwi 20s infinite normal linear;
 }
 #dach{
     position:absolute;
@@ -105,7 +104,7 @@
     border-bottom:140px solid green;
     border-left:130px solid transparent;
     border-right:130px solid transparent;
-    animation:dach 10s infinite normal linear;
+    animation:dach 20s infinite normal linear;
 }
 #korba{
     position:absolute;
@@ -116,62 +115,31 @@
     width:45px;
     background-color:grey;
     border-radius:100%;
-    animation:kolor_korba 10s infinite normal linear;
+    animation:kolor_korba 20s infinite normal linear;
+}
+.skrzydlo{
+    position:absolute;
+    z-index:3;
+    bottom:220px;
+    left:45px;
+    height:0;
+    width:20px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 120px solid grey;
+    transform-origin:100% 50%;
 }
 #skrzydlo1{
-    position:absolute;
-    z-index:3;
-    bottom:220px;
-    left:45px;
-    height:0;
-    width:20px;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent;
-    border-left: 120px solid grey;
-    transform-origin:100% 50%;
-    animation:wiatrak 10s infinite normal linear, kolor_wiatrak 10s infinite normal linear;
+    animation:wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
 }
 #skrzydlo2{
-    position:absolute;
-    z-index:3;
-    bottom:220px;
-    left:45px;
-    height:0;
-    width:20px;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent;
-    border-left: 120px solid grey;
-    transform:rotate(90deg);
-    transform-origin:100% 50%;
-    animation:wiatrak1 10s  infinite normal linear,kolor_wiatrak 10s infinite normal linear;
+    animation:wiatrak1 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
 #skrzydlo3{
-    position:absolute;
-    z-index:3;
-    bottom:220px;
-    left:45px;
-    height:0;
-    width:20px;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent;
-    border-left: 120px solid grey;
-    transform:rotate(180deg);
-    transform-origin:100% 50%;
-    animation:wiatrak2 10s  infinite normal linear,kolor_wiatrak 10s infinite normal linear;
+    animation:wiatrak2 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
 #skrzydlo4{
-    position:absolute;
-    z-index:3;
-    bottom:220px;
-    left:45px;
-    height:0;
-    width:20px;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent;
-    border-left: 120px solid grey;
-    transform:rotate(270deg);
-    transform-origin:100% 50%;
-    animation:wiatrak3 10s  infinite normal linear,kolor_wiatrak 10s infinite normal linear;
+    animation:wiatrak3 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
 /* animacje*/
 @keyframes pogoda{
