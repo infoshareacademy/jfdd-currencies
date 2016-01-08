@@ -45,6 +45,7 @@
     height:20%;
     animation: trawa 10s infinite normal linear;
     background-color:#66cc33;
+    z-index:2;
 }
 #slonce{
     position:absolute;
@@ -183,9 +184,9 @@
     100%{background-color:#003300}
 }
 @keyframes slonce{
-    0% {top:400px; left:-100px;}
+    0% {top:450px; left:-100px;}
     50% {top:100px; left:450px;}
-    100%  {top:400px; left:1100px;}
+    100%  {top:450px; left:1100px;}
 }
 @keyframes promienie{
     0% {box-shadow: 0 0 10px yellow;}
@@ -193,9 +194,9 @@
     100%  {box-shadow: 0 0 30px yellow;}
 }
 @keyframes ksiezyc{
-    0% {top:400px; left:-100px;opacity:0.2;}
+    0% {top:450px; left:-100px;opacity:0.2;}
     50% {top:100px; left:450px;opacity:1;}
-    100%  {top:400px; left:1100px;opacity:0.2;}
+    100%  {top:450px; left:1100px;opacity:0.2;}
 }
 @keyframes wiatrak{
     0% {transform:rotate(0deg);}
