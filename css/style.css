@@ -449,7 +449,7 @@ footer input {
 }
 /*** additional functionality END ***/
 
-body .informationAboutCookies {
+.informationAboutCookies {
     color: #ffffff;
     padding: 50px 30px 30px 30px;
     position: fixed;
