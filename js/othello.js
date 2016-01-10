@@ -113,7 +113,7 @@ $('#startOthelloButton').click(function () {
     setTimeout(function(){
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
-    }, 4000);
+    }, 3200);
 });
 
 
