@@ -1,4 +1,4 @@
-#formularz{
+#formToSend{
     position:relative;
     padding-top:50px;
     height:300px;
@@ -20,10 +20,196 @@
     background-color:limegreen;
 }
 .othelloBoard {
+    position:relative;
     border-collapse: collapse;
     border: 4px solid black;
     margin:0 auto;
+    z-index:100;
 }
+
+.monetaGry{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    padding:4px 0 0 4px;
+}
+/* animacja */
+.niebo{
+    overflow:hidden;
+    width:100%;
+    animation:pogoda 20s infinite normal linear;
+}
+#ziemia{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:20%;
+    animation: trawa 20s infinite normal linear;
+    background-color:#66cc33;
+    z-index:2;
+}
+#slonce{
+    position:absolute;
+    z-index:1;
+    top:400px;
+    left:-100px;
+    width:100px;
+    height:100px;
+    background-color:yellow;
+    border-radius:100%;
+    overflow:hidden;
+    animation:slonce 20s infinite normal linear,
+    promienie 1s infinite;
+    box-shadow: 0 0 10px yellow;
+}
+#ksiezyc{
+    position:absolute;
+    z-index:1;
+    top:100px;
+    left:450px;
+    width:100px;
+    height:100px;
+    background-color:white;
+    border-radius:100%;
+    overflow:hidden;
+    animation:ksiezyc 20s 10s infinite normal linear;
+    opacity:0;
+}
+#wiatrak{
+    position:absolute;
+    z-index:3;
+    bottom:50px;
+    left:85px;
+    height:150px;
+    width:200px;
+    background-color:#97694F;
+    animation:budynek 20s infinite normal linear;
+}
+#drzwi{
+    position:absolute;
+    z-index:4;
+    height:50px;
+    width:30px;
+    left:100px;
+    bottom:50px;
+    background-color:black;
+    animation:drzwi 20s infinite normal linear;
+}
+#dach{
+    position:absolute;
+    z-index:2;
+    bottom:200px;
+    left:55px;
+    height:0;
+    width:0;
+    border-bottom:140px solid green;
+    border-left:130px solid transparent;
+    border-right:130px solid transparent;
+    animation:dach 20s infinite normal linear;
+}
+#korba{
+    position:absolute;
+    z-index:2;
+    bottom:231px;
+    left:162px;
+    height:45px;
+    width:45px;
+    background-color:grey;
+    border-radius:100%;
+    animation:kolor_korba 20s infinite normal linear;
+}
+.skrzydlo{
+    position:absolute;
+    z-index:3;
+    bottom:220px;
+    left:45px;
+    height:0;
+    width:20px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 120px solid grey;
+    transform-origin:100% 50%;
+}
+#skrzydlo1{
+    animation:wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+#skrzydlo2{
+    animation:wiatrak1 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+#skrzydlo3{
+    animation:wiatrak2 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+#skrzydlo4{
+    animation:wiatrak3 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+/* animacje*/
+@keyframes pogoda{
+    0% {background-color:#000033}
+    50% {background-color:#0066ff}
+    100%{background-color:#000033}
+}
+@keyframes trawa{
+    0% {background-color:#003300}
+    50% {background-color:#66cc33}
+    100%{background-color:#003300}
+}
+@keyframes slonce{
+    0% {top:450px; left:-100px;}
+    50% {top:100px; left:450px;}
+    100%  {top:450px; left:1100px;}
+}
+@keyframes promienie{
+    0% {box-shadow: 0 0 10px yellow;}
+    50% {box-shadow: 0 0 20px yellow;}
+    100%  {box-shadow: 0 0 30px yellow;}
+}
+@keyframes ksiezyc{
+    0% {top:450px; left:-100px;opacity:0.2;}
+    50% {top:100px; left:450px;opacity:1;}
+    100%  {top:450px; left:1100px;opacity:0.2;}
+}
+@keyframes wiatrak{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes wiatrak1{
+    0% {transform:rotate(90deg);}
+    100% {transform:rotate(450deg);}
+}
+@keyframes wiatrak2{
+    0% {transform:rotate(180deg);}
+    100% {transform:rotate(540deg);}
+}
+@keyframes wiatrak3{
+    0% {transform:rotate(270deg);}
+    100% {transform:rotate(630deg);}
+}
+@keyframes kolor_wiatrak{
+    0% {border-left: 120px solid #3a3a3a;}
+    50% {border-left: 120px solid #666666;}
+    100%{border-left: 120px solid #3a3a3a;}
+}
+@keyframes kolor_korba{
+    0% {background: #3a3a3a;}
+    50% {background: #666666;}
+    100%{background: #3a3a3a;}
+}
+@keyframes budynek{
+    0% {background-color:#4E2F2F}
+    50% {background-color:#97694F}
+    100%{background-color:#4E2F2F}
+}
+@keyframes dach{
+    0% {border-bottom:140px solid #191919;}
+    50% {border-bottom:140px solid #5f5f5f}
+    100%{border-bottom:140px solid #191919}
+}
+@keyframes drzwi{
+    0%{background-color:#000}
+    50%{background-color:#191919}
+    100%{background-color:#000}
+}
+/* koniec animacji */
 
 main input {
     margin-top:10px;
@@ -56,6 +242,7 @@ form {
 }
 form ul{
    list-style:none;
+    padding:0;
 }
 form li{
     color:#71706B;
@@ -186,6 +373,7 @@ form li{
 
 */
 
+
 body {
     margin: 0 !important;
     padding: 0 !important;
@@ -207,7 +395,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999999999999;
+    z-index: 2000;
     opacity: 0.90;
 }
 
@@ -356,7 +544,7 @@ footer h4 {
     margin: 5px 15px 5px 15px;
 }
 .socialButton:hover {
-    background: rgb(120, 42, 40);
+    background: rgba(255, 169, 49, 0.75);
     border-radius: 100%;
 }
 .mediaLine {
@@ -388,7 +576,7 @@ footer li a:hover {
     padding-left: 10px;
 }
 .logoButton {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
     transition: all 1s ease-in;
     transform: scale(1.0);
@@ -396,7 +584,7 @@ footer li a:hover {
 }
 .logoButton:hover {
     transition: all 1s;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 footer input {
     border: solid 1px rgba(255, 255, 255, 0.31);
@@ -414,7 +602,7 @@ footer input {
     font-size: 12px;
     color: white;
     text-shadow: none;
-    padding: 5px;
+    padding: 5px 40px 5px 5px;
 }
 
 .logoMargin {
@@ -444,6 +632,16 @@ footer input {
 }
 /*** additional functionality END ***/
 
+.informationAboutCookies {
+    color: #ffffff;
+    padding: 50px 30px 30px 30px;
+    position: fixed;
+    z-index: 2001;
+    background-image: linear-gradient(#000000,#2c4f85);
+    width: 100%;
+    box-shadow: 0 0 35px 10px rgba(0,0,0,1);
+}
+
 .hide{
     opacity:0
 }
@@ -452,7 +650,7 @@ footer input {
     opacity: 1;
 }
 .moveToTop {
-
+    z-index:50;
     width: 80px;
     height: 80px;
     position: fixed;
