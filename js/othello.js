@@ -1,4 +1,6 @@
 var typeTd = 'czarny';
+
+
 $('.othelloSquare').click(function () {
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
         if (typeTd == 'czarny') {
@@ -94,6 +96,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 }
 $('#startOthelloButton').click(function () {
+
     $('.othelloSquare').removeClass('czarny bialy').html('');
 
 
@@ -105,4 +108,18 @@ $('#startOthelloButton').click(function () {
 
     $('#55').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
 
+
 });
+$('#startOthelloButton').click(function () {
+    $('#gameTextContener').removeClass('stopGameTexts');
+    $('#gameTextContener p').addClass('startGameTexts');
+    setTimeout(function(){
+        $('#gameTextContener p').removeClass('startGameTexts');
+        $('#gameTextContener').addClass('stopGameTexts');
+       }, 4000);
+});
+
+
+
+
+

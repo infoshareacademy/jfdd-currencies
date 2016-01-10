@@ -26,7 +26,76 @@
     margin:0 auto;
     z-index:100;
 }
+#gameTextContener{
+    top:20px;
+    width: 100%;
+    height:600px;
+    position:absolute;
+}
+#startOthelloButton{
+    position:absolute;
+    z-index:600;
+}
+.stopGameTexts{
+    display:none;
+}
+.startGameTexts{
+    position:relative;
+    margin:0;
+    font-weight:bolder;
+    font-size:200px;
+    color:orange;
+    text-align:center;
+    z-index:500;
+    animation:zoomTextGame 4s  1 normal linear;
+}
+.startGameTextLets{
+    opacity:0;
+    animation-delay: 0s;
+}
+.startGameTextStart{
+    opacity:0;
+    animation-delay: 0.5s;
+}
 
+
+@keyframes zoomTextGame {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -200px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    20% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+        transform: scale3d(1, 1, 1) translate3d(0,0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+
+
+    100%{
+        opacity: 0;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0,-50px, 0);
+        transform: scale3d(20, 20, 20) translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+
+}
 .monetaGry{
     width:36px;
     height:36px;
