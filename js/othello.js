@@ -108,16 +108,14 @@ $('#startOthelloButton').click(function () {
 
     $('#55').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
 
-
-});
-$('#startOthelloButton').click(function () {
     $('#gameTextContener').removeClass('stopGameTexts');
     $('#gameTextContener p').addClass('startGameTexts');
     setTimeout(function(){
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
-       }, 4000);
+    }, 4000);
 });
+
 
 
 
