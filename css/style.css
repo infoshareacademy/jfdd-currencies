@@ -96,19 +96,19 @@
     }
 
 }
-.monetaGry{
-    width:36px;
-    height:36px;
+.gameCoin{
+    width:42px;
+    height:42px;
     border-radius:50%;
-    padding:4px 0 0 4px;
+    padding:2px 0 0 2px;
 }
 /* animacja */
-.niebo{
+.skyAnimation{
     overflow:hidden;
     width:100%;
     animation:pogoda 20s infinite normal linear;
 }
-#ziemia{
+#groundAnimation{
     position:absolute;
     bottom:0;
     width:100%;
@@ -117,7 +117,7 @@
     background-color:#66cc33;
     z-index:2;
 }
-#slonce{
+#sunAnimation{
     position:absolute;
     z-index:1;
     top:400px;
@@ -131,7 +131,7 @@
     promienie 1s infinite;
     box-shadow: 0 0 10px yellow;
 }
-#ksiezyc{
+#moonAnimation{
     position:absolute;
     z-index:1;
     top:100px;
@@ -144,7 +144,7 @@
     animation:ksiezyc 20s 10s infinite normal linear;
     opacity:0;
 }
-#wiatrak{
+#windmillAnimation{
     position:absolute;
     z-index:3;
     bottom:50px;
@@ -154,7 +154,7 @@
     background-color:#97694F;
     animation:budynek 20s infinite normal linear;
 }
-#drzwi{
+#doorAnimation{
     position:absolute;
     z-index:4;
     height:50px;
@@ -164,7 +164,7 @@
     background-color:black;
     animation:drzwi 20s infinite normal linear;
 }
-#dach{
+#roofAnimation{
     position:absolute;
     z-index:2;
     bottom:200px;
@@ -176,7 +176,7 @@
     border-right:130px solid transparent;
     animation:dach 20s infinite normal linear;
 }
-#korba{
+#windmillPartAnimation{
     position:absolute;
     z-index:2;
     bottom:231px;
@@ -187,7 +187,7 @@
     border-radius:100%;
     animation:kolor_korba 20s infinite normal linear;
 }
-.skrzydlo{
+.wingsAnimation{
     position:absolute;
     z-index:3;
     bottom:220px;
@@ -199,16 +199,16 @@
     border-left: 120px solid grey;
     transform-origin:100% 50%;
 }
-#skrzydlo1{
+#wing1Animation{
     animation:wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
 }
-#skrzydlo2{
+#wing2Animation{
     animation:wiatrak1 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
-#skrzydlo3{
+#wing3Animation{
     animation:wiatrak2 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
-#skrzydlo4{
+#wing4Animation{
     animation:wiatrak3 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
 }
 /* animacje*/

@@ -1,10 +1,11 @@
 var typeTd = 'czarny';
-
+var randomCoin;
 
 $('.othelloSquare').click(function () {
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
         if (typeTd == 'czarny') {
-            var imgWhite = '<img src="image/srebrnaMoneta.png" class="monetaGry">';
+
+          //  var imgWhite = '<img src="image/srebrnaMoneta.png" class="monetaGry">';
             typeTd = 'bialy';
             if (checkClickedTd($(this))) {
                 pickCoin($(this), imgWhite);
@@ -12,7 +13,7 @@ $('.othelloSquare').click(function () {
             }
         }
         else {
-            var imgBlack = ' <img src="image/zlotaMoneta.png" class="monetaGry">';
+           // var imgBlack = ' <img src="image/zlotaMoneta.png" class="monetaGry">';
             typeTd = 'czarny';
             if (checkClickedTd($(this))) {
                 pickCoin($(this), imgBlack);
@@ -96,17 +97,17 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 }
 $('#startOthelloButton').click(function () {
-
+    randomCurrencyGame();
     $('.othelloSquare').removeClass('czarny bialy').html('');
 
 
-    $('#44').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
+    $('#44').html(imgBlack).addClass('czarny');
 
-    $('#54').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
+    $('#54').html(imgBlack).addClass('czarny');
 
-    $('#45').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
+    $('#45').html(imgWhite).addClass('bialy');
 
-    $('#55').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
+    $('#55').html(imgWhite).addClass('bialy');
 
     $('#gameTextContener').removeClass('stopGameTexts');
     $('#gameTextContener p').addClass('startGameTexts');
@@ -114,10 +115,23 @@ $('#startOthelloButton').click(function () {
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
     }, 3200);
+
 });
 
 
 
+function randomCurrencyGame (){
+    var randomCurrencyPlayer= Math.floor( Math.random() * ( 0 + 5- 1 ) ) ;
+    var randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
+    while(randomCurrencyPlayer == randomCurrencyPlayer2){
+        randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
+    }
+    var allCurrencyType = ['image/monetaZloty.jpg','image/monetaFunt.jpg','image/monetaEuro.jpg','image/monetaKopiejka.jpg','image/monetaKorona.jpg'];
+    player1 =allCurrencyType[randomCurrencyPlayer];
+    player2 =allCurrencyType[randomCurrencyPlayer2];
+    imgWhite = '<img src='+player1+' class="gameCoin">';
+    imgBlack = '<img src='+player2+' class="gameCoin">';
 
+}
 
 
