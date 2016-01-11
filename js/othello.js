@@ -1,28 +1,31 @@
 var typeTd = 'czarny';
-arrayListWhite = [];
-arrayListBlack = [];
+
 
 $('.othelloSquare').click(function () {
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
         if (typeTd == 'czarny') {
-            imgWhite = '<img src="image/zlotaMoneta.png" class="monetaGry">';
+            var imgWhite = '<img src="image/srebrnaMoneta.png" class="monetaGry">';
             typeTd = 'bialy';
-            pickCoin($(this), imgWhite, typeTd);
-            arrayListWhite.push($(this).attr('id'));
-            //zrobic ifa czy funkcja ok i wywolac funkcje wstawiajaca monete
-
+            if (checkClickedTd($(this))) {
+                pickCoin($(this), imgWhite);
+                changeCoin($(this), typeTd, 'czarny',imgWhite);
+            }
         }
         else {
-            imgBlack = ' <img src="image/srebrnaMoneta.png" class="monetaGry">';
+            var imgBlack = ' <img src="image/zlotaMoneta.png" class="monetaGry">';
             typeTd = 'czarny';
-            pickCoin($(this), imgBlack, typeTd);
+            if (checkClickedTd($(this))) {
+                pickCoin($(this), imgBlack);
+                changeCoin($(this), typeTd, 'bialy',imgBlack);
+            }
             arrayListBlack.push($(this).attr('id'));
         }
     }
 
+
 });
-function pickCoin(ClickedTd, imgCoin, typeClass) {
-    var idClickedTd = ClickedTd.attr('id');
+function checkClickedTd(clickedTd) {
+    idClickedTd = clickedTd.attr('id');
     for (var i = -1; i <= 1; i++) {
         for (var j = -1; j <= 1; j++) {
             var cordYclick = parseInt(idClickedTd.charAt(0)),
@@ -32,8 +35,60 @@ function pickCoin(ClickedTd, imgCoin, typeClass) {
                 cordsXY = '#' + cordY + cordX;
 
             if ($(cordsXY).hasClass('bialy') || $(cordsXY).hasClass('czarny')) {
-                $('#' + idClickedTd).html(imgCoin).addClass(typeClass);
-                break;
+                return true;
+            }
+        }
+    }
+
+
+}
+function pickCoin(clickedId, imgCoin) {
+    var idClickedTd = clickedId.attr('id');
+    $('#' + idClickedTd).html(imgCoin).addClass(typeTd);
+
+}
+function changeCoin(clickedId, classTd, classChange, typeImg) {
+    var coinToChange = [];
+    for (var cordYnextTd = -1; cordYnextTd <= 1; cordYnextTd++) {
+        for (var cordXnextTd = -1; cordXnextTd <= 1; cordXnextTd++) {
+            idClickedTd = clickedId.attr('id');
+            var cordYclick = parseInt(idClickedTd.charAt(0)),
+                cordXclick = parseInt(idClickedTd.charAt(1));
+
+            while (true) {
+                //pomiń pole klikane
+                if (cordYnextTd == 0 && cordXnextTd == 0) {
+                    break;
+                }
+                cordXclick = cordXclick + (cordXnextTd);
+                cordYclick = cordYclick + (cordYnextTd);
+                var cordsXY = '#' + cordYclick + cordXclick;
+
+                //jeśli pole nie jest puste
+                if ($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) {
+                    //jeśli sprawdzane pole ma taką samą klasę jak pole klikane
+                    if ($(cordsXY).hasClass(classTd)) {
+                        //jeśli w tablicy znajdują się elementy
+                        if (coinToChange.length > 0) {
+                            //zamień wszystkie klasy na klasę pola klikanego
+                            for (var arrayLength = 0; arrayLength < coinToChange.length; arrayLength++) {
+                                $(coinToChange[arrayLength]).removeClass(classChange);
+                                $(coinToChange[arrayLength]).addClass(classTd);
+                                $(coinToChange[arrayLength]).html(typeImg);
+
+                            }
+                            //wyczyść pola do zamiany
+                            coinToChange = [];
+                        }
+                        //jeśli badana moneta jest przeciwna dodaj pozycję do tablicy
+                    } else if (($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) && $(cordsXY).hasClass(classChange)) {
+                        coinToChange.push(cordsXY);
+                    }
+                    //jeśli pole jest puste, zakończ cordYnextTd badaj następne
+                } else {
+                    coinToChange = [];
+                    break
+                }
             }
         }
     }
@@ -41,16 +96,28 @@ function pickCoin(ClickedTd, imgCoin, typeClass) {
 
 }
 $('#startOthelloButton').click(function () {
-    $('.othelloSquare').removeClass('czarny bialy').html('');
-    $('#44').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
-    arrayListBlack.push(44);
-    $('#54').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
-    arrayListBlack.push(54);
-    $('#45').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
-    arrayListWhite.push(45);
-    $('#55').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
-    arrayListWhite.push(55);
-    arrayListWhite = [];
-    arrayListBlack = [];
 
+    $('.othelloSquare').removeClass('czarny bialy').html('');
+
+
+    $('#44').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
+
+    $('#54').html('<img src="image/zlotaMoneta.png" class="monetaGry">').addClass('czarny');
+
+    $('#45').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
+
+    $('#55').html('<img src="image/srebrnaMoneta.png" class="monetaGry">').addClass('bialy');
+
+    $('#gameTextContener').removeClass('stopGameTexts');
+    $('#gameTextContener p').addClass('startGameTexts');
+    setTimeout(function(){
+        $('#gameTextContener p').removeClass('startGameTexts');
+        $('#gameTextContener').addClass('stopGameTexts');
+    }, 3200);
 });
+
+
+
+
+
+
