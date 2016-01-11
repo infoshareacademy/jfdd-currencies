@@ -94,20 +94,20 @@ $(document).ready(function() {
 
 // 5. COOKIE (SET / GET)
 
-    function setCookie(cname, cvalue, exdays)   {
+    function setCookie(cookieName, cookieValue, expireDays)   {
         var d = new Date();
-        d.setTime (d.getTime() +(exdays*24*60*60*1000));
+        d.setTime (d.getTime() +(expireDays*24*60*60*1000));
         var expires = "expires="+ d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires;
+        document.cookie = cookieName + "=" + cookieValue + ";" + expires;
     }
 
-    function getCookie(cname)   {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i<ca.length; i++)  {
-            var c = ca[i];
-            while (c.charAt(0)==" ") c = c.substring(1);
-            if (c.indexOf(name) ==0) return c.substring(name.length, c.length);
+    function getCookie(cookieName)   {
+        var name = cookieName + "=";
+        var cookieArray = document.cookie.split(';');
+        for(var i=0; i<cookieArray.length; i++)  {
+            var cookie = cookieArray[i];
+            while (cookie.charAt(0)==" ") cookie = cookie.substring(1);
+            if (cookie.indexOf(name) ==0) return cookie.substring(name.length, cookie.length);
         }
         return "";
     }
@@ -146,8 +146,6 @@ $(document).ready(function() {
     else    {
         changeIntoPolski();
     }
-
-
 
 });
 
