@@ -444,35 +444,58 @@ footer input {
 
 /*** Information about cookies START ***/
 
-#informationAboutCookies {
-    text-align: justify;
-    font-size: 12px;
-    line-height: 2;
-    background-color: rgba(38, 69, 117, 1);
-    color: #ffffff;
-    position: fixed;
-    z-index: 2001;
-    padding: 20px;
-    box-shadow: 0 0 35px 10px rgb(0, 0, 0);
-    border-bottom: solid 5px #ffc93e;
-}
-.coociesIcon {
-    margin-left: 25px;
-    z-index: 2002;
-    float: right;
-    -moz-filter: invert(100%);
-    -webkit-filter: invert(100%);
-    -o-filter: invert(100%);
-    -ms-filter: invert(100%);
-    filter: invert(100%);
-}
-.coociesIcon:hover {
-    -moz-filter: invert(75%);
-    -webkit-filter: invert(75%);
-    -o-filter: invert(75%);
-    -ms-filter: invert(75%);
+#cookieinfo * {
+    margin: 0;
+    padding: 0;
 }
 
+#cookieinfo {
+    border-bottom: #eaca1f solid 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(#2c4f85, #000000);
+    padding: 20px;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.75);
+    z-index: 2001;
+}
+
+#cookieinfo h6 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #cdd7da;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+    margin-bottom: 7px;
+}
+
+#cookieinfo p {
+    font-size: 14px;
+    color: #afb4bc;
+    line-height: 1.5em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+}
+
+#cookieinfo a {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #435eb2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+#cookieinfo a:hover {
+    background-color: #d8b720;
+}
 /*** Information about cookies END ***/
 
 .hide{
