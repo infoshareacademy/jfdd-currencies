@@ -224,8 +224,10 @@
 }
 @keyframes slonce{
     0% {top:450px; left:-100px;}
-    50% {top:100px; left:450px;}
-    100%  {top:450px; left:1100px;}
+    25% {top:275px; left:300px;}
+    50% {top:100px; left:700px;}
+    75% {top:275px; left:1100px;}
+    100%  {top:450px; left:1500px;}
 }
 @keyframes promienie{
     0% {box-shadow: 0 0 10px yellow;}
@@ -234,8 +236,10 @@
 }
 @keyframes ksiezyc{
     0% {top:450px; left:-100px;opacity:0.2;}
-    50% {top:100px; left:450px;opacity:1;}
-    100%  {top:450px; left:1100px;opacity:0.2;}
+    25% {top:275px; left:300px;opacity:1;}
+    50% {top:100px; left:700px;opacity:1;}
+   75% {top:275px; left:1100px;opacity:1;}
+    100%  {top:450px; left:1500px;opacity:0.2;}
 }
 @keyframes wiatrak{
     0% {transform:rotate(0deg);}
