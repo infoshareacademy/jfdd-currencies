@@ -69,22 +69,63 @@ $(document).ready(function() {
             'slow');
     });
 
-// 5. FUNCTION WHICH CHANGES PAGE LANGUAGE
+// 5. COOKIE (SET / GET)
+
+    function setCookie(cname, cvalue, exdays)   {
+        var d = new Date();
+        d.setTime (d.getTime() +(exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires;
+    }
+
+    function getCookie(cname)   {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++)  {
+            var c = ca[i];
+            while (c.charAt(0)==" ") c = c.substring(1);
+            if (c.indexOf(name) ==0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
 
 
-    $('#jQuerylangEngBtn').click(function () {
-            $('.pl').addClass('hidePolishTxt');
-            $('.engBlock').addClass('engBlockElement');
-            $('.engInlineBlock').addClass('engInlineBlockElement');
-            $('.engInline').addClass('engInlineElement');
-        });
+// 6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
 
-    $('#jQuerylangPlBtn').click(function () {
+    function changeIntoEnglish()    {
+        $('.pl').addClass('hidePolishTxt');
+        $('.engBlock').addClass('engBlockElement');
+        $('.engInlineBlock').addClass('engInlineBlockElement');
+        $('.engInline').addClass('engInlineElement');
+    }
+    function changeIntoPolski() {
         $('.engBlock').removeClass('engBlockElement');
         $('.engInlineBlock').removeClass('engInlineBlockElement');
         $('.engInline').removeClass('engInlineElement');
         $('.pl').removeClass('hidePolishTxt');
+    }
+
+    $('#jQuerylangEngBtn').click(function () {
+        changeIntoEnglish();
+        setCookie('langCookie', 'english', 30);
+        });
+
+    $('#jQuerylangPlBtn').click(function () {
+        changeIntoPolski();
+        setCookie('langCookie', 'polski', 30);
     });
+
+    var langCookieValue= (getCookie('langCookie'));
+
+    if ( langCookieValue==='english' )      {
+        changeIntoEnglish();
+    }
+
+    else    {
+        changeIntoPolski();
+    }
+
+
 
 });
 
