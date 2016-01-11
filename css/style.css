@@ -451,6 +451,7 @@ footer input {
 
 #informationAboutCookies {
     border-bottom: #eaca1f solid 5px;
+    text-align: justify;
     position: fixed;
     left: 0;
     top: 0;
@@ -494,6 +495,7 @@ footer input {
 }
 
 #informationAboutCookies a:hover {
+    color: #1f1f1f;
     background-color: #d8b720;
     box-shadow: 0 0 10px 3px rgb(27, 31, 117);
 }
