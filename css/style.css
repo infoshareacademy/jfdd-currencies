@@ -444,12 +444,12 @@ footer input {
 
 /*** Information about cookies START ***/
 
-#cookieinfo * {
+#informationAboutCookies * {
     margin: 0;
     padding: 0;
 }
 
-#cookieinfo {
+#informationAboutCookies {
     border-bottom: #eaca1f solid 5px;
     position: fixed;
     left: 0;
@@ -461,22 +461,22 @@ footer input {
     z-index: 2001;
 }
 
-#cookieinfo h6 {
+#informationAboutCookies h6 {
     font-size: 24px;
     font-weight: bold;
-    color: #cdd7da;
+    color: #ffffff;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
     margin-bottom: 7px;
 }
 
-#cookieinfo p {
+#informationAboutCookies p {
     font-size: 14px;
-    color: #afb4bc;
+    color: #ffffff;
     line-height: 1.5em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
 }
 
-#cookieinfo a {
+#informationAboutCookies a {
     display: block;
     position: absolute;
     right: 10px;
@@ -490,11 +490,12 @@ footer input {
     text-align: center;
     text-decoration: none;
     background-color: #435eb2;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 20px 3px rgba(27, 31, 117, 0.50);
 }
 
-#cookieinfo a:hover {
+#informationAboutCookies a:hover {
     background-color: #d8b720;
+    box-shadow: 0 0 10px 3px rgb(27, 31, 117);
 }
 /*** Information about cookies END ***/
 

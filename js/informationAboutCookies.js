@@ -1,13 +1,10 @@
-/**
- * Created by siwexx on 08.01.16.
- */
-(function() {
+function okienko() {
     var container = document.createElement('div'),
         link = document.createElement('a');
 
-    container.setAttribute('id', 'cookieinfo');
+    container.setAttribute('id', 'informationAboutCookies');
     container.setAttribute('class', 'cookie-alert');
-    container.innerHTML = '<h6>Ta strona wykorzystuje pliki cookie</h6><p>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych,reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce,dzięki czemu nie będą zbierane żadne informacje.</p>';
+    container.innerHTML = '<h6>Strona wykorzystuje pliki cookie</h6><p>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych,reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce,dzięki czemu nie będą zbierane żadne informacje.</p>';
 
     link.setAttribute('href', '#');
     link.setAttribute('title', 'Zamknij');
@@ -43,4 +40,5 @@
     document.body.appendChild(container);
 
     return true;
-})();
+}
+okienko();
