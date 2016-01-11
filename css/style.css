@@ -567,7 +567,7 @@ li a:hover {
     display: inline;
 }
 
-header button img  {
+/**header button img  {
     width: 40px;
     height: 40px;
     padding: 0 10px 0 10px;
@@ -576,9 +576,16 @@ header button img  {
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
+} **/
+#jQuerylangEngBtn   {
+    background-image: url("../image/eng.png");
+}
+#jQuerylangPlBtn    {
+    background-image: url("../image/pl.png");
 }
 
 header button, header button:active    {
+    background-color: #5f5f5f;
     width: 35px;
     height: 35px;
     padding: 0 10px 0 10px;
@@ -587,6 +594,7 @@ header button, header button:active    {
     border: none;
     outline: none;
     cursor: pointer;
+    box-shadow: none;
 }
 
 
