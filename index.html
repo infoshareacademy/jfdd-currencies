@@ -14,7 +14,13 @@
     <link rel="icon" href="image/favicon.ico">
 </head>
 <body>
-
+<!--    <div class="informationAboutCookies">
+        <span>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych,
+            reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich
+            potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce,
+            dzięki czemu nie będą zbierane żadne informacje.
+        </span>
+    </div>-->
 
     <div id="start"></div>
 
@@ -191,10 +197,38 @@
 
 
     </section>
-    <section id="othello">
+    <section id="othello" class="niebo">
+        <div id="gameTextContener">
+        <p class=" startGameTextLets  ">Lets </p>
+        <p class=" startGameTextStart "> START!</p>
+        </div>
+    <button id="startOthelloButton">restart</button>
+
+
         <table class='othelloBoard' >
-            <script src="js/othello.js"></script>
+            <script>
+                for (var x = 1; x < 9; ++x) {
+                document.write('<tr>');
+                for (var y = 1; y < 9; ++y) {
+                    document.write('<td class=othelloSquare id=' + x + y + '>' + '</td>');
+                }
+                document.write('</tr>');
+                }
+            </script>
         </table>
+
+        <div id="ziemia"></div>
+        <div id="slonce"></div>
+        <div id="ksiezyc"></div>
+        <div id ="dach"></div>
+        <div id ="wiatrak"></div>
+        <div id ="korba"></div>
+        <div id ="skrzydlo1" class="skrzydlo"></div>
+        <div id ="skrzydlo2" class="skrzydlo"></div>
+        <div id ="skrzydlo3" class="skrzydlo"></div>
+        <div id ="skrzydlo4" class="skrzydlo"></div>
+        <div id ="drzwi"></div>
+
     </section>
 </main>
 
@@ -271,6 +305,7 @@
 <script src="js/jquery.viewportchecker.min.js"></script>
 <script src="js/animacje.js"></script>
 <script src="js/scrollUp.js"></script>
+<script src="js/othello.js"></script>
 
 </body>
 </html>

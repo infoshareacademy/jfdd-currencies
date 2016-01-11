@@ -23,10 +23,32 @@ $(document).ready(function() {
 
 //2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
 
-    $(".menuItem").click(function(){
-        $('.menuItem').removeClass('menuItemSelected');
-        $(this).addClass('menuItemSelected');
+    $(document).scroll(function(){
+        var scroll = $(this).scrollTop();
+
+        if (scroll >= $("#start").offset().top && scroll <= $("#functionsTitle").offset().top) {
+            $('.menuItem').removeClass('menuItemSelected');
+            $('#link-start').addClass('menuItemSelected');
+        }
+
+        if (scroll >= $("#functionsTitle").offset().top && scroll <= $("#ourTeam").offset().top) {
+            $('.menuItem').removeClass('menuItemSelected');
+            $('#link-produkt').addClass('menuItemSelected');
+        }
+
+        if (scroll >= $("#ourTeam").offset().top - 2 && scroll <= $("#formToSend").offset().top) {
+            $('.menuItem').removeClass('menuItemSelected');
+            $('#link-zespol').addClass('menuItemSelected');
+        }
+
+        if (scroll >= $("#formToSend").offset().top - 2) {
+            $('.menuItem').removeClass('menuItemSelected');
+            $('#link-kontakt').addClass('menuItemSelected');
+        }
+
     });
+
+
 
 // 3. FUNCTION WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
 
@@ -53,7 +75,7 @@ $(document).ready(function() {
 
     $("#link-produkt").click(function() {
         $('html,body').animate({
-                scrollTop: $("#functions").offset().top},
+                scrollTop: $("#functionsTitle").offset().top},
             'slow');
     });
 
