@@ -111,7 +111,6 @@ $(document).ready(function() {
         return "";
     }
 
-
 // 6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
 
     function changeIntoEnglish()    {
