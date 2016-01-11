@@ -1,9 +1,10 @@
-// SPIS FUNKCJI TOMASZA
+// SPIS FUNKCJI
 // 1. ADDING CLASS TO HEADER WHEN SCROLLBAR > 50
 // 2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
 // 3. FUNCTION "changeHeroImage" WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
 // 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
-// 5. FUNCTION WHICH CHANGES PAGE LANGUAGE
+// 5. COOKIE (SET / GET)
+//6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
 
 
 $(document).ready(function() {
@@ -91,22 +92,60 @@ $(document).ready(function() {
             'slow');
     });
 
-// 5. FUNCTION WHICH CHANGES PAGE LANGUAGE
+// 5. COOKIE (SET / GET)
 
+    function setCookie(cookieName, cookieValue, expireDays)   {
+        var d = new Date();
+        d.setTime (d.getTime() +(expireDays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cookieName + "=" + cookieValue + ";" + expires;
+    }
 
-    $('#jQuerylangEngBtn').click(function () {
-            $('.pl').addClass('hidePolishTxt');
-            $('.engBlock').addClass('engBlockElement');
-            $('.engInlineBlock').addClass('engInlineBlockElement');
-            $('.engInline').addClass('engInlineElement');
-        });
+    function getCookie(cookieName)   {
+        var name = cookieName + "=";
+        var cookieArray = document.cookie.split(';');
+        for(var i=0; i<cookieArray.length; i++)  {
+            var cookie = cookieArray[i];
+            while (cookie.charAt(0)==" ") cookie = cookie.substring(1);
+            if (cookie.indexOf(name) ==0) return cookie.substring(name.length, cookie.length);
+        }
+        return "";
+    }
 
-    $('#jQuerylangPlBtn').click(function () {
+// 6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
+
+    function changeIntoEnglish()    {
+        $('.pl').addClass('hidePolishTxt');
+        $('.engBlock').addClass('engBlockElement');
+        $('.engInlineBlock').addClass('engInlineBlockElement');
+        $('.engInline').addClass('engInlineElement');
+    }
+    function changeIntoPolski() {
         $('.engBlock').removeClass('engBlockElement');
         $('.engInlineBlock').removeClass('engInlineBlockElement');
         $('.engInline').removeClass('engInlineElement');
         $('.pl').removeClass('hidePolishTxt');
+    }
+
+    $('#jQuerylangEngBtn').click(function () {
+        changeIntoEnglish();
+        setCookie('langCookie', 'english', 30);
+        });
+
+    $('#jQuerylangPlBtn').click(function () {
+        changeIntoPolski();
+        setCookie('langCookie', 'polski', 30);
     });
+
+    var langCookieValue= (getCookie('langCookie'));
+
+    if ( langCookieValue==='english' )      {
+        changeIntoEnglish();
+    }
+
+    else    {
+        changeIntoPolski();
+    }
 
 });
 
