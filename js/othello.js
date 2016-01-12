@@ -65,6 +65,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                 }
                 cordXclick = cordXclick + (cordXnextTd);
                 cordYclick = cordYclick + (cordYnextTd);
+
                 var cordsXY = '#' + cordYclick + cordXclick;
 
                 //jeśli pole nie jest puste
