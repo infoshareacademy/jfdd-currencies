@@ -148,7 +148,6 @@ function points2() {
 $('.areaPoints1').html(pointStart1);
 $('.areaPoints2').html(pointStart2);
 
-});
 
 function randomCurrencyGame (){
     var randomCurrencyPlayer= Math.floor( Math.random() * ( 0 + 5- 1 ) ) ;
