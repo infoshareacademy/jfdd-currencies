@@ -20,10 +20,270 @@
     background-color:limegreen;
 }
 .othelloBoard {
+    position:relative;
     border-collapse: collapse;
     border: 4px solid black;
     margin:0 auto;
+    z-index:100;
 }
+#gameTextContener{
+    top:20px;
+    width: 100%;
+    height:600px;
+    position:absolute;
+}
+#startOthelloButton{
+    position:absolute;
+    z-index:600;
+}
+.stopGameTexts{
+    display:none;
+}
+.startGameTexts{
+    position:relative;
+    margin:0;
+    font-weight:bolder;
+    font-size:200px;
+    color:orange;
+    text-align:center;
+    z-index:500;
+    animation:zoomTextGame 4s  1 normal linear;
+}
+.startGameTextLets{
+    opacity:0;
+    animation-delay: 0s;
+}
+.startGameTextStart{
+    opacity:0;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes zoomTextGame {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -200px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -200px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    10% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+        transform: scale3d(1, 1, 1) translate3d(0,0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+
+
+    90%{
+        opacity: 0;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0,-50px, 0);
+        transform: scale3d(20, 20, 20) translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+    }
+
+}
+.gameCoin{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    padding:2px 0 0 3px;
+}
+/* animacja */
+.skyAnimation{
+    overflow:hidden;
+    position: relative;
+    width:100%;
+    animation:pogoda 20s infinite normal linear;
+}
+#groundAnimation{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:20%;
+    animation: trawa 20s infinite normal linear;
+    background-color:#66cc33;
+    z-index:2;
+}
+#sunAnimation{
+    position:absolute;
+    z-index:1;
+    top:400px;
+    left:-100px;
+    width:100px;
+    height:100px;
+    background-color:yellow;
+    border-radius:100%;
+    overflow:hidden;
+    animation:slonce 20s infinite normal linear,
+    promienie 1s infinite;
+    box-shadow: 0 0 10px yellow;
+}
+#moonAnimation{
+    position:absolute;
+    z-index:1;
+    top:100px;
+    left:450px;
+    width:100px;
+    height:100px;
+    background-color:white;
+    border-radius:100%;
+    overflow:hidden;
+    animation:ksiezyc 20s 10s infinite normal linear;
+    opacity:0;
+}
+#windmillAnimation{
+    position:absolute;
+    z-index:3;
+    bottom:50px;
+    left:85px;
+    height:150px;
+    width:200px;
+    background-color:#97694F;
+    animation:budynek 20s infinite normal linear;
+}
+#doorAnimation{
+    position:absolute;
+    z-index:4;
+    height:50px;
+    width:30px;
+    left:100px;
+    bottom:50px;
+    background-color:black;
+    animation:drzwi 20s infinite normal linear;
+}
+#roofAnimation{
+    position:absolute;
+    z-index:2;
+    bottom:200px;
+    left:55px;
+    height:0;
+    width:0;
+    border-bottom:140px solid green;
+    border-left:130px solid transparent;
+    border-right:130px solid transparent;
+    animation:dach 20s infinite normal linear;
+}
+#windmillPartAnimation{
+    position:absolute;
+    z-index:2;
+    bottom:231px;
+    left:162px;
+    height:45px;
+    width:45px;
+    background-color:grey;
+    border-radius:100%;
+    animation:kolor_korba 20s infinite normal linear;
+}
+.wingsAnimation{
+    position:absolute;
+    z-index:3;
+    bottom:220px;
+    left:45px;
+    height:0;
+    width:20px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 120px solid grey;
+    transform-origin:100% 50%;
+}
+#wing1Animation{
+    animation:wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+#wing2Animation{
+    animation:wiatrak1 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+#wing3Animation{
+    animation:wiatrak2 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+#wing4Animation{
+    animation:wiatrak3 20s  infinite normal linear,kolor_wiatrak 20s infinite normal linear;
+}
+/* animacje*/
+@keyframes pogoda{
+    0% {background-color:#000033}
+    50% {background-color:#0066ff}
+    100%{background-color:#000033}
+}
+@keyframes trawa{
+    0% {background-color:#003300}
+    50% {background-color:#66cc33}
+    100%{background-color:#003300}
+}
+@keyframes slonce{
+    0% {top:450px; left:-100px;}
+    25% {top:275px; left:300px;}
+    50% {top:100px; left:700px;}
+    75% {top:275px; left:1100px;}
+    100%  {top:450px; left:1500px;}
+}
+@keyframes promienie{
+    0% {box-shadow: 0 0 10px yellow;}
+    50% {box-shadow: 0 0 20px yellow;}
+    100%  {box-shadow: 0 0 30px yellow;}
+}
+@keyframes ksiezyc{
+    0% {top:450px; left:-100px;opacity:0.2;}
+    25% {top:275px; left:300px;opacity:0.6;}
+    50% {top:100px; left:700px;opacity:1;}
+   75% {top:275px; left:1100px;opacity:0.6;}
+    100%  {top:450px; left:1500px;opacity:0.2;}
+}
+@keyframes wiatrak{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes wiatrak1{
+    0% {transform:rotate(90deg);}
+    100% {transform:rotate(450deg);}
+}
+@keyframes wiatrak2{
+    0% {transform:rotate(180deg);}
+    100% {transform:rotate(540deg);}
+}
+@keyframes wiatrak3{
+    0% {transform:rotate(270deg);}
+    100% {transform:rotate(630deg);}
+}
+@keyframes kolor_wiatrak{
+    0% {border-left: 120px solid #3a3a3a;}
+    50% {border-left: 120px solid #666666;}
+    100%{border-left: 120px solid #3a3a3a;}
+}
+@keyframes kolor_korba{
+    0% {background: #3a3a3a;}
+    50% {background: #666666;}
+    100%{background: #3a3a3a;}
+}
+@keyframes budynek{
+    0% {background-color:#4E2F2F}
+    50% {background-color:#97694F}
+    100%{background-color:#4E2F2F}
+}
+@keyframes dach{
+    0% {border-bottom:140px solid #191919;}
+    50% {border-bottom:140px solid #5f5f5f}
+    100%{border-bottom:140px solid #191919}
+}
+@keyframes drzwi{
+    0%{background-color:#000}
+    50%{background-color:#191919}
+    100%{background-color:#000}
+}
+/* koniec animacji */
 
 main input {
     margin-top:10px;
@@ -55,7 +315,7 @@ form {
     margin:0 auto;
 }
 form ul{
-    list-style:none;
+   list-style:none;
 }
 form li{
     color:#71706B;
@@ -64,8 +324,8 @@ form li{
 }
 #divNumberErrorMassage,
 #divMailErrorMassage{
-    height: 20px;
-    color: #C55252;
+	height: 20px;
+	color: #C55252;
 }
 
 #functionsTitle  {
@@ -78,7 +338,7 @@ form li{
 }
 
 #functionsTitle h1  {
-    font-weight:100;
+       font-weight:100;
 }
 
 #functions  {
@@ -317,7 +577,6 @@ header button img  {
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
-
 }
 
 header button, header button:active    {
@@ -328,17 +587,38 @@ header button, header button:active    {
     border-radius: 100%;
     border: none;
     outline: none;
+    cursor: pointer;
 }
+
+/* Othello game, scorring */
+
+.pointsOfPlayerOne, .pointsOfPlayerTwo {
+    position: absolute;
+    width: 120px;
+    padding: 20px;
+    height: 50px;
+    background-color: #fef9ff;
+    right: 80px;
+}
+
+.pointsOfPlayerOne {
+    top: 80px;
+}
+
+.pointsOfPlayerTwo {
+    top: 200px;
+}
+
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
 
 /************* FOOTER START *************/
 footer {
-    background-image: linear-gradient(#2c4f85, #000000);
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 1px 1px rgb(0, 0, 0);
-    font-weight: lighter;
+	background-image: linear-gradient(#2c4f85, #000000);
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 1px 1px rgb(0, 0, 0);
+	font-weight: lighter;
 }
 footer h4 {
     font-weight: lighter;
@@ -419,6 +699,7 @@ footer input {
 .logoMargin {
     padding: 20px 0 10px 0;
 }
+
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/

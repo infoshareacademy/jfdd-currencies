@@ -35,25 +35,24 @@
         <img src="image/pl.png" title="Polski" alt="Polski"/>
     </button>
 
+    </header>
 
-</header>
 
+    <div id="hero">
 
-<div id="hero">
+        <div id="firstHero"><img src="image/hero.jpg" alt="waluty" class="heroPicture"></div>
+        <div id="secondHero"><img src="image/hero3.jpg" alt="waluty" class="heroPicture"></div>
 
-    <div id="firstHero"><img src="image/hero.jpg" alt="waluty" class="heroPicture"></div>
-    <div id="secondHero"><img src="image/hero3.jpg" alt="waluty" class="heroPicture"></div>
+        <div id="containerTitleOnHero" data-animate="fadeInUp">
 
-    <div id="containerTitleOnHero" data-animate="fadeInUp">
+            <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
+            <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
+            <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+            <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
 
-        <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
-        <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
-        <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
-        <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
+        </div>
 
     </div>
-
-</div>
 
 
 <main>
@@ -74,7 +73,7 @@
             <p class="engInline">
                 See the most current foreign currency exchange rates based on quotations of the Polish National Bank.
                 The euro exchange rate, dollar, pound, franc, crowns and many others.
-            </p>
+        </p>
         </div>
         <div class="rightsideFunctions">
             <img src="image/kursy_historyczne.jpg" alt="tu powinien być obrazek">
@@ -190,11 +189,44 @@
 
 
     </section>
-    <section id="othello">
+    <section id="othello" class="skyAnimation">
+        <div id="gameTextContener">
+        <p class=" startGameTextLets  ">Lets </p>
+        <p class=" startGameTextStart "> START!</p>
+        </div>
+    <button id="startOthelloButton">restart</button>
+
+
         <table class='othelloBoard' >
-            <script src="js/othello.js"></script>
+            <script>
+                for (var x = 1; x < 9; ++x) {
+                document.write('<tr>');
+                for (var y = 1; y < 9; ++y) {
+                    document.write('<td class=othelloSquare id=' + x + y + '>' + '</td>');
+                }
+                document.write('</tr>');
+                }
+            </script>
         </table>
+
+        <div id="groundAnimation"></div>
+        <div id="sunAnimation"></div>
+        <div id="moonAnimation"></div>
+        <div id ="roofAnimation"></div>
+        <div id ="windmillAnimation"></div>
+        <div id ="windmillPartAnimation"></div>
+        <div id ="wing1Animation" class="wingsAnimation"></div>
+        <div id ="wing2Animation" class="wingsAnimation"></div>
+        <div id ="wing3Animation" class="wingsAnimation"></div>
+        <div id ="wing4Animation" class="wingsAnimation"></div>
+        <div id ="doorAnimation"></div>
+
+        <div class="pointsOfPlayerOne">Punkty gracz 1 :<p class="areaPoints1"></p></div>
+        <div class="pointsOfPlayerTwo">Punkty gracz 2 :<p class="areaPoints2"></p></div>
+
     </section>
+
+
 </main>
 
 <!-- FOOTER START -->
@@ -270,6 +302,7 @@
 <script src="js/jquery.viewportchecker.min.js"></script>
 <script src="js/animacje.js"></script>
 <script src="js/scrollUp.js"></script>
+<script src="js/othello.js"></script>
 <script src="js/cookie-monster.js"></script>
 <script src="js/informationAboutCookies.js"></script>
 </body>
