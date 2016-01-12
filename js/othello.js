@@ -5,7 +5,10 @@ var actualRate = 1.2;
 var pointOvertaking = 10 * actualRate;
 
 $('.othelloSquare').click(function () {
+
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
+
+
         if (typeTd == 'czarny') {
 
             typeTd = 'bialy';
@@ -13,6 +16,8 @@ $('.othelloSquare').click(function () {
                 pickCoin($(this), imgWhite);
                 changeCoin($(this), typeTd, 'czarny',imgWhite);
                 points1($(this));
+                $('.pointsOfPlayerTwo').addClass('animateAreaScore');
+                $('.pointsOfPlayerOne').removeClass('animateAreaScore');
             }
         }
         else {
@@ -21,6 +26,8 @@ $('.othelloSquare').click(function () {
                 pickCoin($(this), imgBlack);
                 changeCoin($(this), typeTd, 'bialy',imgBlack);
                 points2($(this));
+                $('.pointsOfPlayerOne').addClass('animateAreaScore');
+                $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
             }
         }
     }
@@ -117,7 +124,12 @@ $('#startOthelloButton').click(function () {
     pointStart2 = 20;
     $('.areaPoints1').html(pointStart1);
     $('.areaPoints2').html(pointStart2);
+    $('.pointsOfPlayerOne').addClass('animateAreaScore');
+    var namePlayer1 = prompt("Please enter your name", "Gracz 1");
+    var namePlayer2 = prompt("Please enter your name", "Gracz 2");
 
+    $('#player1').html(namePlayer1);
+    $('#player2').html(namePlayer2);
     $('#44').html(imgBlack).addClass('czarny');
 
     $('#54').html(imgBlack).addClass('czarny');
