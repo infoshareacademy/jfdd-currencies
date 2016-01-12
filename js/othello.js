@@ -1,5 +1,8 @@
 var typeTd = 'czarny';
-
+var pointStart1 = 20;
+var pointStart2 = 20;
+var actualRate = 1.2;
+var pointOvertaking = 10 * actualRate;
 
 $('.othelloSquare').click(function () {
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
@@ -19,7 +22,6 @@ $('.othelloSquare').click(function () {
                 changeCoin($(this), typeTd, 'bialy',imgBlack);
                 points2($(this));
             }
-            arrayListBlack.push($(this).attr('id'));
         }
     }
 
@@ -110,7 +112,10 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 $('#startOthelloButton').click(function () {
     randomCurrencyGame();
     $('.othelloSquare').removeClass('czarny bialy').html('');
-
+    pointStart1 = 20;
+    pointStart2 = 20;
+    $('.areaPoints1').html(pointStart1);
+    $('.areaPoints2').html(pointStart2);
 
     $('#44').html(imgBlack).addClass('czarny');
 
@@ -129,11 +134,6 @@ $('#startOthelloButton').click(function () {
 
 });
 
-    var pointStart1 = 20;
-    var pointStart2 = 20;
-    var actualRate = 1.2;
-    var pointOvertaking = 10 * actualRate;
-
 function points1() {
     pointStart1 = pointStart1 + 10;
     $('.areaPoints1').html(pointStart1);
@@ -144,9 +144,6 @@ function points2() {
     $('.areaPoints2').html(pointStart2);
 };
 
-
-$('.areaPoints1').html(pointStart1);
-$('.areaPoints2').html(pointStart2);
 
 
 function randomCurrencyGame (){
