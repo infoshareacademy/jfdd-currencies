@@ -123,12 +123,15 @@ $('#startOthelloButton').click(function () {
     pointStart2 = 20;
     $('.areaPoints1').html(pointStart1);
     $('.areaPoints2').html(pointStart2);
+
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
+
     var namePlayer1 = prompt("Please enter your name", "Gracz 1");
     var namePlayer2 = prompt("Please enter your name", "Gracz 2");
 
-    $('#player1').html(namePlayer1);
-    $('#player2').html(namePlayer2);
+    $('#player1').html(namePlayer1 + imgWhitePlayer1);
+    $('#player2').html(namePlayer2 + imgBlackPlayer2);
+
     $('#44').html(imgBlack).addClass('czarny');
 
     $('#54').html(imgBlack).addClass('czarny');
@@ -169,6 +172,9 @@ function randomCurrencyGame (){
     player2 =allCurrencyType[randomCurrencyPlayer2];
     imgWhite = '<img src='+player1+' class="gameCoin">';
     imgBlack = '<img src='+player2+' class="gameCoin">';
+
+    imgWhitePlayer1 = '<img src='+player1+' class="playerIcon">';
+    imgBlackPlayer2 = '<img src='+player2+' class="playerIcon">';
 
 }
 
