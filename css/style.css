@@ -599,6 +599,7 @@ header button, header button:active    {
     height: 50px;
     background-color: #fef9ff;
     right: 80px;
+    border-radius: 10px;
 }
 
 .pointsOfPlayerOne {
@@ -609,6 +610,23 @@ header button, header button:active    {
     top: 200px;
 }
 
+.animateAreaScore {
+    -webkit-animation: scoreEffect 1s linear infinite alternate; /* Chrome, Safari, Opera */
+    animation: scoreEffect 1s linear infinite alternate;
+}
+
+
+@-webkit-keyframes scoreEffect {
+    0%   {background-color: #50b1ff; }
+    50%  {background-color:#ff7136; }
+    100% {background-color:#50b1ff; }
+}
+
+@keyframes scoreEffect {
+    0%   {background-color:#50b1ff; }
+    50%  {background-color: #ff7136; }
+    100% {background-color:#50b1ff; }
+}
 
 /***** END OF NAV / MENU / TITLE ON HERO *****/
 
