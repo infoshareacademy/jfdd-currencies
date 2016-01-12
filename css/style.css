@@ -532,9 +532,9 @@ li a:hover {
     width: 100%;
     top: 150px;
     position: absolute;
-    color: #ffffff;
+    color: #ebebeb;
     font-size: 2em;
-    text-shadow: 1px 1px #55585b;
+    text-shadow: 1px 1px #646464;
 }
 
 #bigTitleOnHero {
