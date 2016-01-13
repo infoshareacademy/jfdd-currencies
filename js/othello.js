@@ -2,7 +2,11 @@ var typeTd = 'czarny';
 var pointStart1 = 20;
 var pointStart2 = 20;
 var actualRate = 1.2;
-var pointOvertaking = 10 * actualRate;
+var buyRate = actualRate *1.2;
+var sellRate  = actualRate* 0.8;
+var pointOvertaking = 10 * buyRate;
+
+
 
 $('.othelloSquare').click(function () {
 
@@ -171,5 +175,8 @@ function randomCurrencyGame (){
     imgBlack = '<img src='+player2+' class="gameCoin">';
 
 }
+
+$('.actualBuyRate').html(buyRate);
+$('.actualSellRate').html(sellRate);
 
 

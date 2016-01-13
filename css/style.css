@@ -591,6 +591,19 @@ header button, header button:active    {
 }
 
 /* Othello game, scorring */
+.exchangeRateTable  {
+    width: 300px;
+    padding:10px 10px 10px 20px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    z-index: 20000;
+    text-align: center;
+    }
+.exchangeRateTable p{
+    display: inline;
+}
 
 .pointsOfPlayerOne, .pointsOfPlayerTwo {
     position: absolute;
