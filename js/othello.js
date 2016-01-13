@@ -1,8 +1,7 @@
 var typeTd = 'czarny';
 var pointStart1 = 20;
 var pointStart2 = 20;
-var actualRate = 1.2;
-
+var actualRate = Math.random()*10;
 var pointOvertaking = 10 * actualRate;
 
 $('.othelloSquare').click(function () {
