@@ -168,7 +168,7 @@ function randomCurrencyGame (){
     while(randomCurrencyPlayer == randomCurrencyPlayer2){
         randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
     }
-    var allCurrencyType = ['image/monetaZloty.jpg','image/monetaFunt.jpg','image/monetaEuro.jpg','image/monetaKopiejka.jpg','image/monetaKorona.jpg'];
+    var allCurrencyType = ['image/monetaZloty.png','image/monetaFunt.png','image/monetaEuro.png','image/monetaKopiejka.png','image/monetaKorona.png'];
     player1 =allCurrencyType[randomCurrencyPlayer];
     player2 =allCurrencyType[randomCurrencyPlayer2];
     imgWhite = '<img src='+player1+' class="gameCoin">';
