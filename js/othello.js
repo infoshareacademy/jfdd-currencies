@@ -142,11 +142,12 @@ $('#startOthelloButton').click(function () {
     $('.areaPoints1').html(pointStart1);
     $('.areaPoints2').html(pointStart2);
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
-    var namePlayer1 = prompt("Please enter your name", "Gracz 1");
-    var namePlayer2 = prompt("Please enter your name", "Gracz 2");
+    var namePlayer1 = prompt("Please enter your name (max 12 letters)", "Gracz 1");
+    var namePlayer2 = prompt("Please enter your name (max 12 letter)", "Gracz 2");
 
-    $('#player1').html(namePlayer1);
-    $('#player2').html(namePlayer2);
+
+    $('#player1').html(namePlayer1 +'<img src=' + player1 + ' class="playerIcon">');
+    $('#player2').html(namePlayer2 +'<img src=' + player2 + ' class="playerIcon">');
     $('#44').html(imgBlack).addClass('czarny');
 
     $('#54').html(imgBlack).addClass('czarny');
@@ -167,6 +168,7 @@ $('#startOthelloButton').click(function () {
 function points1() {
     pointStart1 = pointStart1 + 10;
     $('.areaPoints1').html(pointStart1.toFixed(2));
+
 };
 
 function points2() {
