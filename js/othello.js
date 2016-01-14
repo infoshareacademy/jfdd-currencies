@@ -1,8 +1,7 @@
 var typeTd = 'czarny';
 var pointStart1 = 20;
 var pointStart2 = 20;
-var actualRate = 1.2;
-var pointOvertaking = 10 * actualRate;
+var pointOvertaking;
 
 $('.othelloSquare').click(function () {
 
@@ -65,6 +64,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
             var cordYclick = parseInt(idClickedTd.charAt(0)),
                 cordXclick = parseInt(idClickedTd.charAt(1));
 
+            
             while (true) {
                 //pomiń pole klikane
                 if (cordYnextTd == 0 && cordXnextTd == 0) {
@@ -87,13 +87,13 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                                 $(coinToChange[arrayLength]).html(typeImg);
 
                                     if($(cordsXY).hasClass('bialy')){
-                                        pointStart1 = pointStart1 + pointOvertaking;
-                                        $('.areaPoints1').html(pointStart1);
+                                        pointStart1 =  pointStart1 + 10 + Math.random();
+                                        $('.areaPoints1').html(pointStart1.toFixed(2));
                                     }
 
                                     if($(cordsXY).hasClass('czarny')){
-                                        pointStart2 = pointStart2 + pointOvertaking;
-                                        $('.areaPoints2').html(pointStart2);
+                                        pointStart2 = pointStart2 + 10 + Math.random();
+                                        $('.areaPoints2').html(pointStart2.toFixed(2));
                                     }
 
                                 }
@@ -148,12 +148,12 @@ $('#startOthelloButton').click(function () {
 
 function points1() {
     pointStart1 = pointStart1 + 10;
-    $('.areaPoints1').html(pointStart1);
+    $('.areaPoints1').html(pointStart1.toFixed(2));
 };
 
 function points2() {
     pointStart2 = pointStart2 + 10;
-    $('.areaPoints2').html(pointStart2);
+    $('.areaPoints2').html(pointStart2.toFixed(2));
 };
 
 
