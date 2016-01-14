@@ -609,15 +609,38 @@ header button, header button:active    {
 }
 
 /* Othello game, scorring */
+.exchangeRateTable {
+    visibility: hidden;
+    width: 300px;
+    padding: 10px 10px 10px 20px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    z-index: 20000;
+    text-align: center;
+}
+.exchangeRateTableShow  {
+    visibility: visible;
+}
+.exchangeRateTable p {
+    display: inline;
+}
 
 .pointsOfPlayerOne, .pointsOfPlayerTwo {
+    visibility: hidden;
     position: absolute;
-    width: 120px;
+    width: 140px;
     padding: 20px;
     height: 50px;
     background-color: #fef9ff;
     right: 80px;
     border-radius: 10px;
+}
+#player1, #player2    {
+    display: block;
+    width: 110px;
+    overflow: hidden;
 }
 
 .pointsOfPlayerOne {
@@ -629,12 +652,12 @@ header button, header button:active    {
 }
 
 .playerIcon {
-    vertical-align: middle;
-    padding-left: 8px;
-    text-align: right;
-    width:25px;
-    height:25px;
-    border-radius:50%;
+    position: absolute;
+    top:15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .animateAreaScore {
