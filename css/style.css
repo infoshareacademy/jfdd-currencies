@@ -1,11 +1,14 @@
 #formToSend{
     position:relative;
-    padding-top:50px;
+    padding:50px 0 50px 0;
     height:300px;
     width:100%;
     background-color:#f4f4f4;
     text-align:center;
 
+}
+.formTitle {
+    font-size:30px;
 }
 #othello{
     position:relative;
@@ -323,16 +326,24 @@ form {
 }
 form ul{
    list-style:none;
+    margin-bottom:30px;
 }
 form li{
     color:#71706B;
     font-size:20px;
     font-weight:bolder;
 }
+form span {
+    color: #71706B;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 #divNumberErrorMassage,
 #divMailErrorMassage{
 	height: 20px;
 	color: #C55252;
+    margin-bottom:10px;
 }
 
 #functionsTitle  {
