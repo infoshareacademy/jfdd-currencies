@@ -5,6 +5,11 @@ var buyRate;
 var sellRate;
 
 function setCurrentRate() {
+    buyRate = 10 + 5 * Math.random();
+    sellRate = buyRate * 0.8;
+    $('.actualBuyRate').html(buyRate.toFixed(2));
+    $('.actualSellRate').html(sellRate.toFixed(2));
+
     setInterval(function () {
             buyRate = 10 + 5 * Math.random();
             sellRate = buyRate * 0.8;
@@ -13,7 +18,6 @@ function setCurrentRate() {
         }
         , 5000);
 }
-setCurrentRate();
 
 $('.othelloSquare').click(function () {
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
@@ -135,19 +139,28 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 }
 $('#startOthelloButton').click(function () {
+    $('.pointsOfPlayerOne').removeClass('animateAreaScore');
+    $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
+    $('.pointsOfPlayerOne').addClass('animateAreaScore');
     randomCurrencyGame();
+    setCurrentRate();
     $('.othelloSquare').removeClass('czarny bialy').html('');
     pointStart1 = 20;
     pointStart2 = 20;
     $('.areaPoints1').html(pointStart1);
     $('.areaPoints2').html(pointStart2);
-    $('.pointsOfPlayerOne').addClass('animateAreaScore');
+
     var namePlayer1 = prompt("Please enter your name (max 12 letters)", "Gracz 1");
     var namePlayer2 = prompt("Please enter your name (max 12 letter)", "Gracz 2");
 
 
-    $('#player1').html(namePlayer1 +'<img src=' + player1 + ' class="playerIcon">');
-    $('#player2').html(namePlayer2 +'<img src=' + player2 + ' class="playerIcon">');
+    $('#player1').html(namePlayer1 + '<img src=' + player1 + ' class="playerIcon">');
+    $('#player2').html(namePlayer2 + '<img src=' + player2 + ' class="playerIcon">');
+
+    $('.exchangeRateTable').css('visibility', 'visible');
+    $('.pointsOfPlayerOne').css('visibility', 'visible');
+    $('.pointsOfPlayerTwo').css('visibility', 'visible');
+
     $('#44').html(imgBlack).addClass('czarny');
 
     $('#54').html(imgBlack).addClass('czarny');

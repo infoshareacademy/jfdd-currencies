@@ -730,6 +730,7 @@ header button, header button:active {
 
 /* Othello game, scorring */
 .exchangeRateTable {
+    visibility: hidden;
     width: 300px;
     padding: 10px 10px 10px 20px;
     background-color: white;
@@ -739,12 +740,15 @@ header button, header button:active {
     z-index: 20000;
     text-align: center;
 }
-
+.exchangeRateTableShow  {
+    visibility: visible;
+}
 .exchangeRateTable p {
     display: inline;
 }
 
 .pointsOfPlayerOne, .pointsOfPlayerTwo {
+    visibility: hidden;
     position: absolute;
     width: 140px;
     padding: 20px;
