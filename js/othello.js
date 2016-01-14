@@ -64,7 +64,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
             var cordYclick = parseInt(idClickedTd.charAt(0)),
                 cordXclick = parseInt(idClickedTd.charAt(1));
 
-            
+
             while (true) {
                 //pomiń pole klikane
                 if (cordYnextTd == 0 && cordXnextTd == 0) {
@@ -86,15 +86,15 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                                 $(coinToChange[arrayLength]).addClass(classTd);
                                 $(coinToChange[arrayLength]).html(typeImg);
 
-                                    if($(cordsXY).hasClass('bialy')){
-                                        pointStart1 =  pointStart1 + 10 + Math.random();
-                                        $('.areaPoints1').html(pointStart1.toFixed(2));
-                                    }
+                                if($(cordsXY).hasClass('bialy')){
+                                    pointStart1 =  pointStart1 + 10 + Math.random();
+                                    $('.areaPoints1').html(pointStart1.toFixed(2));
+                                }
 
-                                    if($(cordsXY).hasClass('czarny')){
-                                        pointStart2 = pointStart2 + 10 + Math.random();
-                                        $('.areaPoints2').html(pointStart2.toFixed(2));
-                                    }
+                                if($(cordsXY).hasClass('czarny')){
+                                    pointStart2 = pointStart2 + 10 + Math.random();
+                                    $('.areaPoints2').html(pointStart2.toFixed(2));
+                                }
 
                                 }
                                 //wyczyść pola do zamiany
@@ -164,7 +164,7 @@ function randomCurrencyGame (){
     while(randomCurrencyPlayer == randomCurrencyPlayer2){
         randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
     }
-    var allCurrencyType = ['image/monetaZloty.jpg','image/monetaFunt.jpg','image/monetaEuro.jpg','image/monetaKopiejka.jpg','image/monetaKorona.jpg'];
+    var allCurrencyType = ['image/monetaZloty.png','image/monetaFunt.png','image/monetaEuro.png','image/monetaKopiejka.png','image/monetaKorona.png'];
     player1 =allCurrencyType[randomCurrencyPlayer];
     player2 =allCurrencyType[randomCurrencyPlayer2];
     imgWhite = '<img src='+player1+' class="gameCoin">';

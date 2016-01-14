@@ -610,6 +610,15 @@ header button, header button:active    {
     top: 200px;
 }
 
+.playerIcon {
+    vertical-align: middle;
+    padding-left: 8px;
+    text-align: right;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+}
+
 .animateAreaScore {
     -webkit-animation: scoreEffect 1s linear infinite alternate; /* Chrome, Safari, Opera */
     animation: scoreEffect 1s linear infinite alternate;
