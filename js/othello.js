@@ -87,7 +87,6 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                 }
                 cordXclick = cordXclick + (cordXnextTd);
                 cordYclick = cordYclick + (cordYnextTd);
-
                 var cordsXY = '#' + cordYclick + cordXclick;
 
                 //jeśli pole nie jest puste
@@ -118,23 +117,23 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                                     $('.areaPoints1').html(pointStart1.toFixed(2));
                                 }
 
+                                }
+                                //wyczyść pola do zamiany
+                                coinToChange = [];
                             }
-                            //wyczyść pola do zamiany
-                            coinToChange = [];
-                        }
-                        //jeśli badana moneta jest przeciwna dodaj pozycję do tablicy
-                    } else if (($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) && $(cordsXY).hasClass(classChange)) {
-                        coinToChange.push(cordsXY);
+                            //jeśli badana moneta jest przeciwna dodaj pozycję do tablicy
+                        } else if (($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) && $(cordsXY).hasClass(classChange)) {
+                            coinToChange.push(cordsXY);
 
+                        }
+                        //jeśli pole jest puste, zakończ cordYnextTd badaj następne
+                    } else {
+                        coinToChange = [];
+                        break
                     }
-                    //jeśli pole jest puste, zakończ cordYnextTd badaj następne
-                } else {
-                    coinToChange = [];
-                    break
                 }
             }
         }
-    }
 
 
 }
