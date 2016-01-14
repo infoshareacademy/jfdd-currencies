@@ -69,6 +69,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
             var cordYclick = parseInt(idClickedTd.charAt(0)),
                 cordXclick = parseInt(idClickedTd.charAt(1));
 
+
             while (true) {
                 //pomiń pole klikane
                 if (cordYnextTd == 0 && cordXnextTd == 0) {
@@ -76,6 +77,7 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                 }
                 cordXclick = cordXclick + (cordXnextTd);
                 cordYclick = cordYclick + (cordYnextTd);
+
                 var cordsXY = '#' + cordYclick + cordXclick;
 
                 //jeśli pole nie jest puste
@@ -90,33 +92,33 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                                 $(coinToChange[arrayLength]).addClass(classTd);
                                 $(coinToChange[arrayLength]).html(typeImg);
 
-                                    if($(cordsXY).hasClass('bialy')){
-                                        pointStart1 = pointStart1 + pointOvertaking;
-                                        $('.areaPoints1').html(pointStart1);
-                                    }
-
-                                    if($(cordsXY).hasClass('czarny')){
-                                        pointStart2 = pointStart2 + pointOvertaking;
-                                        $('.areaPoints2').html(pointStart2);
-                                    }
-
+                                if($(cordsXY).hasClass('bialy')){
+                                    pointStart1 =  pointStart1 + 10 + Math.random();
+                                    $('.areaPoints1').html(pointStart1.toFixed(2));
                                 }
-                                //wyczyść pola do zamiany
-                                coinToChange = [];
-                            }
-                            //jeśli badana moneta jest przeciwna dodaj pozycję do tablicy
-                        } else if (($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) && $(cordsXY).hasClass(classChange)) {
-                            coinToChange.push(cordsXY);
 
+                                if($(cordsXY).hasClass('czarny')){
+                                    pointStart2 = pointStart2 + 10 + Math.random();
+                                    $('.areaPoints2').html(pointStart2.toFixed(2));
+                                }
+
+                            }
+                            //wyczyść pola do zamiany
+                            coinToChange = [];
                         }
-                        //jeśli pole jest puste, zakończ cordYnextTd badaj następne
-                    } else {
-                        coinToChange = [];
-                        break
+                        //jeśli badana moneta jest przeciwna dodaj pozycję do tablicy
+                    } else if (($(cordsXY).hasClass('czarny') || $(cordsXY).hasClass('bialy')) && $(cordsXY).hasClass(classChange)) {
+                        coinToChange.push(cordsXY);
+
                     }
+                    //jeśli pole jest puste, zakończ cordYnextTd badaj następne
+                } else {
+                    coinToChange = [];
+                    break
                 }
             }
         }
+    }
 
 
 }
@@ -152,12 +154,12 @@ $('#startOthelloButton').click(function () {
 
 function points1() {
     pointStart1 = pointStart1 + 10;
-    $('.areaPoints1').html(pointStart1);
+    $('.areaPoints1').html(pointStart1.toFixed(2));
 };
 
 function points2() {
     pointStart2 = pointStart2 + 10;
-    $('.areaPoints2').html(pointStart2);
+    $('.areaPoints2').html(pointStart2.toFixed(2));
 };
 
 
@@ -168,7 +170,7 @@ function randomCurrencyGame (){
     while(randomCurrencyPlayer == randomCurrencyPlayer2){
         randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
     }
-    var allCurrencyType = ['image/monetaZloty.jpg','image/monetaFunt.jpg','image/monetaEuro.jpg','image/monetaKopiejka.jpg','image/monetaKorona.jpg'];
+    var allCurrencyType = ['image/monetaZloty.png','image/monetaFunt.png','image/monetaEuro.png','image/monetaKopiejka.png','image/monetaKorona.png'];
     player1 =allCurrencyType[randomCurrencyPlayer];
     player2 =allCurrencyType[randomCurrencyPlayer2];
     imgWhite = '<img src='+player1+' class="gameCoin">';
