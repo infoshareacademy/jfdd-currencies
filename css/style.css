@@ -42,6 +42,7 @@
 }
 #resetOthelloButton{
     display:none;
+    cursor:pointer;
     position: absolute;
     z-index: 600;
     width: 200px;
@@ -54,6 +55,7 @@
 }
 #startOthelloButton{
     position:relative;
+    cursor:pointer;
     margin-top:250px;
     z-index: 6000;
     width: 400px;
@@ -785,7 +787,9 @@ footer input {
 .logoMargin {
     padding: 20px 0 10px 0;
 }
-
+#footerStartGame{
+    cursor:pointer;
+}
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
