@@ -13,9 +13,9 @@ function checkForm() {
         testNumber();
 
         if (!errorMail && !errorNumber) {
-            numberComment = document.getElementById('divNumberErrorMassage');
+            numberComment = document.getElementById('NumberErrorMassage');
             numberComment.innerHTML = '';
-            mailComment = document.getElementById('divMailErrorMassage');
+            mailComment = document.getElementById('MailErrorMassage');
             mailComment.innerHTML = '';
             sendForm.submit();
         }
@@ -23,8 +23,8 @@ function checkForm() {
             date = new Date();
         }
 
-        displayError(errorNumber, 'divNumberErrorMassage');
-        displayError(errorMail, 'divMailErrorMassage');
+        displayError(errorNumber, 'NumberErrorMassage');
+        displayError(errorMail, 'MailErrorMassage');
 
     }
     else {

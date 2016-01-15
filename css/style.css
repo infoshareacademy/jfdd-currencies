@@ -359,8 +359,8 @@ form span {
     font-weight: bolder;
 }
 
-#divNumberErrorMassage,
-#divMailErrorMassage{
+#NumberErrorMassage,
+#MailErrorMassage{
 	height: 20px;
 	color: #C55252;
     margin-bottom:10px;
