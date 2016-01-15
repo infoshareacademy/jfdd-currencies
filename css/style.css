@@ -1,17 +1,20 @@
 #formToSend{
     position:relative;
-    padding-top:50px;
+    padding:50px 0 50px 0;
     height:300px;
     width:100%;
     background-color:#f4f4f4;
     text-align:center;
 
 }
+.formTitle {
+    font-size:30px;
+}
 #othello{
     display:none;
     position:relative;
     padding-top:50px;
-    height:500px;
+    height:550px;
     width:100%;
 }
 .othelloVisible{
@@ -37,8 +40,14 @@
     position:absolute;
 }
 #startOthelloButton{
-    position:absolute;
-    z-index:600;
+    position: absolute;
+    z-index: 600;
+    width: 200px;
+    height: 50px;
+    left: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 .stopGameTexts{
     display:none;
@@ -105,6 +114,7 @@
     height:42px;
     border-radius:50%;
     padding:2px 0 0 3px;
+
 }
 /* animacja */
 .skyAnimation{
@@ -320,16 +330,24 @@ form {
 }
 form ul{
    list-style:none;
+    margin-bottom:30px;
 }
 form li{
     color:#71706B;
     font-size:20px;
     font-weight:bolder;
 }
+form span {
+    color: #71706B;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 #divNumberErrorMassage,
 #divMailErrorMassage{
 	height: 20px;
 	color: #C55252;
+    margin-bottom:10px;
 }
 
 #functionsTitle  {
@@ -595,15 +613,38 @@ header button, header button:active    {
 }
 
 /* Othello game, scorring */
+.exchangeRateTable {
+    visibility: hidden;
+    width: 300px;
+    padding: 10px 10px 10px 20px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    z-index: 20000;
+    text-align: center;
+}
+.exchangeRateTableShow  {
+    visibility: visible;
+}
+.exchangeRateTable p {
+    display: inline;
+}
 
 .pointsOfPlayerOne, .pointsOfPlayerTwo {
+    visibility: hidden;
     position: absolute;
-    width: 120px;
+    width: 140px;
     padding: 20px;
     height: 50px;
     background-color: #fef9ff;
     right: 80px;
     border-radius: 10px;
+}
+#player1, #player2    {
+    display: block;
+    width: 110px;
+    overflow: hidden;
 }
 
 .pointsOfPlayerOne {
@@ -615,12 +656,12 @@ header button, header button:active    {
 }
 
 .playerIcon {
-    vertical-align: middle;
-    padding-left: 8px;
-    text-align: right;
-    width:25px;
-    height:25px;
-    border-radius:50%;
+    position: absolute;
+    top:15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .animateAreaScore {
@@ -831,6 +872,7 @@ footer input {
     background-color: #000;
     border-radius:5px;
     opacity:0.2;
+    z-index:2000;
 }
 .moveToTop:hover {
     opacity:1;
