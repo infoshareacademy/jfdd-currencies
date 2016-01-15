@@ -195,10 +195,12 @@
     </section>
     <section id="othello" class="skyAnimation">
         <div id="gameTextContener">
-        <p class=" startGameTextLets  ">Lets </p>
+            <button id="startOthelloButton">START</button>
+
+            <p class=" startGameTextLets  ">Lets </p>
         <p class=" startGameTextStart "> START!</p>
         </div>
-    <button id="startOthelloButton">restart</button>
+    <button id="resetOthelloButton">restart</button>
 
         <div class="exchangeRateTable">
             <p>Buy:</p>
@@ -263,7 +265,6 @@
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Produkty</a></li>
                 <li><a href="#formToSend">Kontakt</a></li>
-                <li><a href="pdf/regulamin.pdf" target="_blank">Regulamin</a></li>
                 <li><a href="pdf/politykaCookies.pdf" target="_blank">Polityka cookies</a></li>
             </ul>
         </div>
@@ -272,7 +273,6 @@
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Products</a></li>
                 <li><a href="#formToSend">Contact</a></li>
-                <li><a href="pdf/regulamin.pdf" target="_blank">Regulations</a></li>
                 <li><a href="pdf/politykaCookies.pdf" target="_blank">Cookies policy</a></li>
             </ul>
         </div>
@@ -306,6 +306,9 @@
     <div class="footerCopyright">
         <p id="footerStartGame">copyright &copy; <span id="currentYear"></span> &bull; All rights reserved</p>
     </div>
+
+    <span id="player1x"></span>
+    <span id="player2x"></span>
 </footer>
 <!-- FOOTER END -->
 <script src="js/jquery.min.js"></script>

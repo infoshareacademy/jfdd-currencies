@@ -137,7 +137,12 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 
 }
-$('#startOthelloButton').click(function () {
+$('#resetOthelloButton').click(function () {
+    startGame();
+
+});
+
+function startGame(){
     $('.pointsOfPlayerOne').removeClass('animateAreaScore');
     $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
@@ -150,7 +155,7 @@ $('#startOthelloButton').click(function () {
     $('.areaPoints2').html(pointStart2);
 
     var namePlayer1 = prompt("Please enter your name (max 12 letters)", "Gracz 1");
-    var namePlayer2 = prompt("Please enter your name (max 12 letter)", "Gracz 2");
+    var namePlayer2= prompt("Please enter your name (max 12 letter)", "Gracz 2");
 
 
     $('#player1').html(namePlayer1 + '<img src=' + player1 + ' class="playerIcon">');
@@ -174,9 +179,7 @@ $('#startOthelloButton').click(function () {
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
     }, 3200);
-
-});
-
+}
 function points1() {
     pointStart1 = pointStart1 + 10;
     $('.areaPoints1').html(pointStart1.toFixed(2));
@@ -204,7 +207,19 @@ function randomCurrencyGame() {
 }
 
 $("#footerStartGame").click(function(){
-
+    $('html,body').animate({
+            scrollTop: $(".socialMediaButton").offset().top-100},
+        'slow');
     document.getElementById("othello").style.display = "block";
+    //startGame();
+
+
+});
+$("#startOthelloButton").click(function(){
+    document.getElementById("startOthelloButton").style.display = "none";
+
+    document.getElementById("resetOthelloButton").style.display = "inline";
+    startGame();
+
 
 });
