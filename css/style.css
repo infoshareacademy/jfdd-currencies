@@ -1,17 +1,24 @@
 #formToSend{
     position:relative;
-    padding-top:50px;
+    padding:50px 0 50px 0;
     height:300px;
     width:100%;
     background-color:#f4f4f4;
     text-align:center;
 
 }
+.formTitle {
+    font-size:30px;
+}
 #othello{
+    display:none;
     position:relative;
     padding-top:50px;
-    height:500px;
+    height:550px;
     width:100%;
+}
+.othelloVisible{
+    display:block;
 }
 .othelloSquare {
     border: 4px solid black;
@@ -31,10 +38,32 @@
     width: 100%;
     height:600px;
     position:absolute;
+    text-align:center;
+}
+#resetOthelloButton{
+    display:none;
+    cursor:pointer;
+    position: absolute;
+    z-index: 600;
+    width: 200px;
+    height: 50px;
+    left: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border:1px solid #000;
 }
 #startOthelloButton{
-    position:absolute;
-    z-index:600;
+    position:relative;
+    cursor:pointer;
+    margin-top:250px;
+    z-index: 6000;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 50px;
+    text-transform: uppercase;
+    border:1px solid #000;
 }
 .stopGameTexts{
     display:none;
@@ -101,6 +130,7 @@
     height:42px;
     border-radius:50%;
     padding:2px 0 0 3px;
+
 }
 /* animacja */
 .skyAnimation{
@@ -316,29 +346,39 @@ form {
 }
 form ul{
    list-style:none;
+    margin-bottom:30px;
 }
 form li{
     color:#71706B;
     font-size:20px;
     font-weight:bolder;
 }
-#divNumberErrorMassage,
-#divMailErrorMassage{
+form span {
+    color: #71706B;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#NumberErrorMassage,
+#MailErrorMassage{
 	height: 20px;
 	color: #C55252;
+    margin-bottom:10px;
 }
 
 #functionsTitle  {
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     padding-top:50px;
     padding-bottom: 50px;
 }
 
 #functionsTitle h1  {
-       font-weight:100;
+    margin:0;
+    font-weight:100;
+
 }
 
 #functions  {
@@ -410,6 +450,7 @@ form li{
     text-align: center;
     height:70px;
     padding-top: 8px;
+    padding-bottom: 15px;
 }
 
 #teamName h2    {
@@ -592,15 +633,38 @@ header button, header button:active    {
 }
 
 /* Othello game, scorring */
+.exchangeRateTable {
+    visibility: hidden;
+    width: 300px;
+    padding: 10px 10px 10px 20px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    z-index: 20000;
+    text-align: center;
+}
+.exchangeRateTableShow  {
+    visibility: visible;
+}
+.exchangeRateTable p {
+    display: inline;
+}
 
 .pointsOfPlayerOne, .pointsOfPlayerTwo {
+    visibility: hidden;
     position: absolute;
-    width: 120px;
+    width: 140px;
     padding: 20px;
     height: 50px;
     background-color: #fef9ff;
     right: 80px;
     border-radius: 10px;
+}
+#player1, #player2    {
+    display: block;
+    width: 110px;
+    overflow: hidden;
 }
 
 .pointsOfPlayerOne {
@@ -612,12 +676,12 @@ header button, header button:active    {
 }
 
 .playerIcon {
-    vertical-align: middle;
-    padding-left: 8px;
-    text-align: right;
-    width:25px;
-    height:25px;
-    border-radius:50%;
+    position: absolute;
+    top:15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .animateAreaScore {
@@ -727,7 +791,9 @@ footer input {
 .logoMargin {
     padding: 20px 0 10px 0;
 }
-
+#footerStartGame{
+    cursor:pointer;
+}
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
@@ -828,6 +894,7 @@ footer input {
     background-color: #000;
     border-radius:5px;
     opacity:0.2;
+    z-index:2000;
 }
 .moveToTop:hover {
     opacity:1;
