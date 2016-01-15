@@ -734,8 +734,14 @@ footer h4 {
 .footerContent {
     height: 130px;
     float: left;
-    width: 32%;
+    width: 33.33%;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footerContentRight{
+    float:left;
+    height: 130px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 footer li a {
     color: #ffffff;
@@ -747,12 +753,12 @@ footer li a:hover {
 }
 .txtRight {
     text-align: right;
-    padding-right: 10px;
+    padding:25px 0 0 0;
 }
 .txtLeft {
     text-align: left;
     border-right: 0;
-    padding-left: 10px;
+    padding:0;
 }
 .logoButton {
     padding-top: 30px;
