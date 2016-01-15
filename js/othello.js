@@ -179,4 +179,8 @@ function randomCurrencyGame (){
 
 }
 
+$("#footerStartGame").click(function(){
 
+    document.getElementById("othello").style.display = "block";
+
+});
