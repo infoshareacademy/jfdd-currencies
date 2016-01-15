@@ -175,13 +175,17 @@
     <section id="formToSend" data-animate="fadeIn">
         <a href="#" class="moveToTop"><img src="image/strzalka.jpg" alt="tu powinien być obrazek"></a>
         <form name="sendForm" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+            <span class="pl formTitle">Wypełnij formularz, skontaktujemy się z Tobą!</span>
+            <span class="engInline formTitle">Fill out the form, we will contact you!</span>
             <ul>
-                <li class="pl">Wypełnij formularz, skontaktujemy się z Tobą!</li>
-                <li class="engInline">Fill out the form, we will contact you!</li>
-                <li><input type="text" id="numer" name="numer" placeholder="Numer telefonu komórkowego"></li>
-                <div id="divNumberErrorMassage"></div>
-                <li><input type="email" id="email" name="email" placeholder="Adres e-mail"></li>
-                <div id="divMailErrorMassage"></div>
+                <li><label for="numer" class="engInline">Your phone number</label></li>
+                <li><label  class="pl">Twój numer telefonu</label></li>
+                <li><input type="text"  id="numer" name="numer" ></li>
+                <li id="divNumberErrorMassage"></li>
+                <li><label for="email" class="pl">Twój Email</label></li>
+                <li><label  class="engInline">Your Email</label></li>
+                <li><input type="email"  id="email" name="email" ></li>
+                <li id="divMailErrorMassage"></li>
                 <li><input type="hidden" name="receiver" value="l.komajda@wp.pl"></li>
                 <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij"></li>
 
@@ -192,10 +196,20 @@
     </section>
     <section id="othello" class="skyAnimation">
         <div id="gameTextContener">
-        <p class=" startGameTextLets  ">Lets </p>
+            <button id="startOthelloButton">START</button>
+
+            <p class=" startGameTextLets  ">Lets </p>
         <p class=" startGameTextStart "> START!</p>
         </div>
-    <button id="startOthelloButton">restart</button>
+    <button id="resetOthelloButton">restart</button>
+
+        <div class="exchangeRateTable">
+            <p>Buy:</p>
+            <p class="actualBuyRate"></p>
+            <br>
+            <p>Sell:</p>
+            <p class="actualSellRate"></p>
+        </div>
 
 
         <table class='othelloBoard' >
@@ -252,7 +266,6 @@
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Produkty</a></li>
                 <li><a href="#formToSend">Kontakt</a></li>
-                <li><a href="pdf/regulamin.pdf" target="_blank">Regulamin</a></li>
                 <li><a href="pdf/politykaCookies.pdf" target="_blank">Polityka cookies</a></li>
             </ul>
         </div>
@@ -261,7 +274,6 @@
                 <li><a href="#">Start</a></li>
                 <li><a href="#functions">Products</a></li>
                 <li><a href="#formToSend">Contact</a></li>
-                <li><a href="pdf/regulamin.pdf" target="_blank">Regulations</a></li>
                 <li><a href="pdf/politykaCookies.pdf" target="_blank">Cookies policy</a></li>
             </ul>
         </div>
@@ -293,8 +305,11 @@
     </div>
     <div class="clear"></div>
     <div class="footerCopyright">
-        <p>copyright &copy; <span id="currentYear"></span> &bull; All rights reserved</p>
+        <p id="footerStartGame">copyright &copy; <span id="currentYear"></span> &bull; All rights reserved</p>
     </div>
+
+    <span id="player1x"></span>
+    <span id="player2x"></span>
 </footer>
 <!-- FOOTER END -->
 <script src="js/jquery.min.js"></script>

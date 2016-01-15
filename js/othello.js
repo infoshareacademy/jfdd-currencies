@@ -1,7 +1,23 @@
 var typeTd = 'czarny';
 var pointStart1 = 20;
 var pointStart2 = 20;
-var pointOvertaking;
+var buyRate;
+var sellRate;
+
+function setCurrentRate() {
+    buyRate = 10 + 5 * Math.random();
+    sellRate = buyRate * 0.8;
+    $('.actualBuyRate').html(buyRate.toFixed(2));
+    $('.actualSellRate').html(sellRate.toFixed(2));
+
+    setInterval(function () {
+            buyRate = 10 + 5 * Math.random();
+            sellRate = buyRate * 0.8;
+            $('.actualBuyRate').html(buyRate.toFixed(2));
+            $('.actualSellRate').html(sellRate.toFixed(2));
+        }
+        , 5000);
+}
 
 $('.othelloSquare').click(function () {
 
@@ -13,7 +29,7 @@ $('.othelloSquare').click(function () {
             typeTd = 'bialy';
             if (checkClickedTd($(this))) {
                 pickCoin($(this), imgWhite);
-                changeCoin($(this), typeTd, 'czarny',imgWhite);
+                changeCoin($(this), typeTd, 'czarny', imgWhite);
                 points1($(this));
                 $('.pointsOfPlayerTwo').addClass('animateAreaScore');
                 $('.pointsOfPlayerOne').removeClass('animateAreaScore');
@@ -23,7 +39,7 @@ $('.othelloSquare').click(function () {
             typeTd = 'czarny';
             if (checkClickedTd($(this))) {
                 pickCoin($(this), imgBlack);
-                changeCoin($(this), typeTd, 'bialy',imgBlack);
+                changeCoin($(this), typeTd, 'bialy', imgBlack);
                 points2($(this));
                 $('.pointsOfPlayerOne').addClass('animateAreaScore');
                 $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
@@ -86,14 +102,20 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
                                 $(coinToChange[arrayLength]).addClass(classTd);
                                 $(coinToChange[arrayLength]).html(typeImg);
 
-                                if($(cordsXY).hasClass('bialy')){
-                                    pointStart1 =  pointStart1 + 10 + Math.random();
+                                $('.actualBuyRate').html(buyRate.toFixed(2));
+
+                                if ($(cordsXY).hasClass('bialy')) {
+                                    pointStart1 = pointStart1 + buyRate;
                                     $('.areaPoints1').html(pointStart1.toFixed(2));
+                                    pointStart2 = pointStart2 - sellRate;
+                                    $('.areaPoints2').html(pointStart2.toFixed(2));
                                 }
 
-                                if($(cordsXY).hasClass('czarny')){
-                                    pointStart2 = pointStart2 + 10 + Math.random();
+                                if ($(cordsXY).hasClass('czarny')) {
+                                    pointStart2 = pointStart2 + buyRate;
                                     $('.areaPoints2').html(pointStart2.toFixed(2));
+                                    pointStart1 = pointStart1 - sellRate;
+                                    $('.areaPoints1').html(pointStart1.toFixed(2));
                                 }
 
                                 }
@@ -116,19 +138,34 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 
 }
-$('#startOthelloButton').click(function () {
+$('#resetOthelloButton').click(function () {
+    startGame();
+
+});
+
+function startGame(){
+    $('.pointsOfPlayerOne').removeClass('animateAreaScore');
+    $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
+    $('.pointsOfPlayerOne').addClass('animateAreaScore');
     randomCurrencyGame();
+    setCurrentRate();
     $('.othelloSquare').removeClass('czarny bialy').html('');
     pointStart1 = 20;
     pointStart2 = 20;
     $('.areaPoints1').html(pointStart1);
     $('.areaPoints2').html(pointStart2);
-    $('.pointsOfPlayerOne').addClass('animateAreaScore');
-    var namePlayer1 = prompt("Please enter your name", "Gracz 1");
-    var namePlayer2 = prompt("Please enter your name", "Gracz 2");
 
-    $('#player1').html(namePlayer1);
-    $('#player2').html(namePlayer2);
+    var namePlayer1 = prompt("Please enter your name (max 12 letters)", "Gracz 1");
+    var namePlayer2= prompt("Please enter your name (max 12 letter)", "Gracz 2");
+
+
+    $('#player1').html(namePlayer1 + '<img src=' + player1 + ' class="playerIcon">');
+    $('#player2').html(namePlayer2 + '<img src=' + player2 + ' class="playerIcon">');
+
+    $('.exchangeRateTable').css('visibility', 'visible');
+    $('.pointsOfPlayerOne').css('visibility', 'visible');
+    $('.pointsOfPlayerTwo').css('visibility', 'visible');
+
     $('#44').html(imgBlack).addClass('czarny');
 
     $('#54').html(imgBlack).addClass('czarny');
@@ -139,16 +176,15 @@ $('#startOthelloButton').click(function () {
 
     $('#gameTextContener').removeClass('stopGameTexts');
     $('#gameTextContener p').addClass('startGameTexts');
-    setTimeout(function(){
+    setTimeout(function () {
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
     }, 3200);
-
-});
-
+}
 function points1() {
     pointStart1 = pointStart1 + 10;
     $('.areaPoints1').html(pointStart1.toFixed(2));
+
 };
 
 function points2() {
@@ -157,18 +193,34 @@ function points2() {
 };
 
 
-
-function randomCurrencyGame (){
-    var randomCurrencyPlayer= Math.floor( Math.random() * ( 0 + 5- 1 ) ) ;
-    var randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
-    while(randomCurrencyPlayer == randomCurrencyPlayer2){
-        randomCurrencyPlayer2= Math.floor( Math.random() * ( 0 + 5 - 1 ) ) ;
+function randomCurrencyGame() {
+    var randomCurrencyPlayer = Math.floor(Math.random() * ( 0 + 5 - 1 ));
+    var randomCurrencyPlayer2 = Math.floor(Math.random() * ( 0 + 5 - 1 ));
+    while (randomCurrencyPlayer == randomCurrencyPlayer2) {
+        randomCurrencyPlayer2 = Math.floor(Math.random() * ( 0 + 5 - 1 ));
     }
-    var allCurrencyType = ['image/monetaZloty.png','image/monetaFunt.png','image/monetaEuro.png','image/monetaKopiejka.png','image/monetaKorona.png'];
-    player1 =allCurrencyType[randomCurrencyPlayer];
-    player2 =allCurrencyType[randomCurrencyPlayer2];
-    imgWhite = '<img src='+player1+' class="gameCoin">';
-    imgBlack = '<img src='+player2+' class="gameCoin">';
+    var allCurrencyType = ['image/monetaZloty.png', 'image/monetaFunt.png', 'image/monetaEuro.png', 'image/monetaKopiejka.png', 'image/monetaKorona.png'];
+    player1 = allCurrencyType[randomCurrencyPlayer];
+    player2 = allCurrencyType[randomCurrencyPlayer2];
+    imgWhite = '<img src=' + player1 + ' class="gameCoin">';
+    imgBlack = '<img src=' + player2 + ' class="gameCoin">';
 
 }
 
+$("#footerStartGame").click(function(){
+    $('html,body').animate({
+            scrollTop: $(".socialMediaButton").offset().top-100},
+        'slow');
+    document.getElementById("othello").style.display = "block";
+    //startGame();
+
+
+});
+$("#startOthelloButton").click(function(){
+    document.getElementById("startOthelloButton").style.display = "none";
+
+    document.getElementById("resetOthelloButton").style.display = "inline";
+    startGame();
+
+
+});
