@@ -129,11 +129,15 @@ $(document).ready(function() {
 
     $('#jQuerylangEngBtn').click(function () {
         changeIntoEnglish();
+        $('.sendButton').val('send');
+
         setCookie('langCookie', 'english', 30);
         });
 
     $('#jQuerylangPlBtn').click(function () {
+        $('.sendButton').val('wyślij');
         changeIntoPolski();
+
         setCookie('langCookie', 'polski', 30);
     });
 
@@ -146,6 +150,7 @@ $(document).ready(function() {
     else    {
         changeIntoPolski();
     }
+
 
 });
 

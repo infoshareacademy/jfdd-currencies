@@ -26,10 +26,10 @@
     </button>
     <nav>
         <ul>
-            <li><a href="#start" class="menuItem" id="link-start">START</a></li>
-            <li><a href="#functions" class="menuItem" id="link-produkt">PRODUKTY</a></li>
-            <li><a href="#ourTeam" class="menuItem" id="link-zespol">ZESPÓŁ</a></li>
-            <li><a href="#formToSend" class="menuItem" id="link-kontakt">KONTAKT</a></li>
+            <li><a href="#start" class="menuItem" id="link-start"><span class="pl">START</span><span class="engInline">START</span></a></li>
+            <li><a href="#functions" class="menuItem" id="link-produkt"><span class="pl">PRODUKTY</span><span class="engInline">PRODUCTS</span></a></li>
+            <li><a href="#ourTeam" class="menuItem" id="link-zespol"><span class="pl">ZESPÓŁ</span><span class="engInline">TEAM</span></a></li>
+            <li><a href="#formToSend" class="menuItem" id="link-kontakt"><span class="pl">KONTAKT</span><span class="engInline">CONTACT</span></a></li>
         </ul>
     </nav>
 
@@ -180,14 +180,14 @@
             <ul>
                 <li><label for="numer" class="engInline">Your phone number</label></li>
                 <li><label  class="pl">Twój numer telefonu</label></li>
-                <li><input type="text"  id="numer" name="numer" ></li>
+                <li><input type="text"  id="numer" name="numer" class="numberInput"></li>
                 <li id="divNumberErrorMassage"></li>
                 <li><label for="email" class="pl">Twój Email</label></li>
                 <li><label  class="engInline">Your Email</label></li>
-                <li><input type="email"  id="email" name="email" ></li>
+                <li><input type="email"  id="email" name="email" class="emailInput"></li>
                 <li id="divMailErrorMassage"></li>
                 <li><input type="hidden" name="receiver" value="l.komajda@wp.pl"></li>
-                <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij"></li>
+                <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij" class="sendButton"></li>
 
             </ul>
         </form>
@@ -280,18 +280,10 @@
 
         <div class="footerContent">
             <p class="pl">
-                Monitor Kursów Walut<br>
-                3 Hanover Square #8<br>
-                New York City<br>
-                e-mail: waluty@kasa.pl<br>
-                tel.: +48 789 456 123<br>
+                <br><br>Monitor Kursów Walut
             </p>
             <p class="engBlock">
-                Monitor Exchange Rates<br>
-                3 Hanover Square #8<br>
-                New York City<br>
-                e-mail: waluty@kasa.pl<br>
-                tel.: +48 789 456 123<br>
+                <br><br>Monitor Exchange Rates
             </p>
         </div>
         <div class="footerContent txtLeft">
