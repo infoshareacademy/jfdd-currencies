@@ -370,13 +370,15 @@ form span {
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     padding-top:50px;
     padding-bottom: 50px;
 }
 
 #functionsTitle h1  {
-       font-weight:100;
+    margin:0;
+    font-weight:100;
+
 }
 
 #functions  {
@@ -448,6 +450,7 @@ form span {
     text-align: center;
     height:70px;
     padding-top: 8px;
+    padding-bottom: 15px;
 }
 
 #teamName h2    {
