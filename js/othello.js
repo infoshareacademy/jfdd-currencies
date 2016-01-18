@@ -20,6 +20,7 @@ function setCurrentRate() {
 }
 
 $('.othelloSquare').click(function () {
+
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
 
 
@@ -143,6 +144,7 @@ $('#resetOthelloButton').click(function () {
 });
 
 function startGame(){
+    typeTd = 'czarny';
     $('.pointsOfPlayerOne').removeClass('animateAreaScore');
     $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
