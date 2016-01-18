@@ -10,6 +10,7 @@
 .formTitle {
     font-size:30px;
 }
+
 #othello{
     display:none;
     position:relative;
@@ -368,6 +369,7 @@ form span {
 }
 
 #functionsTitle  {
+    font-size: 36px;
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
@@ -498,19 +500,18 @@ body {
 /* 1. HEADER */
 
 header {
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
     font-size: 15px;
     line-height: 40px;
     height: 60px;
     width: 100%;
     transition: all 0.3s ease-in-out;
     position: fixed;
+    color: #ffffff;
     top: 0;
     left: 0;
     z-index: 2000;
-    opacity: 0.90;
+    opacity: 1;
 }
 
 /* 2. MENU */
@@ -518,7 +519,7 @@ header {
 header ul {
     position: absolute;
     top: 10px;
-    right:10px;
+    right:80px;
     text-align: center;
     list-style: none;
     margin: 0 50px 0 0;
@@ -531,19 +532,25 @@ header ul li {
 }
 
 header li a {
+    letter-spacing: 2px;
+    position: relative;
+    color: #fff;
     text-decoration: none;
-    color: #343434;
 }
 
 .menuItemSelected,
 li a:hover {
-    border-bottom: 2px solid #343434;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
-    background-color: #ffffff;
+    background-color: #13264d;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -610,27 +617,40 @@ li a:hover {
     display: inline;
 }
 
-header button img  {
-    width: 41px;
-    height: 41px;
-    padding: 0 10px 0 10px;
-    margin-left:-23px;
-    margin-top:-3px;
+.langBtnStyle  {
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
+    position: absolute;
+    top: 15px;
+}
+.langBtnStylePl {
+    right: 60px;
+}
+
+.langBtnStyleEng {
+    right: 20px;
 }
 
 header button, header button:active    {
-    width: 35px;
-    height: 35px;
-    padding: 0 10px 0 10px;
-    margin: 10px;
+    float: right;
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
     border: none;
     outline: none;
     cursor: pointer;
     background-color:darkgray;
+}
+header button, header button:active:nth-child(1) {
+    margin-right: 23px;
+    margin-top: 17px;
+}
+
+header button, header button:active:nth-child(1) {
+    margin-left: -9px;
 }
 
 /* Othello game, scorring */
