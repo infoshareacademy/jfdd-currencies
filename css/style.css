@@ -10,6 +10,7 @@
 .formTitle {
     font-size:30px;
 }
+
 #othello{
     display:none;
     position:relative;
@@ -499,9 +500,7 @@ body {
 /* 1. HEADER */
 
 header {
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
     font-size: 15px;
     line-height: 40px;
     height: 60px;
@@ -512,7 +511,7 @@ header {
     top: 0;
     left: 0;
     z-index: 2000;
-    opacity: 0.90;
+    opacity: 1;
 }
 
 /* 2. MENU */
@@ -537,7 +536,6 @@ header li a {
     position: relative;
     color: #fff;
     text-decoration: none;
-    color: #343434;
 }
 
 .menuItemSelected,
