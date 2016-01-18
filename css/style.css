@@ -681,6 +681,7 @@ header button, header button:active:nth-child(1) {
     background-color: #fef9ff;
     right: 80px;
     border-radius: 10px;
+    z-index:70;
 }
 #player1, #player2    {
     display: block;

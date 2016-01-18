@@ -144,6 +144,7 @@ $('#resetOthelloButton').click(function () {
 });
 
 function startGame(){
+    typeTd = 'czarny';
     $('.pointsOfPlayerOne').removeClass('animateAreaScore');
     $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
