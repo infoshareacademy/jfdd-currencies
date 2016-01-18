@@ -20,6 +20,7 @@ function setCurrentRate() {
 }
 
 $('.othelloSquare').click(function () {
+
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
 
 
