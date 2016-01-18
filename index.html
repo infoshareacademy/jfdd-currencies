@@ -18,12 +18,6 @@
 
 <header>
 
-    <button id="jQuerylangEngBtn" class="langEngBtn" class="langBtnStyle">
-        <img src="image/eng.png" title="English" alt="English" class="langBtnStyle langBtnStyleEng"/>
-    </button>
-    <button id="jQuerylangPlBtn" class="langPlBtn" class="langBtnStyle">
-        <img src="image/pl.png" title="Polski" alt="Polski" class="langBtnStyle langBtnStylePl"/>
-    </button>
     <nav>
         <ul>
             <li><a href="#start" class="menuItem" id="link-start"><span class="pl">START</span><span class="engInline">START</span></a></li>
@@ -34,24 +28,29 @@
     </nav>
 
 
-
+    <button id="jQuerylangEngBtn" class="langEngBtn">
+        <img src="image/eng.png" title="English" alt="English"/>
+    </button>
+    <button id="jQuerylangPlBtn" class="langPlBtn">
+        <img src="image/pl.png" title="Polski" alt="Polski"/>
+    </button>
 
     </header>
 
 
-    <div id="hero">
+<div id="hero">
 
         <div id="firstHero"><img src="image/big-photo-top.jpg" alt="waluty" class="heroPicture"></div>
         <div id="secondHero"><img src="image/big-photo-top4.jpg" alt="waluty" class="heroPicture"></div>
 
-        <div id="containerTitleOnHero" data-animate="fadeInUp">
+    <div id="containerTitleOnHero" data-animate="fadeInUp">
 
-            <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
-            <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
-            <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
-            <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
+        <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
+        <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
+        <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+        <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
 
-        </div>
+    </div>
 
     </div>
 
@@ -280,18 +279,28 @@
 
         <div class="footerContent">
             <p class="pl">
-                <br><br>Monitor Kursów Walut
+                Monitor Kursów Walut<br>
+                "Najlepsze narzędzie<br>do rozwoju portfela walutowego."
             </p>
             <p class="engBlock">
-                <br><br>Monitor Exchange Rates
+                Monitor Exchange Rates<br>
+                "The best tool<br>to develop your currency wallet."
             </p>
         </div>
-        <div class="footerContent txtLeft">
-            <img src="image/logo.png" class="logoMargin" alt=" logo firmowe" title="Waluty on-line">
+        <div class="footerContentRight txtLeft pl">
+            <img src="image/logo.svg" class="logoMargin" alt="logo firmowe" title="Monitor Kursów Walut">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
                 <input type="email" title="e-mail" placeholder="wpisz e-maila...">
                 <input type="hidden" name="receiver" value="siwexx@tlen.pl">
-                <input type="submit" value="newsletter">
+                <input  class="newsletterButton" type="submit" value="newsletter">
+            </form>
+        </div>
+        <div class="footerContentRight txtLeft engBlock">
+            <img src="image/logoEN.svg" class="logoMargin" alt="company logo" title="Monitor Exchange Rates">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
+                <input type="email" title="e-mail" placeholder="send an e-mail...">
+                <input type="hidden" name="receiver" value="siwexx@tlen.pl">
+                <input  class="newsletterButton" type="submit" value="newsletter">
             </form>
         </div>
     </div>

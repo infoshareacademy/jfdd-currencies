@@ -347,6 +347,7 @@ form {
 form ul{
    list-style:none;
     margin-bottom:30px;
+    padding:0;
 }
 form li{
     color:#71706B;
@@ -758,16 +759,15 @@ footer h4 {
     padding: 0 20px 0 20px;
 }
 .footerContent {
-    height: 130px;
+    padding-top: 33px;
+    height: 90px;
     float: left;
     width: 33.33%;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footerContentRight{
     float:left;
     height: 130px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 footer li a {
     color: #ffffff;
@@ -817,10 +817,16 @@ footer input {
 }
 
 .logoMargin {
-    padding: 20px 0 10px 0;
+    padding: 30px 0 10px 0;
 }
 #footerStartGame{
     cursor:pointer;
+}
+.newsletterButton:hover{
+    cursor:pointer;
+    border: solid 1px rgb(255, 201, 62);
+    background: rgba(255, 201, 62, 0.17);
+    color: rgb(255, 201, 62);
 }
 /************* FOOTER END *************/
 
