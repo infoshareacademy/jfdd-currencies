@@ -347,6 +347,7 @@ form {
 form ul{
    list-style:none;
     margin-bottom:30px;
+    padding:0;
 }
 form li{
     color:#71706B;
@@ -359,8 +360,8 @@ form span {
     font-weight: bolder;
 }
 
-#divNumberErrorMassage,
-#divMailErrorMassage{
+#NumberErrorMassage,
+#MailErrorMassage{
 	height: 20px;
 	color: #C55252;
     margin-bottom:10px;
@@ -370,13 +371,15 @@ form span {
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     padding-top:50px;
     padding-bottom: 50px;
 }
 
 #functionsTitle h1  {
-       font-weight:100;
+    margin:0;
+    font-weight:100;
+
 }
 
 #functions  {
@@ -448,6 +451,7 @@ form span {
     text-align: center;
     height:70px;
     padding-top: 8px;
+    padding-bottom: 15px;
 }
 
 #teamName h2    {
@@ -607,11 +611,11 @@ li a:hover {
 }
 
 header button img  {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
     padding: 0 10px 0 10px;
-    margin-left:-22px;
-    margin-top:-2px;
+    margin-left:-23px;
+    margin-top:-3px;
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
@@ -626,6 +630,7 @@ header button, header button:active    {
     border: none;
     outline: none;
     cursor: pointer;
+    background-color:darkgray;
 }
 
 /* Othello game, scorring */
@@ -729,12 +734,17 @@ footer h4 {
 .mediaLine {
     display: inline-block;
     width: 70px;
-    padding: 0 40px 0 20px;
+    padding: 0 20px 0 20px;
 }
 .footerContent {
-    height: 130px;
+    padding-top: 33px;
+    height: 90px;
     float: left;
-    width: 32%;
+    width: 33.33%;
+}
+.footerContentRight{
+    float:left;
+    height: 130px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 footer li a {
@@ -747,12 +757,12 @@ footer li a:hover {
 }
 .txtRight {
     text-align: right;
-    padding-right: 10px;
+    padding:25px 0 0 0;
 }
 .txtLeft {
     text-align: left;
     border-right: 0;
-    padding-left: 10px;
+    padding:0;
 }
 .logoButton {
     padding-top: 30px;
@@ -781,14 +791,20 @@ footer input {
     font-size: 12px;
     color: white;
     text-shadow: none;
-    padding: 5px 40px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 .logoMargin {
-    padding: 20px 0 10px 0;
+    padding: 30px 0 10px 0;
 }
 #footerStartGame{
     cursor:pointer;
+}
+.newsletterButton:hover{
+    cursor:pointer;
+    border: solid 1px rgb(255, 201, 62);
+    background: rgba(255, 201, 62, 0.17);
+    color: rgb(255, 201, 62);
 }
 /************* FOOTER END *************/
 

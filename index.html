@@ -38,19 +38,19 @@
     </header>
 
 
-    <div id="hero">
+<div id="hero">
 
-        <div id="firstHero"><img src="image/hero.jpg" alt="waluty" class="heroPicture"></div>
-        <div id="secondHero"><img src="image/hero3.jpg" alt="waluty" class="heroPicture"></div>
+    <div id="firstHero"><img src="image/hero.jpg" alt="waluty" class="heroPicture"></div>
+    <div id="secondHero"><img src="image/hero3.jpg" alt="waluty" class="heroPicture"></div>
 
-        <div id="containerTitleOnHero" data-animate="fadeInUp">
+    <div id="containerTitleOnHero" data-animate="fadeInUp">
 
-            <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
-            <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
-            <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
-            <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
+        <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
+        <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
+        <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
+        <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
 
-        </div>
+    </div>
 
     </div>
 
@@ -154,19 +154,19 @@
             <h2 class="engBlock">Our team: FunkyPro</h2>
         </div>
         <div class="teamMember">
-            <img src="image/female_user.png" alt="tu powinno być zdjęcie Emilii" title="Emilia">
+            <img src="image/emilia.jpg" alt="tu powinno być zdjęcie Emilii" title="Emilia">
             <p>Emilia</p>
         </div>
         <div class="teamMember">
-            <img src="image/jarek_user.png" alt="tu powinno być zdjęcie Jarka" title="Jarek">
+            <img src="image/jarek.jpg" alt="tu powinno być zdjęcie Jarka" title="Jarek">
             <p>Jarek</p>
         </div>
         <div class="teamMember">
-            <img src="image/male_user.png" alt="tu powinno być zdjęcie Łukasza" title="Łukasz">
+            <img src="image/lukasz.jpg" alt="tu powinno być zdjęcie Łukasza" title="Łukasz">
             <p>Łukasz</p>
         </div>
         <div class="teamMember">
-            <img src="image/male_user.png" alt="tu powinno być zdjęcie Tomka" title="Tomek">
+            <img src="image/tomek.jpg" alt="tu powinno być zdjęcie Tomka" title="Tomek">
             <p>Tomek</p>
         </div>
     </section>
@@ -180,11 +180,11 @@
                 <li><label for="numer" class="engInline">Your phone number</label></li>
                 <li><label  class="pl">Twój numer telefonu</label></li>
                 <li><input type="text"  id="numer" name="numer" ></li>
-                <li id="divNumberErrorMassage"></li>
+                <li id="NumberErrorMassage"></li>
                 <li><label for="email" class="pl">Twój Email</label></li>
                 <li><label  class="engInline">Your Email</label></li>
                 <li><input type="email"  id="email" name="email" ></li>
-                <li id="divMailErrorMassage"></li>
+                <li id="MailErrorMassage"></li>
                 <li><input type="hidden" name="receiver" value="l.komajda@wp.pl"></li>
                 <li><input type="button" name="wyślij" onclick="checkForm()" value="wyślij"></li>
 
@@ -280,25 +280,27 @@
         <div class="footerContent">
             <p class="pl">
                 Monitor Kursów Walut<br>
-                3 Hanover Square #8<br>
-                New York City<br>
-                e-mail: waluty@kasa.pl<br>
-                tel.: +48 789 456 123<br>
+                "Najlepsze narzędzie<br>do rozwoju portfela walutowego."
             </p>
             <p class="engBlock">
                 Monitor Exchange Rates<br>
-                3 Hanover Square #8<br>
-                New York City<br>
-                e-mail: waluty@kasa.pl<br>
-                tel.: +48 789 456 123<br>
+                "The best tool<br>to develop your currency wallet."
             </p>
         </div>
-        <div class="footerContent txtLeft">
-            <img src="image/logo.png" class="logoMargin" alt=" logo firmowe" title="Waluty on-line">
+        <div class="footerContentRight txtLeft pl">
+            <img src="image/logo.svg" class="logoMargin" alt="logo firmowe" title="Monitor Kursów Walut">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
                 <input type="email" title="e-mail" placeholder="wpisz e-maila...">
                 <input type="hidden" name="receiver" value="siwexx@tlen.pl">
-                <input type="submit" value="newsletter">
+                <input  class="newsletterButton" type="submit" value="newsletter">
+            </form>
+        </div>
+        <div class="footerContentRight txtLeft engBlock">
+            <img src="image/logoEN.svg" class="logoMargin" alt="company logo" title="Monitor Exchange Rates">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="post">
+                <input type="email" title="e-mail" placeholder="send an e-mail...">
+                <input type="hidden" name="receiver" value="siwexx@tlen.pl">
+                <input  class="newsletterButton" type="submit" value="newsletter">
             </form>
         </div>
     </div>
