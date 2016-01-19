@@ -12,8 +12,6 @@ var sellRate;
         for (var y = 1; y < 9; ++y) {
             table+='<td class=othelloSquare id=' + x + y + '>' + '</td>';
         }
-        //table+='</tr>';
-
     }
     table+=" </table>";
     $('#othello').append(table);
