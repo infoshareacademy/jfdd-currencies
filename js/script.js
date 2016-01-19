@@ -131,14 +131,14 @@ $(document).ready(function() {
         changeIntoEnglish();
         $('.sendButton').val('send');
 
-        setCookie('langCookie', 'english', 30);
+        setCookie('langCookie', 'english', 365);
         });
 
     $('#jQuerylangPlBtn').click(function () {
         $('.sendButton').val('wyślij');
         changeIntoPolski();
 
-        setCookie('langCookie', 'polski', 30);
+        setCookie('langCookie', 'polski', 365);
     });
 
     var langCookieValue= (getCookie('langCookie'));
