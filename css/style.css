@@ -373,7 +373,6 @@ form span {
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 36px;
     padding-top:50px;
     padding-bottom: 50px;
 }
@@ -592,6 +591,85 @@ li a:hover {
 
 #underTitleOnHero {
     font-weight: 100;
+}
+
+/*PRZYCISK ZALOGUJ*/
+
+.logInButton    {
+    width: 180px;
+    height: 80px;
+    background-color: white;
+    opacity:0.4;
+    border-radius: 10px;
+    font-size:1em;
+    font-weight: bold;
+    color: #000060;
+    text-shadow: 1px 1px #306dbe;
+    cursor:pointer;
+    outline: none;
+
+}
+.logInButton:hover  {
+    opacity:0.7;
+    outline: none;
+}
+/*LOGIN POPUP*/
+
+.logInPopUp {
+    width: 70%;
+    height: 500px;
+    background-color: white;
+    opacity: 0.98;
+    z-index:2000;
+    position:absolute;
+    margin-left:15%;
+    top:100px;
+    border-radius: 10px;
+   }
+
+.unvisiblePopUp {
+    visibility: hidden;
+}
+.logInPopUp p{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 40px;
+    }
+.closePopUp {
+    float:right;
+    width:40px;
+    height:40px;
+    background-image: url("../image/closePopUp.png");
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.socialMediaLogIn   {
+    width: 200px;
+    color: white;
+    background-color: #9eb5ce;
+    margin:auto;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top:8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+
+}
+.socialMediaLogIn img   {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-left: 0;
+    display: inline;
+}
+.socialMediaLogIn h2    {
+    display: inline;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 /* 6. CLASS PL & ENG */
