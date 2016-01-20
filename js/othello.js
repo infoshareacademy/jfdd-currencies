@@ -4,6 +4,20 @@ var pointStart2 = 20;
 var buyRate;
 var sellRate;
 
+//Create table board
+(function() {
+    var table = "<table class='othelloBoard' >";
+    for (var x = 1; x < 9; ++x) {
+        table+= '<tr>';
+        for (var y = 1; y < 9; ++y) {
+            table+='<td class=othelloSquare id=' + x + y + '>' + '</td>';
+        }
+    }
+    table+=" </table>";
+    $('#othello').append(table);
+})();
+
+
 function setCurrentRate() {
     buyRate = 10 + 5 * Math.random();
     sellRate = buyRate * 0.8;
@@ -20,6 +34,7 @@ function setCurrentRate() {
 }
 
 $('.othelloSquare').click(function () {
+
     if (!$(this).hasClass('czarny') && !$(this).hasClass('bialy')) {
 
 
@@ -137,7 +152,13 @@ function changeCoin(clickedId, classTd, classChange, typeImg) {
 
 
 }
-$('#startOthelloButton').click(function () {
+$('#resetOthelloButton').click(function () {
+    startGame();
+
+});
+
+function startGame(){
+    typeTd = 'czarny';
     $('.pointsOfPlayerOne').removeClass('animateAreaScore');
     $('.pointsOfPlayerTwo').removeClass('animateAreaScore');
     $('.pointsOfPlayerOne').addClass('animateAreaScore');
@@ -150,7 +171,7 @@ $('#startOthelloButton').click(function () {
     $('.areaPoints2').html(pointStart2);
 
     var namePlayer1 = prompt("Please enter your name (max 12 letters)", "Gracz 1");
-    var namePlayer2 = prompt("Please enter your name (max 12 letter)", "Gracz 2");
+    var namePlayer2= prompt("Please enter your name (max 12 letter)", "Gracz 2");
 
 
     $('#player1').html(namePlayer1 + '<img src=' + player1 + ' class="playerIcon">');
@@ -174,9 +195,7 @@ $('#startOthelloButton').click(function () {
         $('#gameTextContener p').removeClass('startGameTexts');
         $('#gameTextContener').addClass('stopGameTexts');
     }, 3200);
-
-});
-
+}
 function points1() {
     pointStart1 = pointStart1 + 10;
     $('.areaPoints1').html(pointStart1.toFixed(2));
@@ -203,5 +222,20 @@ function randomCurrencyGame() {
 
 }
 
+$("#footerStartGame").click(function(){
+    $('html,body').animate({
+            scrollTop: $(".socialMediaButton").offset().top-100},
+        'slow');
+    document.getElementById("othello").style.display = "block";
+    //startGame();
 
 
+});
+$("#startOthelloButton").click(function(){
+    document.getElementById("startOthelloButton").style.display = "none";
+
+    document.getElementById("resetOthelloButton").style.display = "inline";
+    startGame();
+
+
+});

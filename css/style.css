@@ -10,11 +10,16 @@
 .formTitle {
     font-size:30px;
 }
+
 #othello{
+    display:none;
     position:relative;
     padding-top:50px;
-    height:500px;
+    height:550px;
     width:100%;
+}
+.othelloVisible{
+    display:block;
 }
 .othelloSquare {
     border: 4px solid black;
@@ -34,8 +39,11 @@
     width: 100%;
     height:600px;
     position:absolute;
+    text-align:center;
 }
-#startOthelloButton{
+#resetOthelloButton{
+    display:none;
+    cursor:pointer;
     position: absolute;
     z-index: 600;
     width: 200px;
@@ -44,6 +52,19 @@
     border-radius: 10px;
     font-size: 20px;
     text-transform: uppercase;
+    border:1px solid #000;
+}
+#startOthelloButton{
+    position:relative;
+    cursor:pointer;
+    margin-top:250px;
+    z-index: 6000;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 50px;
+    text-transform: uppercase;
+    border:1px solid #000;
 }
 .stopGameTexts{
     display:none;
@@ -327,6 +348,7 @@ form {
 form ul{
    list-style:none;
     margin-bottom:30px;
+    padding:0;
 }
 form li{
     color:#71706B;
@@ -339,24 +361,27 @@ form span {
     font-weight: bolder;
 }
 
-#divNumberErrorMassage,
-#divMailErrorMassage{
+#NumberErrorMassage,
+#MailErrorMassage{
 	height: 20px;
 	color: #C55252;
     margin-bottom:10px;
 }
 
 #functionsTitle  {
+    font-size: 36px;
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     padding-top:50px;
     padding-bottom: 50px;
 }
 
 #functionsTitle h1  {
-       font-weight:100;
+    margin:0;
+    font-weight:100;
+
 }
 
 #functions  {
@@ -428,6 +453,7 @@ form span {
     text-align: center;
     height:70px;
     padding-top: 8px;
+    padding-bottom: 15px;
 }
 
 #teamName h2    {
@@ -474,19 +500,18 @@ body {
 /* 1. HEADER */
 
 header {
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
     font-size: 15px;
     line-height: 40px;
     height: 60px;
     width: 100%;
     transition: all 0.3s ease-in-out;
     position: fixed;
+    color: #ffffff;
     top: 0;
     left: 0;
     z-index: 2000;
-    opacity: 0.90;
+    opacity: 1;
 }
 
 /* 2. MENU */
@@ -494,7 +519,7 @@ header {
 header ul {
     position: absolute;
     top: 10px;
-    right:10px;
+    right:80px;
     text-align: center;
     list-style: none;
     margin: 0 50px 0 0;
@@ -507,19 +532,25 @@ header ul li {
 }
 
 header li a {
+    letter-spacing: 2px;
+    position: relative;
+    color: #fff;
     text-decoration: none;
-    color: #343434;
 }
 
 .menuItemSelected,
 li a:hover {
-    border-bottom: 2px solid #343434;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 /* 3. CLASS OF HEADER WHEN SCROLLING */
 
 .active {
-    background-color: #ffffff;
+    background-color: #13264d;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -586,26 +617,40 @@ li a:hover {
     display: inline;
 }
 
-header button img  {
-    width: 40px;
-    height: 40px;
-    padding: 0 10px 0 10px;
-    margin-left:-22px;
-    margin-top:-2px;
+.langBtnStyle  {
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     box-shadow: none;
     box-sizing: initial;
+    position: absolute;
+    top: 15px;
+}
+.langBtnStylePl {
+    right: 60px;
+}
+
+.langBtnStyleEng {
+    right: 20px;
 }
 
 header button, header button:active    {
-    width: 35px;
-    height: 35px;
-    padding: 0 10px 0 10px;
-    margin: 10px;
+    float: right;
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
     border: none;
     outline: none;
     cursor: pointer;
+    background-color:darkgray;
+}
+header button, header button:active:nth-child(1) {
+    margin-right: 23px;
+    margin-top: 17px;
+}
+
+header button, header button:active:nth-child(1) {
+    margin-left: -9px;
 }
 
 /* Othello game, scorring */
@@ -636,6 +681,7 @@ header button, header button:active    {
     background-color: #fef9ff;
     right: 80px;
     border-radius: 10px;
+    z-index:70;
 }
 #player1, #player2    {
     display: block;
@@ -709,12 +755,17 @@ footer h4 {
 .mediaLine {
     display: inline-block;
     width: 70px;
-    padding: 0 40px 0 20px;
+    padding: 0 20px 0 20px;
 }
 .footerContent {
-    height: 130px;
+    padding-top: 33px;
+    height: 90px;
     float: left;
-    width: 32%;
+    width: 33.33%;
+}
+.footerContentRight{
+    float:left;
+    height: 130px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 footer li a {
@@ -727,12 +778,12 @@ footer li a:hover {
 }
 .txtRight {
     text-align: right;
-    padding-right: 10px;
+    padding:25px 0 0 0;
 }
 .txtLeft {
     text-align: left;
     border-right: 0;
-    padding-left: 10px;
+    padding:0;
 }
 .logoButton {
     padding-top: 30px;
@@ -761,13 +812,21 @@ footer input {
     font-size: 12px;
     color: white;
     text-shadow: none;
-    padding: 5px 40px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 .logoMargin {
-    padding: 20px 0 10px 0;
+    padding: 30px 0 10px 0;
 }
-
+#footerStartGame{
+    cursor:pointer;
+}
+.newsletterButton:hover{
+    cursor:pointer;
+    border: solid 1px rgb(255, 201, 62);
+    background: rgba(255, 201, 62, 0.17);
+    color: rgb(255, 201, 62);
+}
 /************* FOOTER END *************/
 
 /*** additional functionality START ***/
