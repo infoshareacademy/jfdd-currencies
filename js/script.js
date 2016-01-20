@@ -157,3 +157,12 @@ $(document).ready(function() {
 var date = new Date();
 var actualYear = date.getFullYear();
 document.getElementById("currentYear").innerHTML = actualYear;
+
+
+$('.logInButton').click(function()  {
+    $('.logInPopUp').removeClass('unvisiblePopUp');
+}
+);
+$('.closePopUp').click(function ()   {
+    $('.logInPopUp').addClass('unvisiblePopUp');
+});
