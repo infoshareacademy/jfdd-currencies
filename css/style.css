@@ -96,6 +96,9 @@ li a:hover {
 
 /* LOG IN BUTTON*/
 .logInButton    {
+    text-decoration: none;
+}
+.logInButton  button  {
     width: 180px;
     height: 80px;
     background-color: white;
