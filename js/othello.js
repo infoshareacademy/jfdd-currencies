@@ -4,6 +4,20 @@ var pointStart2 = 20;
 var buyRate;
 var sellRate;
 
+//Create table board
+(function() {
+    var table = "<table class='othelloBoard' >";
+    for (var x = 1; x < 9; ++x) {
+        table+= '<tr>';
+        for (var y = 1; y < 9; ++y) {
+            table+='<td class=othelloSquare id=' + x + y + '>' + '</td>';
+        }
+    }
+    table+=" </table>";
+    $('#othello').append(table);
+})();
+
+
 function setCurrentRate() {
     buyRate = 10 + 5 * Math.random();
     sellRate = buyRate * 0.8;

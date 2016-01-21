@@ -8,6 +8,7 @@
           content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
     <title>Monitor Kursu Walut</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/othello.css">
     <link rel="stylesheet" href="css/animate.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
@@ -47,11 +48,25 @@
 
         <h1 class="bigTitleOnHero pl">Zwiększ efektywność.</h1>
         <h1 class="bigTitleOnHero engBlock">Increase efficiency.</h1>
+
         <p class="underTitleOnHero pl">Monitor kursu walut. Najlepsze narzędzie do rozwoju portfela walutowego. </p>
         <p class="underTitleOnHero engBlock">The best tool to develop your currency wallet.</p>
 
+        <button class="logInButton pl">Zaloguj</button>
+        <button class="logInButton engInline">Log in</button>
+
+
     </div>
 
+    </div>
+    <div class="logInPopUp unvisiblePopUp">
+        <div class="closePopUp"></div>
+        <p class="pl">Zaloguj się przez:</p>
+        <p class="engBlock">Log in with:</p>
+        <div class="socialMediaLogIn linkedIn"><img src="image/linkedinLogIn.png"><h2> LinkedIn</h2></div>
+        <div class="socialMediaLogIn facebook"><img src="image/facebookLogIn.png"><h2> Facebook</h2></div>
+        <div class="socialMediaLogIn google"><img src="image/googleLogIn.png"><h2> Google+</h2></div>
+        <div class="socialMediaLogIn twitter"><img src="image/twitterLogIn.png"><h2> Twitter</h2></div>
     </div>
 
 
@@ -211,17 +226,7 @@
         </div>
 
 
-        <table class='othelloBoard' >
-            <script>
-                for (var x = 1; x < 9; ++x) {
-                document.write('<tr>');
-                for (var y = 1; y < 9; ++y) {
-                    document.write('<td class=othelloSquare id=' + x + y + '>' + '</td>');
-                }
-                document.write('</tr>');
-                }
-            </script>
-        </table>
+
 
         <div id="groundAnimation"></div>
         <div id="sunAnimation"></div>
@@ -322,5 +327,6 @@
 <script src="js/othello.js"></script>
 <script src="js/cookie-monster.js"></script>
 <script src="js/informationAboutCookies.js"></script>
+
 </body>
 </html>
