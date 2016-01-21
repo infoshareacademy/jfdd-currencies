@@ -7,12 +7,12 @@
 //6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 //1. ADDING CLASS TO HEADER WHEN SCROLLBAR > 50
 
     $(window).on("scroll", function () {
-        if($(window).scrollTop() > 50) {
+        if ($(window).scrollTop() > 50) {
             $("header").addClass("active");
             $("#quick_contact").addClass("active");
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 //2. ADDING CLASS TO LINKS IN HEADER AFTER CLICKING
 
-    $(document).scroll(function(){
+    $(document).scroll(function () {
         var scroll = $(this).scrollTop();
 
         if (scroll >= $("#start").offset().top && scroll <= $("#functionsTitle").offset().top) {
@@ -50,76 +50,80 @@ $(document).ready(function() {
     });
 
 
-
 // 3. FUNCTION WHICH CHANGES IMAGE IN HERO (TWO IMAGES)
 
-    var changeHeroImage = function(firstHero, secondHero) {
+    var changeHeroImage = function (firstHero, secondHero) {
 
         firstHero.fadeIn(1500);
         secondHero.fadeOut(1500);
 
-        setTimeout(function() {
-            changeHeroImage(secondHero,firstHero)
-        } , 6000);
+        setTimeout(function () {
+            changeHeroImage(secondHero, firstHero)
+        }, 6000);
 
     };
 
-    changeHeroImage($('#firstHero'),$('#secondHero'));
+    changeHeroImage($('#firstHero'), $('#secondHero'));
 
 // 4. LINKS IN HEADER - SCROLLING TO RIGHT PARAGRAPHS AFTER CLICKING
 
-    $("#link-start").click(function() {
+    $("#link-start").click(function () {
         $('html,body').animate({
-                scrollTop: $("#start").offset().top},
+                scrollTop: $("#start").offset().top
+            },
             'slow');
     });
 
-    $("#link-produkt").click(function() {
+    $("#link-produkt").click(function () {
         $('html,body').animate({
-                scrollTop: $("#functionsTitle").offset().top},
+                scrollTop: $("#functionsTitle").offset().top
+            },
             'slow');
     });
 
-    $("#link-zespol").click(function() {
+    $("#link-zespol").click(function () {
         $('html,body').animate({
-                scrollTop: $("#ourTeam").offset().top},
+                scrollTop: $("#ourTeam").offset().top
+            },
             'slow');
     });
 
-    $("#link-kontakt").click(function() {
+    $("#link-kontakt").click(function () {
         $('html,body').animate({
-                scrollTop: $("#formToSend").offset().top},
+                scrollTop: $("#formToSend").offset().top
+            },
             'slow');
     });
 
 // 5. COOKIE (SET / GET)
 
-    function setCookie(cookieName, cookieValue, expireDays)   {
+    function setCookie(cookieName, cookieValue, expireDays) {
         var d = new Date();
-        d.setTime (d.getTime() +(expireDays*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
+        d.setTime (d.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
         document.cookie = cookieName + "=" + cookieValue + ";" + expires;
     }
 
-    function getCookie(cookieName)   {
+    function getCookie(cookieName) {
         var name = cookieName + "=";
         var cookieArray = document.cookie.split(';');
-        for(var i=0; i<cookieArray.length; i++)  {
+        for (var i = 0; i < cookieArray.length; i++) {
             var cookie = cookieArray[i];
-            while (cookie.charAt(0)==" ") cookie = cookie.substring(1);
-            if (cookie.indexOf(name) ==0) return cookie.substring(name.length, cookie.length);
+            while (cookie.charAt(0) == " ") cookie = cookie.substring(1);
+            if (cookie.indexOf(name) == 0) return cookie.substring(name.length, cookie.length);
         }
         return "";
     }
 
 // 6. FUNCTION WHICH CHANGES PAGE LANGUAGE, REMEMBER LANGUAGE
 
-    function changeIntoEnglish()    {
+    function changeIntoEnglish() {
         $('.pl').addClass('hidePolishTxt');
         $('.engBlock').addClass('engBlockElement');
         $('.engInlineBlock').addClass('engInlineBlockElement');
         $('.engInline').addClass('engInlineElement');
     }
+
     function changeIntoPolski() {
         $('.engBlock').removeClass('engBlockElement');
         $('.engInlineBlock').removeClass('engInlineBlockElement');
@@ -132,7 +136,7 @@ $(document).ready(function() {
         $('.sendButton').val('send');
 
         setCookie('langCookie', 'english', 365);
-        });
+    });
 
     $('#jQuerylangPlBtn').click(function () {
         $('.sendButton').val('wyślij');
@@ -141,13 +145,13 @@ $(document).ready(function() {
         setCookie('langCookie', 'polski', 365);
     });
 
-    var langCookieValue= (getCookie('langCookie'));
+    var langCookieValue = (getCookie('langCookie'));
 
-    if ( langCookieValue==='english' )      {
+    if (langCookieValue === 'english') {
         changeIntoEnglish();
     }
 
-    else    {
+    else {
         changeIntoPolski();
     }
 
@@ -159,10 +163,3 @@ var actualYear = date.getFullYear();
 document.getElementById("currentYear").innerHTML = actualYear;
 
 
-$('.logInButton').click(function()  {
-    $('.logInPopUp').removeClass('unvisiblePopUp');
-}
-);
-$('.closePopUp').click(function ()   {
-    $('.logInPopUp').addClass('unvisiblePopUp');
-});
