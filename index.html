@@ -8,8 +8,10 @@
           content="waluta, pieniądze, kalkulator, portfel, monitorować, kontrolować, obserwować, tendencja, trend, przelicznik, notowanie, stawka, cena, pieniądz, moneta">
     <title>Monitor Kursu Walut</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loginPopUp.css">
     <link rel="stylesheet" href="css/othello.css">
     <link rel="stylesheet" href="css/animate.css">
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link rel="icon" href="image/favicon.ico">
@@ -37,6 +39,32 @@
     </button>
 
     </header>
+
+<section class="fluid-container" id="PopUp-wrapper" style="display:none">
+
+
+    <div class="row logInBackground"></div>
+    <div class=" row logInPopUp col-xs-12 col col-sm-offset-1 col-sm-10 col-md-offset-3 col-md-6">
+
+        <div class="row"><h2>Zaloguj się przez:</h2></div>
+
+        <div class="row" id="facebookLogin">
+            <fb:login-button size="xlarge" scope="public_profile,email" onlogin="checkLoginState();" class="socialMediaLogIn">
+                Facebook
+            </fb:login-button>
+        </div>
+
+        <div class="row" id="googleLogin">
+            <button>
+                <div class="g-signin2 socialMediaLogIn google" data-onsuccess="onSignIn" data-theme="dark">
+                </div>
+            </button>
+        </div>
+
+        <div class="row"><a href="http://test.currencies.jfdd.infoshareaca.nazwa.pl/">Powrót</a></div>
+
+    </div>
+</section>
 
 
 <div id="hero">
@@ -318,6 +346,11 @@
 <script src="js/othello.js"></script>
 <script src="js/cookie-monster.js"></script>
 <script src="js/informationAboutCookies.js"></script>
+<script src="js/popUp.js"></script>
+<script src="js/google-login.js"></script>
+<script src="js/fb-login.js"></script>
+
+
 
 </body>
 </html>
