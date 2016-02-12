@@ -74,7 +74,7 @@ function testAPI() {
 
         localStorage.setItem("name",response.name);
 
-        window.location = 'http://localhost:63342/jfdd-currencies-app/index.html';
+        window.location = 'http://test.app.currencies.jfdd.infoshareaca.nazwa.pl/';
 
     });
 }/**
